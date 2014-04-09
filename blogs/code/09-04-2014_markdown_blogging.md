@@ -1,3 +1,8 @@
+---
+layout: post
+title: Variants on Linux sort command
+---
+
 # Variants on Linux sort command
 - Miles Benton
 - miles_benton
