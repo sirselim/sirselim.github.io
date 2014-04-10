@@ -1,0 +1,19 @@
+---
+layout: default
+title: Code Notebook
+category: codenotebook
+---
+
+<div>
+  <h1>Code notebook</h1>
+    <p>I am going to use this space to record useful pieces of code that I will inevitably forget and really want to use later on down the track - essentially an electronic diary/notebook.</p>
+
+      <ul class="posts">
+        {% for post in site.posts %}
+          {% if post.categories contains 'codenotebook' %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+</div>
