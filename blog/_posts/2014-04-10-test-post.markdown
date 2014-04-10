@@ -1,9 +1,0 @@
----
-layout: post
-category: blog
-title:  "a test post"
-date:   2014-04-10 10:55:29
-categories: test
----
-
-This is just a test post to ensure that the system is working as expected.
