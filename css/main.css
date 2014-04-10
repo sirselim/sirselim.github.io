@@ -121,6 +121,11 @@ a:visited { color: #a0a; }
   border: 0;
 }
 
+[alt=center] {
+  display: block;
+  margin: auto;
+}
+
 /*****************************************************************************/
 /*
 /* Posts
@@ -157,4 +162,9 @@ a:visited { color: #a0a; }
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+[alt=center] {
+  display: block;
+  margin: auto;
 }
