@@ -10,15 +10,15 @@ A very brief post today - more to remind myself to check this out in more detail
 
 A new tool from Git has got me rather excited, [GitBook](http://www.gitbook.io/).
 
-*GitBook is a command line tool (and Node.js library) for building beautiful*
-*programming books and exercises using GitHub/Git and Markdown.*
-
-*GitBook can generate your book in the following formats:*
-
-  - *Static Website: This is the default format, it generates a complete interactive static website that can be for example hosted on GitHub Pages.*
-  - *PDF: A complete PDF book with exercise solutions at the end of the book.*
-  - *eBook: A complete eBook with exercise solutions at the end of the book.*
-  - *Single Page: The book will be stored in a single printable HTML page, this format is used for conversion to PDF or eBook.*
+> GitBook is a command line tool (and Node.js library) for building beautiful
+> programming books and exercises using GitHub/Git and Markdown.
+> 
+> GitBook can generate your book in the following formats:
+> 
+>   - Static Website: This is the default format, it generates a complete interactive static website that can be for example hosted on GitHub Pages.
+>   - PDF: A complete PDF book with exercise solutions at the end of the book.
+>   - eBook: A complete eBook with exercise solutions at the end of the book.
+>   - Single Page: The book will be stored in a single printable HTML page, this format is used for conversion to PDF or eBook.
 
 The ability to save as a website, pdf or ebook is fantastic.
 
