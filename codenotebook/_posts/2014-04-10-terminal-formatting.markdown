@@ -16,20 +16,25 @@ Now there is probably a nice one-liner or more correct way of achieving the belo
 
     # prep targets file for QuasR RNA-seq analysis
     ls -R | grep '.fastq.gz' > FileName.txt
+
 The above line recursively searches and lists all fastq.gz files, then writes them to the file `FileName.txt`.
 
     ls -R | grep '.fastq.gz' | cut -c 1-14 > SampleName.txt
+
 This line is the same as above by cuts the first 14 characters from each line and writes them out to `SampleName.txt`.
 
     ls -d */ > directories.txt
     paste directories.txt FileName.txt -d '' > target_files.txt
     paste target_files.text SampleName.txt > targets_file.txt 
+
 The path to the compressed fastq files needs to be included as the `FileName`. The above writes the directory list of the current 'working directory' and pastes this to the file names extracted earlier. This is then pasted to the SampleNames file to create the 2 column layout required.
 
     echo -e "FileName\tSampleName" | cat - targets_file.txt > /tmp/out && mv /tmp/out targets_file.txt
+
 Now to create the header line.  QuasR requires that the targets file has 2 columns, with **FileName** and **SampleName** as the header (first row).  The above uses the echo command piped to cat to achieve the final overall targets file.
 
     rm SampleName.txt FileName.txt target_files.txt directories.txt
+
 Time for a tidy up, this removes all the 'temporary' files.
 
 What it looks like:
