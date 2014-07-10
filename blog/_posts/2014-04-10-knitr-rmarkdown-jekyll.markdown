@@ -14,11 +14,10 @@ After a bit of searching I came across this wonderful post at [jfisher-usgs](htt
 
 The [knitr](http://yihui.name/knitr/) package provides an easy way to embed 
 [R](http://www.r-project.org/) code in a [Jekyll-Bootstrap](http://jekyllbootstrap.com/) 
-blog post. The only required input is an **R Markdown** source file. The file I used in this example is <code>"2014-04-10-knitr-rmarkdown-jekyll.rmd"</code>.
-<br />
+blog post. The only required input is an **R Markdown** source file. The file I used in this example is <code>"2014-04-10-knitr-rmarkdown-jekyll.rmd"</code>.  
 <br />
 
-## In R
+## 1. In R  
 
 Open the R Console and process the source file:
 
@@ -33,17 +32,16 @@ KnitPost <- function(input, base.url = "/") {
   knit(input, envir = parent.frame())
 }
 KnitPost("2014-04-10-knitr-rmarkdown-jekyll.rmd")
-{% endhighlight %}
+{% endhighlight %}  
 <br />
 
-## Move the files
+## 2. Move the files  
 
 Move the resulting image folder *2014-04-10-knitr-rmarkdown-jekyll* and **Markdown** file *2014-04-10-knitr-rmarkdown-jekyll.md* to the local repository.
-The KnitPost function assumes that the image folder will be placed in a **figs/** folder located at the root of the repository.
-<br />
+The KnitPost function assumes that the image folder will be placed in a **figs/** folder located at the root of the repository.  
 <br />
 
-## Modify your css (once-off)  
+## 3. Modify your css (once-off)  
 
 Add the following CSS code to the appropriate css file to center images:
 
@@ -52,7 +50,7 @@ Add the following CSS code to the appropriate css file to center images:
       margin: auto;
     }
 
-That's it.
+That's it. 
 
 ***
 
@@ -81,19 +79,18 @@ par(mar = c(4, 4, 0.1, 0.1), omi = c(0, 0, 0, 0))
 plot(cars)
 {% endhighlight %}
 
-![center](/figs/2014-04-10-knitr-rmarkdown-jekyll_rmd/fig1.png) 
+![center](/figs/2014-04-10-knitr-rmarkdown-jekyll_rmd/fig1.png)
 
 ##### Figure 1: Caption
 <br />
-
 {% highlight r %}
 par(mar = c(2.5, 2.5, 0.5, 0.1), omi = c(0, 0, 0, 0))
 filled.contour(volcano)
 {% endhighlight %}
 
-![center](/figs/2014-04-10-knitr-rmarkdown-jekyll_rmd/fig2.png) 
+![center](/figs/2014-04-10-knitr-rmarkdown-jekyll_rmd/fig2.png)
 
-##### Figure 2: Caption
+##### Figure 2: Caption  
 
 And don't forget your session information for proper reproducible research.
 
@@ -123,8 +120,7 @@ sessionInfo()
 ## 
 ## loaded via a namespace (and not attached):
 ## [1] evaluate_0.5.3 formatR_0.10.3 stringr_0.6.2  tools_3.1.0
-{% endhighlight %}
-<br />
+{% endhighlight %}<br />
 
 ***
 

@@ -1,0 +1,30 @@
+---
+layout: default
+title: Workshops & Tutorials
+category: workshops&tutorials
+---
+
+<div>
+  <h1>Workshops:</h1>
+    <p>A list of workshops that I've put together over the years.</p>
+
+      <ul class="posts">
+        {% for post in site.posts %}
+          {% if post.categories contains 'workshop' %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+  <h1>Tutorials:</h1>
+    <p>Here I will add various tutorials.</p>
+
+      <ul class="posts">
+        {% for post in site.posts %}
+          {% if post.categories contains 'tutorial' %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+</div>
