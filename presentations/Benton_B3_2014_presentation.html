@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Miles Benton" />
+  <meta name="date" content="2014-11-25" />
+  <title>As Time Goes By: Longitudinal profiling of DNA methylation</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="slidy_css/slidy_mod.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">As Time Goes By: Longitudinal profiling of DNA methylation</h1>
+  <p class="author">
+Miles Benton
+  </p>
+  <p class="date">November 25, 2014</p>
+</div>
+<div id="epigenetics-what-is-it" class="slide section level2">
+<h1>Epigenetics: what is it?</h1>
+<h3 id="epi-greekoverabove-genetics">Epi-(GREEK:over,above) genetics</h3>
+<ul>
+<li>heritable changes in gene expression/phenotype</li>
+<li>functionally relevant changes, doesn't modfiy underlying genomic sequence</li>
+</ul>
+<p></br></p>
+<h3 id="several-mechanisms">Several mechanisms</h3>
+<ul>
+<li>Histone modifications (Acetylation and Methylation)</li>
+<li>microRNA's</li>
+<li>lncRNA's</li>
+<li><strong>DNA Methylation</strong></li>
+</ul>
+</div>
+<div id="dna-methylation-a-brief-overview" class="slide section level2">
+<h1>DNA Methylation: a brief overview</h1>
+<p>Methylation can be thought of as punctuation for the genome:</p>
+<blockquote>
+<p><em>&quot;Woman without her man is nothing.&quot;</em></p>
+</blockquote>
+<div class="incremental">
+<blockquote>
+<p><em>&quot;Woman<strong>,</strong> without her man<strong>,</strong> is nothing.&quot;</em></p>
+</blockquote>
+</div>
+<div class="incremental">
+<blockquote>
+<p><em>&quot;Woman<strong>!</strong> Without her<strong>,</strong> man is nothing.&quot;</em></p>
+</blockquote>
+</div>
+</div>
+<div id="dna-methylation-a-brief-overview-1" class="slide section level2">
+<h1>DNA Methylation: a brief overview</h1>
+<ul>
+<li>5'methylation of cytosine
+<ul>
+<li>typically at CpG dinucleotide</li>
+<li>result is a reduction of gene expression (though there are exceptions)</li>
+</ul></li>
+</ul>
+<div class="figure">
+<img src="/presentations/figures/CpG_methylation_both.png" />
+</div>
+<ul>
+<li>Methylation is heritable - imprinting</li>
+<li><strong>BUT</strong> is also dynamic: response to environment &amp; other stimuli</li>
+</ul>
+</div>
+<div id="k-arrays-the-technology" class="slide section level2">
+<h1>450k Array's: the technology</h1>
+<p>The Illumina Human 450K Methylation Chip:</p>
+<ul>
+<li>Genome Wide: has &gt;450,000 probes (individual CpG sites)</li>
+<li>high-throughput and fast (12 samples per chip)</li>
+<li>GRC within IHBI now have capability to run these</li>
+</ul>
+<div class="incremental">
+<ul>
+<li>DNA is Bisulfite converted, fragmented and hybridised</li>
+<li>difference in intensity between meth/unmeth probes gives <span class="math">\(\beta\)</span>.</li>
+</ul>
+<p><span class="math">\[\beta = \frac{meth}{(meth + unmeth + 100)}\]</span></p>
+<ul>
+<li>values range between 0-1: can think of as percent methylation</li>
+</ul>
+</div>
+</div>
+<div class="slide section level2">
+
+<div class="figure">
+<img src="/presentations/figures/Example_Beta_plot_edit.png" />
+</div>
+</div>
+<div id="investigating-longitudinal-methylation-profiles-the-design" class="slide section level2">
+<h1>Investigating Longitudinal Methylation Profiles: the design</h1>
+<p>Now we had this shiny new machine...</p>
+<ul>
+<li>we needed a pilot study to:
+<ul>
+<li>put the Illumina HiScan through it's paces</li>
+<li>help with training</li>
+<li>hopefully provide some interesting data (!)</li>
+</ul></li>
+</ul>
+<div class="incremental">
+<p>What we came up with:</p>
+<ul>
+<li>12 samples, healthy NI females
+<ul>
+<li>aged matched</li>
+<li>never smoked, not on med's, healthy body metrics, etc.</li>
+</ul></li>
+<li>two time-points, year 2000 and 2009/2010 follow-up</li>
+<li>run across two Illumina 450k methylation chips</li>
+</ul>
+</div>
+</div>
+<div id="investigating-longitudinal-methylation-profiles-the-approach" class="slide section level2">
+<h1>Investigating Longitudinal Methylation Profiles: the approach</h1>
+<ul>
+<li>Quality Control (removal of multiple-mapping and cross-reactive probes) saw a reduction in total CpGs to <strong>442,298</strong></li>
+<li>R package <code>glmnet</code>
+<ul>
+<li>a binomal model with an elastic net was applied across all available CpGs (with time-point as bivariate)</li>
+</ul></li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citation</span>(<span class="st">&#39;glmnet&#39;</span>)</code></pre>
+<blockquote>
+<p>Jerome Friedman, Trevor Hastie, Robert Tibshirani (2010). Regularization Paths for Generalized Linear Models via Coordinate Descent. Journal of Statistical Software, 33(1), 1-22. URL http://www.jstatsoft.org/v33/i01/.</p>
+</blockquote>
+<div class="incremental">
+<ul>
+<li>PCA was used to visualise the separation of the individuals and variables across the top two components
+<ul>
+<li>(R package <code>FactoMineR</code>)</li>
+</ul></li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citation</span>(<span class="st">&#39;FactoMineR&#39;</span>)</code></pre>
+<blockquote>
+<p>Francois Husson, Julie Josse, Sebastien Le and Jeremy Mazet (2014). FactoMineR: Multivariate Exploratory Data Analysis and Data Mining with R. R package version 1.27. http://CRAN.R-project.org/package=FactoMineR</p>
+</blockquote>
+</div>
+</div>
+<div id="results-it-worked" class="slide section level2">
+<h1>Results: it worked!</h1>
+<div class="figure">
+<img src="/presentations/figures/longitudinal_example_plot.png" alt="The two CpG sites showing largest difference from glmnet analysis" /><p class="caption">The two CpG sites showing largest difference from <code>glmnet</code> analysis</p>
+</div>
+</div>
+<div id="results-pca-based-separation-of-individuals" class="slide section level2">
+<h1>Results: PCA based separation of individuals</h1>
+<div class="figure">
+<img src="/presentations/figures/longitudinal_PCAplot.png" alt="Principle component plot showing separation of individuals at two time-points based on methylation profile." /><p class="caption">Principle component plot showing separation of individuals at two time-points based on methylation profile.</p>
+</div>
+</div>
+<div id="results-pca-based-separation-of-variables" class="slide section level2">
+<h1>Results: PCA based separation of variables</h1>
+<div class="figure">
+<img src="/presentations/figures/longitudinal_PCAplot_variables.png" alt="Principle component plot showing separation of the two time-points based on methylation profile." /><p class="caption">Principle component plot showing separation of the two time-points based on methylation profile.</p>
+</div>
+</div>
+<div id="a-few-points-of-interest-before-moving-forwards..." class="slide section level2">
+<h1>A few points of interest before moving forwards...</h1>
+<p>A quick summary thus far...</p>
+<p></br></p>
+<div class="incremental">
+<ul>
+<li>identified <strong>147</strong> CpG sites exhibiting differential methylation over ~10 years in the NI cohort
+<ul>
+<li>interestingly <strong>95%</strong> were located in genes, with the majority of these in 'traditional' control regions</li>
+<li>commonly see many more unannotated 'hits' (intergenic regions)</li>
+<li>is not unusual to have <strong>~25-40%</strong> of associated CpGs in unannotated regions</li>
+</ul></li>
+</ul>
+</div>
+<div class="incremental">
+<p></br></p>
+<ul>
+<li>this potentially speaks to the importance of these genes and their regulation over time</li>
+</ul>
+</div>
+</div>
+<div id="methylation-vs-phenotypic-traits-over-time" class="slide section level2">
+<h1>Methylation vs Phenotypic Traits Over Time</h1>
+<h3 id="the-idea">The Idea</h3>
+<ul>
+<li>investigate associations between change in (<span class="math">\(\Delta\)</span>) methylation and phenotypic traits (measured over ~10 years)</li>
+<li>there were <strong>25</strong> <span class="math">\(\Delta\beta\)</span> (selected based on effect size)
+<ul>
+<li>&gt; absolute 4% methylation change (hopefully can validate)</li>
+</ul></li>
+<li><strong>23</strong> <span class="math">\(\Delta\)</span>traits were available between both NIHS data sets</li>
+</ul>
+<h3 id="findings">Findings</h3>
+<ul>
+<li>identified <strong>22</strong> 'significant' correlations (12 traits and 12 CpGs), see <strong>Table 1</strong>.</li>
+<li>the top correlation was between delta <strong>glucose</strong> and delta <strong>cg06642177</strong>
+<ul>
+<li>Pearson's <strong>r = 0.84</strong> (p-value = 0.001)</li>
+</ul></li>
+</ul>
+</div>
+<div class="slide section level2">
+
+<p><strong>Table 1:</strong> Longitudinal trait vs beta value correlation statistics for 12 healthy NI females.</p>
+<pre><code>|  trait     | CpG        | cor.value     | p.value      |
+|----------- |------------|---------------|--------------|
+| d.alt      | cg18500714 | -0.5796233416 | 0.0482359077 |
+| d.alt      | cg04794887 | -0.6381008029 | 0.025564905  |
+| d.alt      | cg27016262 | -0.7124328017 | 0.0093247438 |
+| d.alt      | cg06642177 | -0.7798492312 | 0.0027763967 |
+| d.bf       | cg27016262 | 0.7351135612  | 0.0154192745 |
+| d.bf       | cg07786668 | 0.6624277234  | 0.0368795466 |
+| d.bf       | cg18500714 | 0.6483647227  | 0.0425912778 |
+| d.bmi      | cg27016262 | 0.6333791614  | 0.0270294857 |
+| d.bmi      | cg07786668 | 0.6310750842  | 0.027765765  |
+| d.chloride | cg06218726 | 0.6629191637  | 0.0187945604 |
+| d.dbp      | cg10115490 | 0.6640518904  | 0.0362552274 |
+| d.glu      | cg06642177 | 0.8442251682  | 0.0010810992 |
+| d.glu      | cg27016262 | 0.7805149555  | 0.0045853407 |
+| d.glu      | cg25090514 | 0.7414520979  | 0.0090124148 |
+| d.glu      | cg18764107 | 0.6377645135  | 0.0347596811 |
+| d.ldl      | cg00820581 | -0.6272368431 | 0.0290242818 |
+| d.tprot    | cg04794887 | -0.5995077491 | 0.0393664944 |
+| d.trigs    | cg25139493 | -0.5889619589 | 0.0439116053 |
+| d.urea     | cg00820581 | -0.6366739869 | 0.0260012675 |
+| d.wc       | cg18764107 | 0.6050502658  | 0.0485780667 |
+| d.wc       | cg10241347 | -0.6443728209 | 0.0323463379 |
+| d.weight   | cg07786668 | 0.6123769879  | 0.0342859971 |</code></pre>
+</div>
+<div class="slide section level2">
+
+<div class="figure">
+<img src="/presentations/figures/deltaBeta_vs_deltaGlu_141016.png" alt="Top four correlations between \Deltaglucose and \Deltamethylation." /><p class="caption">Top four correlations between <span class="math">\(\Delta\)</span>glucose and <span class="math">\(\Delta\)</span>methylation.</p>
+</div>
+</div>
+<div id="serum-and-glucocorticoid-regulated-kinase-1-sgk1" class="slide section level2">
+<h1>Serum and glucocorticoid-regulated kinase 1 (<strong><em>SGK1</em></strong>)</h1>
+<p>The top correlation noted above was with a probe located in the transcription start site of <em>SGK1</em></p>
+<blockquote>
+<p><em>Serum and glucocorticoid-regulated kinase 1, or SGK1, belongs to a family of serine/threonine kinases that is under acute transcriptional control by several stimuli, including serum and glucocorticoids. The kinase is activated by insulin and growth factors via phosphatidylinositide-3-kinase, phosphoinositide-dependent kinase PDK1 and mammalian target of rapamycin mTORC2.</em></p>
+</blockquote>
+<div class="incremental">
+<ul>
+<li>seems biologically plausible and interesting</li>
+<li>follow-up:
+<ul>
+<li>additional samples (healthy males)</li>
+<li>'unhealthy' samples</li>
+<li>functional work?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="identification-of-differentially-methylated-regions-dmrs" class="slide section level2">
+<h1>Identification of Differentially Methylated Regions (DMRs)</h1>
+<p>The R package <code>ChAMP</code> was used to generate a list of DMRs. <code>ChAMP</code> uses a feature based probe-lasso method to extract regions enriched for differentially methylated CpG sites.</p>
+<p><strong>Table 2:</strong> Identified DMRs using <code>ChAMP</code> probe-lasso method</p>
+<pre><code>| probeID    | CHR | gene.1   | feature | cgi    | dmr.start | dmr.end   | dmr.p   | deltaBeta |
+|------------|-----|----------|---------|--------|-----------|-----------|---------|-----------|
+| cg02435109 | 5   | ANKH     | 1stExon | shore  | 14871777  | 14871913  | 3.8E-07 | 0.028     |
+| cg18001714 | 5   | ANKH     | TSS200  | shore  | 14871777  | 14871913  | 3.8E-07 | 0.015     |
+| cg09238598 | 5   | ANKH     | TSS200  | shore  | 14871777  | 14871913  | 3.8E-07 | 0.059     |
+| cg08522087 | 5   | ANKH     | TSS200  | shore  | 14871777  | 14871913  | 3.8E-07 | 0.056     |
+| cg04233747 | 5   | PRELID2  | TSS200  | island | 145214970 | 145214988 | 8.2E-05 | 0.028     |
+| cg07391436 | 5   | PRELID2  | TSS200  | island | 145214970 | 145214988 | 8.2E-05 | 0.018     |
+| cg02750935 | 5   | PRELID2  | TSS200  | island | 145214970 | 145214988 | 8.2E-05 | 0.020     |
+| cg23427963 | 10  | IDI1     | 1stExon | island | 1094993   | 1095083   | 6.6E-05 | 0.030     |
+| cg01098656 | 10  | IDI1     | TSS200  | island | 1094993   | 1095083   | 6.6E-05 | 0.022     |
+| cg09185754 | 10  | IDI1     | TSS200  | island | 1094993   | 1095083   | 6.6E-05 | 0.012     |
+| cg18207091 | 14  | TOMM20L  | Body    | island | 58862886  | 58863079  | 1.3E-04 | 0.015     |
+| cg18457249 | 14  | TOMM20L  | Body    | island | 58862886  | 58863079  | 1.3E-04 | 0.009     |
+| cg16257101 | 14  | TOMM20L  | Body    | island | 58862886  | 58863079  | 1.3E-04 | 0.027     |
+| cg01731839 | 16  | C16orf88 | TSS1500 | island | 19729727  | 19729803  | 1.1E-04 | 0.022     |
+| cg09901735 | 16  | C16orf88 | TSS1500 | island | 19729727  | 19729803  | 1.1E-04 | 0.015     |
+| cg03067068 | 16  | C16orf88 | TSS1500 | island | 19729727  | 19729803  | 1.1E-04 | 0.011     |
+| cg14589466 | 17  | USP43    | TSS200  | island | 9548885   | 9548911   | 1.9E-04 | 0.018     |
+| cg12869623 | 17  | USP43    | TSS200  | island | 9548885   | 9548911   | 1.9E-04 | 0.023     |
+| cg14372333 | 17  | USP43    | TSS200  | island | 9548885   | 9548911   | 1.9E-04 | 0.017     |</code></pre>
+</div>
+<div class="slide section level2">
+
+<div class="figure">
+<img src="/presentations/figures/DMR_ANKH_14871913_141104.png" alt="Example DMR identified in the TSS200 region of ANKH." /><p class="caption">Example DMR identified in the TSS200 region of <em>ANKH</em>.</p>
+</div>
+</div>
+<div id="what-about-age-you-ask" class="slide section level2">
+<h1>What about age you ask?</h1>
+<p>Good question!</p>
+<p></br></p>
+<div class="incremental">
+<ul>
+<li>additional modelling of age revealed a separate series of distinct markers, independent of those identified to change longitudinally</li>
+</ul>
+<p></br></p>
+<ul>
+<li>this finding suggests that specific methylation profiles are dynamically changing in response to various environmental stimuli independent of the effects of the ageing process</li>
+</ul>
+</div>
+</div>
+<div class="slide section level2">
+
+<div class="figure">
+<img src="/presentations/figures/AGE_DDO_sm.png" alt="Example age associations with CpGs in DDO." /><p class="caption">Example age associations with CpGs in <em>DDO</em>.</p>
+</div>
+</div>
+<div id="lots-more-to-do..." class="slide section level2">
+<h1>Lots more to do...</h1>
+<ul>
+<li>generate and analyse data for 12 healthy NI males
+<ul>
+<li>compare and contrast males and females</li>
+</ul></li>
+<li>bring in gene expression data?
+<ul>
+<li>explore correlations between CpG/transcript</li>
+<li>at this stage we only have one time point for expression, future recollection?</li>
+</ul></li>
+<li>can also add in SNP data (~8M SNPs imputed against 1000 Genomes)
+<ul>
+<li>further correlation, structure?</li>
+</ul></li>
+<li>continue to investigate the difference between longitudinal 'jumps' and aging
+<ul>
+<li>mine plentiful public data</li>
+</ul></li>
+<li>begin to explore longitudinal profiles in 'non-healthy'/non-control individuals</li>
+</ul>
+<div class="incremental">
+<p></br></p>
+<p style='text-align: center;'>
+<strong>PUBLISH!!</strong>
+</p>
+
+</div>
+</div>
+<div id="acknowledgements" class="slide section level2">
+<h1>Acknowledgements</h1>
+<p></br></p>
+<p style='text-align: center;'>
+<strong><em>Norfolk Island Health Study &amp; Lab Head:</em></strong>
+</p>
+<p style='text-align: center;'>
+Prof Lyn Griffiths
+</p>
+<p></br></p>
+<p style='text-align: center;'>
+<strong><em>Genomics Research Centre:</em></strong>
+</p>
+<p style='text-align: center;'>
+Dr Rod Lea
+</p>
+<p style='text-align: center;'>
+Dr Heidi Sutherland
+</p>
+<p style='text-align: center;'>
+Dr Larisa Haupt
+</p>
+<p></br></p>
+<p style='text-align: center;'>
+<strong><em>...and of course a very large thank you to all the individuals that took part in the study.</em></strong>
+</p>
+
+</div>
+</body>
+</html>
