@@ -112,6 +112,12 @@ div.handout {
 
 div.slide.titlepage {
   text-align: center;
+  background: #CEE3F6;
+  background-image: url(../figures/ihbiLogo.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 70%;
+  background-size: 510px 125px;
 }
 
 div.slide.titlepage h1 {
@@ -121,9 +127,9 @@ div.slide.titlepage h1 {
 
 div.slide h1 {
   text-align: center;
-  padding-left: 0;
+  padding-left: 20;
   padding-right: 20pt;
-  padding-top: 4pt;
+  padding-top: 20pt;
   padding-bottom: 4pt;
   margin-top: 0;
   margin-left: 0;
@@ -133,6 +139,7 @@ div.slide h1 {
   font-size: 160%;
   line-height: 1.2em;
   background: transparent;
+  color: #2B679B;
 }
 
 @media screen and (max-device-width: 1024px)
