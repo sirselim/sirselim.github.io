@@ -113,7 +113,7 @@ div.handout {
 div.slide.titlepage {
   text-align: center;
   background: #CEE3F6;
-  background-image: url(presentations/figures/ihbiLogo.jpg);
+  background-image: url(../presentations/figures/ihbiLogo.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 70%;
