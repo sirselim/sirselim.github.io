@@ -20,7 +20,7 @@ The workshop manual is available in the form of the `GWAS_workshop.pdf` file fro
 
 #### Set up
 
-  1. Either clone into this repository or download via the `Download ZIP` button to the right, then start `R` and ensure this repository is set as your working directory.
+  1. Either clone into this [repository](https://github.com/sirselim/Intro_to_GWAS) or download via the `Download ZIP` button to the right (on GitHub), then start `R` and ensure this repository is set as your working directory.
   2. In `R` run the following: `source('scripts/GWAS_workshop_setup.R')`. The GWAS_workshop_setup.R script is provided to automatically:
     + extract the example data to example/
     + download OS specific version of `plink` 
