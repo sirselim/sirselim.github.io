@@ -6,9 +6,7 @@ date:   2015-06-26
 categories: workshop PLINK R GWAS
 ---
 
-##Introduction to Genomewide Association Studies using PLINK and R###
-
-###Overview
+##Introduction to Genomewide Association Studies using PLINK and R
 
 In this workshop we will explore the basics of performing Genomewide Association Studies (GWAS) using a combination of the software `plink` (http://pngu.mgh.harvard.edu/~purcell/plink/) and `R` (http://www.r-project.org/).
 
