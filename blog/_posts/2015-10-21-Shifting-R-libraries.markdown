@@ -6,7 +6,7 @@ date:   2015-10-21
 categories: R package-management library
 ---
 
-I recently noticed that my `/` partition was not so slowly running out of space. This was somewhat alarming as I'd given it a generous 23Gb of SSD space which is surely overkill for a Debian install...
+I recently noticed that my `/` (root) partition was not so slowly running out of space. This was somewhat alarming as I'd given it a generous 23Gb of SSD space which is surely overkill for a Debian install...
 
 Well it turns out that the culprit was `R`, more specifically the default site-library located in `/usr/local/lib/R/site-library`:  
 
@@ -15,7 +15,7 @@ $ sudo du -h /usr/local/lib/R/site-library
 6.0G	/usr/local/lib/R/site-library/
 ```
 
-That's **6Gb** of R packages dominating my root directory, thanks Bioconductor! Actually I'm most likely to blame through my use of running `R` and `RStudio` via `sudo`, a bad habit I got into because `RStudio` was a little 'quirky' running as a normal user on Debain (though I haven't checked this in a while).
+That's **6Gb** of R packages dominating my root directory, thanks Bioconductor! Actually I'm most likely to blame through my running of `R` and `RStudio` via `sudo`, a bad habit I got into because `RStudio` was a little 'quirky' running as a normal user on Debain (though I haven't checked this in a while).
 
 After piecing together information from various searches I thought I'd document how I dealt with moving and reassigning this site-library containing the majority of my `R` packages.
 
@@ -35,7 +35,7 @@ $ locate Renviron
 /etc/R/Renviron.site
 ```
 
-For more information on these files, and for a better overview of the R startup routine type `help(startup)` in `R`, there is a wealth of information.
+For more information on these files, and for an in-depth overview of the R startup routine type `help(startup)` in `R`, there is a wealth of information.
 
 First file to modify is `Renviron` (I've done this using `nano`, obviously you have many options to edit text files):
 
