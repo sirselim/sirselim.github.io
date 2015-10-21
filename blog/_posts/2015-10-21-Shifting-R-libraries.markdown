@@ -58,6 +58,7 @@ Now that these changes have been made it's time to copy across all the packages 
 ```sh
 $ sudo cp -rv /usr/local/lib/R/site-library /home/R/
 ```
+*Note: the cp command above will move the site-library directory and all its contents, hence me leaving site-library off /home/R/*
 
 The `-rv` arguments tell the `cp` command to copy recursively (all directories and their files) and output verbosely. 
 
