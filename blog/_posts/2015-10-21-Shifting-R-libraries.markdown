@@ -1,14 +1,14 @@
 ---
 layout: post
 category: blog
-title:  "A new tool from Git for creating beautiful interactive books"
+title:  "That's my root partition you're hogging! Moving R site-library on Unix machines."
 date:   2015-10-21
 categories: R package-management library
 ---
 
 I recently noticed that my `/` partition was not so slowly running out of space. This was somewhat alarming as I'd given it a generious 23Gb of SSD space which is surely overkill for a Debian install...
 
-Well it turns out that the culprit was `R`, more specifically the default `site-library` located in `/usr/local/lib/R/site-library`:  
+Well it turns out that the culprit was `R`, more specifically the default site-library located in `/usr/local/lib/R/site-library`:  
 
     sudo du -h /usr/local/lib/R/site-library
     6.0G	/usr/local/lib/R/site-library/
