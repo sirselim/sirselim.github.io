@@ -62,7 +62,7 @@ $ sudo cp -rv /usr/local/lib/R/site-library /home/R/
 
 The `-rv` arguments tell the `cp` command to copy recursively (all directories and their files) and output verbosely. 
 
-With that done time to fire up `R` and check to see if a) `.libPaths()` outputs the correct library paths, and b) all the packages are visible and working. I was initially a little worried, even though my `.libPaths()` looked correct I couldn't find my packages... Turns out there was a little typo, once corrected everything was working as expected. Nice!
+With that done it's time to fire up `R` and check to see if a) `.libPaths()` outputs the correct library paths, and b) all the packages are visible and working. I was initially a little worried, even though my `.libPaths()` looked correct I couldn't find my packages... Turns out there was a little typo, once corrected everything was working as expected. Nice!
 
 So the last thing to do is to free up all that space on the root partition. I didn't do this earlier as it's nice to have a back up plan should something go horribly wrong! If the worst were to happen and I couldn't get my new library operating I knew all I had to do was return the paths to default in `Renviron` and `Renviron.site`. However, no we are up and running time to toast that great waste of root space:
 
