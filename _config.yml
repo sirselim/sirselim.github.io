@@ -3,7 +3,7 @@ name: Down the rabbit hole
 future:      true
 lsi:         false
 highlighter: rouge
-markdown:    redcarpet
+markdown:    kramdown
 
 maruku:
   use_tex:    false
