@@ -2,7 +2,7 @@ name: Down the rabbit hole
 
 future:      true
 lsi:         false
-highlighter: pygments
+highlighter: rouge
 markdown:    redcarpet
 
 maruku:
