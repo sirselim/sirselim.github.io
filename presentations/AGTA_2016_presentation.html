@@ -42,7 +42,7 @@
                     <!-- </small> -->
                     </p>
                     <p style="font-size: 14px">
-                    Institue of Health and Biomedical Innovation, Queensland University of Technology, Brisbane, Australia <br>
+                    Institute of Health and Biomedical Innovation, Queensland University of Technology, Brisbane, Australia <br>
                     </p>
                     <p style="font-size: 20px">
                       <a href="http://www.agtaconference.org/" target="blank">AGTA 2016 - Pullman Hotel, Auckland, New Zealand</a>
@@ -50,6 +50,9 @@
                     <p style="font-size: 16px">
                       9-12<sup style="font-size: 10px">th</sup> October 2016
 					          </p>
+                  <center>
+                    <img src="images/ihbi_building.jpg" width=40% />
+                  </center>
                 </section>
 
                 <!-- presentation overview -->
@@ -79,7 +82,7 @@
                     Here is more on isolates
                   </section>
                   <section>
-                    Extended familys/pedigrees - identifying rare variants
+                    Extended family's/pedigrees - identifying rare variants
                   </section>
                 </section> -->
 
@@ -93,15 +96,20 @@
                   </section>
                   <section>
                     <img src="images/NI_map.png" width=60% />
+                    <p style="font-size: 20px"><a href="https://github.com/gringer/bioinfscripts/blob/master/perlshaper.pl" target="blank">https://github.com/gringer/bioinfscripts/blob/master/perlshaper.pl</a></p>
                   </section>
                   <section>
                     <img src="images/NorfolkIsland.png">
                   </section>
                   <section>
-                    <img src="images/NIpedigree.png">
-                    <ul>
-                      <li> ~6000 member pedigree </li>
-                    </ul>
+                    <img src="images/NIpedigree.png"><br />
+                    ~6000 member pedigree
+                  </section>
+                  <section>
+                    <img src="images/NI_ped_mt.png"><br />
+                      40% of current population haplogroup B<br />
+
+                      <p style="font-size: 14px">Benton MC <i>et al.,</i>: <i>“Mutiny on the Bounty”: the genetic history of Norfolk Island reveals extreme gender-biased admixture.</i> Investigative Genetics 2015, 6:11.</p>
                   </section>
                   <section>
                     <h3>Norfolk Island Health Study</h3>
@@ -188,6 +196,13 @@
                       <p style="text-align: center; font-size: largest;">QUT HPC facility</p>
                   </section>
                   <section>
+                    <img src="images/ped108.png">
+                  </section>
+                  <section>
+                    <h3>Founder Effect Variants</h3>
+                    <a href="NI_WGS_filtering_flowchart.html">Filtering strategy outline</a>
+                  </section>
+                  <section>
                   <h4>Total variants:</h4>
                     <img src="images/WGS_variants.png" width=35% /">
                   <h4>Functional* variants:</h4> 
@@ -195,9 +210,8 @@
                     <p style="text-align: center; font-size: medium;">*Functional = predicted to be damaging in 5 in-silico tests (SIFT, POLYPHEN2, MUTATIONTASTER, PROVEAN, MUTATION ASSESSOR)</p>
                   </section>
                   <section>
-                    <h3>Founder Effect Variants</h3>
+                    <h3><i>ACOT4</i> (Acyl-CoA Thioesterase 4)</h3>
                     <ul>
-                    <li> <i>ACOT4</i> (Acyl-CoA Thioesterase 4) </li>
                     <li> Regulation of lipid metabolism </li>
                     <li> Amino acid = p.TYR190ASN </li>
                     <li> Freq A = 0.0099 (EUR), 0 (AFR) and 0 (EAS) </li>
@@ -211,7 +225,7 @@
                   </section>
                   <section>
                     <h3>Glaucoma</h3>
-                    <p>There is a higher than usual prevalence of Glaucoma on NI, we explored the WGS data for assocated variants</p><br />
+                    <p>There is a higher than usual prevalence of Glaucoma on NI, we explored the WGS data for associated variants</p><br />
                     <h5>Variant Filtering Strategy</h5>
                     <ol style="font-size: 30px;">                      
                       <li> filtered vcf files at 14% MAF </li>
@@ -224,6 +238,7 @@
                   <section>
                     <h3>Variant information</h3>
                     <ul style="font-size: 30px;">
+                      <li> Esterase-D (<i>ESD</i>)</li>
                       <li> reference allele = C </li>
                       <li> alternate allele = T </li>
                       <li> MAF CASES = 0.43 vs MAF CONTROLS = 0.05 </li>
@@ -231,6 +246,9 @@
                     </ul> 
                     <p>Predicted as deleterious/damaging</p>
                     <p>Gene has been previously associated with Retinoblastoma and Wilson's disease (copper deposits around the cornea)</p>
+                    <center>
+                      <img src="images/esd.jpg" width=25% />
+                    </center>
                   </section>
                 </section>
 
@@ -290,14 +308,15 @@
                   </section>
                   <section>
                     Initial metrics<br>
-                    coverage<br>
-                    <p style="font-size: 20px";>
-                     - the lowest number of CpGs called for a given sample is 2.67M<br>
-                     - the highest number of CpGs called for a given sample is 7.52M<br>
-                     - the average across all samples is 3.48M<br>
-                     - on-target mapping rate across the 24 samples >95% average<br>
-                     - ~1.12M CpG sites in common across the 24 samples with at least 10 times coverage and on-target<br>
-                    </p>
+                    <ul>
+                      <li>coverage <span style="color:lightblue">~40x</span> ave</li>
+                      <li>lowest number of CpGs for a given sample is <span style="color:lightblue">2.67M</span></li>
+                      <li>highest number of CpGs for a given sample is <span style="color:lightblue">7.52M</span></li>
+                      <li>the average across all samples is <span style="color:lightblue">3.48M</span></li>
+                      <li>on-target mapping rate across the 24 samples >95% average</li><br>
+                    </ul>
+                    <br />
+                      <span style="color:lightblue"><b>~1.12M CpG sites in common across the 24 samples with at least 10 times coverage and on-target</b></span>
                   </section>
                   <section>
                     <h4>QC</h4>
@@ -325,7 +344,7 @@
                     <p>
                       <ul>
                         <li>assign parent of origin and then infer ASM</li>
-                        <li>gives the actual info rather than just knowning where an ASM event is</li>
+                        <li>gives the actual info rather than just knowing where an ASM event is</li>
                       </ul>
                     </p>
                     <li>promising method recently published for mice ASM - <span style="color:lightblue"><a href="https://github.com/FelixKrueger/SNPsplit" target="blank">SNPsplit (Krueger 2016)</a></span></li>
@@ -334,7 +353,7 @@
                   <section>
                     <h3>ASM regions</h3>
                     <ul>
-                      <li>Using a custom clustering method we identified ~1800 ASM regions (AMRs) conserved within the pedigree</li>
+                      <li>Using a custom clustering method we identified ~1800 ASM regions (AMRs) conserved within the pedigree</li><br />
                       <li>Many of these AMRs map to known and predicted imprinted genes</li>
                     </ul>
                   </section>
@@ -400,9 +419,19 @@
                   </section>
                 </section>
 
-                <!-- Acknowledgements  -->
+                <!-- summary slide -->
                 <section>
-                  <h3>Acknowledgements</h3>
+                  <h2>Summary</h2>
+                  <ul>
+                    <li>expanding upon our multi-layered NI data</li><br>
+                    <li>identification of founder effect variant associations</li><br>
+                    <li>initial ASM region and imprinting loci identification</li><br>
+                  </ul>          
+                </section>
+
+                <!-- acknowledgements  -->
+                <section>
+                  <h3>acknowledgements</h3>
                   <style type="text/css">
                   .tg  {border-collapse:collapse;border-spacing:0;border:none;margin:0px auto;}
                   .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 20px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
@@ -492,10 +521,23 @@
                   <span style="color:lightblue; font-size:20px"><b>The people of Norfolk Island who who volunteered for this study.</b></span>
                 </section>
 
+                  <section>
+                    <center>
+                      <img id="labgroup" src="images/IMG_1127.JPG" width=85% />
+                    </center>
+                  </section>
+
                 <!-- last slide, questions -->
                 <section>
                   <h2>Thank you</h2><br /> 
-                  <h2><span style="color:lightblue">questions?</span></h2>
+                  <h2><span style="color:lightblue">questions?</span></h2><br />
+                  ...and...<br>
+                  PhD scholarship and opportunity
+                  <center>
+                    <img src="images/otago.png" width=21.71% />
+                    <img src="images/ESR.jpeg" width=20% />
+                  </center>
+                  Donia Macartney-Coxson, Mik Black, & Miles Benton
                 </section>
 
             </div>
@@ -515,7 +557,7 @@
                 history: true,
                 center: true,
                 keyboard: true,
-                transition: 'slide', // none/fade/slide/convex/concave/zoom
+                transition: 'none', // none/fade/slide/convex/concave/zoom
                 // Optional reveal.js plugins
                 dependencies: [
                     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
