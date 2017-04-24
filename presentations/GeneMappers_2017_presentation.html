@@ -60,7 +60,7 @@
                 	<br />
                 	<p>
   					  <img src="images/github_logo.png" width=510px>
-                	  <img src="images/ASM_pres_QR_code.png" width=202px />
+                	  <img src="images/genemappers2017_qr.png" width=202px />
                 	</p><br />
                 	<a href="http://sirselim.github.io/presentations/AB3ACBS_2016_presentation.html" target="blank">http://sirselim.github.io/presentations.html</a>
                 </section>
@@ -151,7 +151,9 @@
                         <ul>
                           <li>fastqc, trimgalore</li>
                           <li>bismark, sambamba, picard tools</li> 
-                          <li>PileOMeth, R and methylkit</li>
+                          <li>methpipe (ASM estimation)</li>
+                          <li>MethylDackel (originally PileOMeth), R and methylkit</li>
+                          <li>Shiny webserver visualisation</li>
                         </ul>
                         <br />
                       <li>parallel processing enabled for local and remote machines</li>
@@ -173,6 +175,9 @@
                     </ul>
                     <br />
                       <span style="color:lightblue"><b>~1.12M CpG sites in common across the 24 samples with at least 10 times coverage and on-target</b></span>
+                  </section>
+                  <section>
+                  	<img src="images/NI_SeqCap_coverage.png" width="85%">
                   </section>
                   <section>
                     <h4>QC</h4>
@@ -224,7 +229,8 @@
                   <section>
                     <h2>Visualising ASM</h2>
                     <center>
-                      <img id="chr7_ASM" src="images/example_asm_chr7.png" width=85% />
+                      <img id="chr7_ASM" src="images/ASM_chr7_SNPs.png" width=85% />
+                      <span style="color:lightblue"><b>Chromosome 7</b></span>
                     </center>
                       <p style="text-align: center; font-size: 18px;">
                       Documented and predicted human imprinted loci are displayed in <span style="color:darkred"><b>darkred</b></span>.
@@ -258,17 +264,20 @@
                   </section>
                   <section>
                     <center>
-                      <img id="chr15_SNP" src="images/ASM_chr15_SNP_MAF.png" width=85% />
+                      <img id="chr15_SNP" src="images/ASM_chr15_SNP_MAF_update.png" width=85% />
+                      <span style="color:lightblue"><b>Chromosome 15</b></span>
                     </center>
                   </section>
                   <section>
                     <center>
-                      <img id="chr20_SNP" src="images/ASM_chr20_SNP_MAF.png" width=85% />
+                      <img id="chr20_SNP" src="images/ASM_chr20_SNP_MAF_update.png" width=85% />
+                      <span style="color:lightblue"><b>Chromosome 20</b></span>
                     </center>
                   </section>
                   <section>
                     <center>
-                      <img id="chr21_SNP" src="images/ASM_chr21_SNP_MAF.png" width=85% />
+                      <img id="chr21_SNP" src="images/ASM_chr21_SNP_MAF_update.png" width=85% />
+                      <span style="color:lightblue"><b>Chromosome 21</b></span>
                     </center>
                   </section>
                   <section>
@@ -278,7 +287,7 @@
                     <span style="font-size: 35%">Alves Da Silva AF, <i>et al.,</i>: <a href="http://www.ncbi.nlm.nih.gov/pubmed/27100087" target="blank"><i>Trisomy 21 alters DNA methylation in parent-of-origin-dependent and -independent manners.</i></a> PLoS One, 2016; 11: e0154108.</span>
                   </section>
                   <section>
-                  	<h3>What about sites which aren't conserved?</h3>
+                  	<h3>What about sites which aren't shared?</h3>
                   </section>
                   <section>
                   	<h4>Nice sanity check of method (X chromosome)</h4>
@@ -291,6 +300,12 @@
                     <h3>Epigenetic inheritance</h3>
                     Next thing is to move onto modeling the inheritance...<br />
                     ...with the help of our brilliant Bayesian statisticians!<br>
+                  </section>
+                  <section>
+                  	<img src="images/NI_ASM_chr10_genetic_161128.png" width="85%">
+                  </section>
+                  <section>
+                  	<img src="images/NI_ASM_chr17_example_161128.png" width="55%">                  	
                   </section>
                 </section>
 
