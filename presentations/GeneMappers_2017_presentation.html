@@ -167,7 +167,7 @@
                   <section>
                     <h3>Initial metrics</h3>
                     <ul>
-                      <li>coverage <span style="color:lightblue">~40x</span> ave</li>
+                      <li>coverage <span style="color:lightblue">~100x</span> average</li>
                       <li>lowest number of CpGs for a given sample is <span style="color:lightblue">2.67M</span></li>
                       <li>highest number of CpGs for a given sample is <span style="color:lightblue">7.52M</span></li>
                       <li>the average across all samples is <span style="color:lightblue">3.48M</span></li>
@@ -200,6 +200,7 @@
                       <ul style="font-size: 24px;">
                       <li>estimates ASM at each CpG site based on ratios of methylation</li>
                       <li>uses CpG pairs (assumes 'linkage')</li>
+                      <li>Fishers exact used (very sensitive to coverage)</li>
                       </ul>
                     </p>
                     <li>moving forward we want to use read data:</li>
