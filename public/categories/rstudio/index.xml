@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rstudio on ...Down the Rabbit Hole...</title>
+    <link>/categories/rstudio/</link>
+    <description>Recent content in Rstudio on ...Down the Rabbit Hole...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 01 Jul 2013 12:43:30 +1200</lastBuildDate>
+    
+	<atom:link href="/categories/rstudio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Introduction to R and RStudio</title>
+      <link>/2013/07/01/r-workshop/</link>
+      <pubDate>Mon, 01 Jul 2013 12:43:30 +1200</pubDate>
+      
+      <guid>/2013/07/01/r-workshop/</guid>
+      <description>This is a workshop I put together during my PhD in attempt to help others wanting to learn and ultise the power of R in their studies/work.
+In the mean time, a pdf version of this workshop can be downloaded here.
+Note: This workshop was last updated on the 5th October 2012, and I have good intentions of updating it - therefore it is a work in progress and may contain some dead links and outdated software versions, however the core concepts are still accurate.</description>
+    </item>
+    
+  </channel>
+</rss>

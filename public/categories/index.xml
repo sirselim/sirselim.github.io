@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on ...Down the Rabbit Hole...</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on ...Down the Rabbit Hole...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design</title>
+      <link>/categories/design/</link>
+      <pubDate>Thu, 11 Sep 2014 09:13:30 +1200</pubDate>
+      
+      <guid>/categories/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gwas</title>
+      <link>/categories/gwas/</link>
+      <pubDate>Fri, 26 Jun 2015 10:15:30 +1200</pubDate>
+      
+      <guid>/categories/gwas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inkscape</title>
+      <link>/categories/inkscape/</link>
+      <pubDate>Thu, 11 Sep 2014 09:13:30 +1200</pubDate>
+      
+      <guid>/categories/inkscape/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ni</title>
+      <link>/categories/ni/</link>
+      <pubDate>Wed, 01 Jun 2016 10:22:30 +1200</pubDate>
+      
+      <guid>/categories/ni/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nihs</title>
+      <link>/categories/nihs/</link>
+      <pubDate>Tue, 04 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/nihs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Source</title>
+      <link>/categories/open-source/</link>
+      <pubDate>Wed, 23 Jul 2014 11:05:30 +1200</pubDate>
+      
+      <guid>/categories/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plink</title>
+      <link>/categories/plink/</link>
+      <pubDate>Fri, 26 Jun 2015 10:15:30 +1200</pubDate>
+      
+      <guid>/categories/plink/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Poster</title>
+      <link>/categories/poster/</link>
+      <pubDate>Thu, 11 Sep 2014 09:13:30 +1200</pubDate>
+      
+      <guid>/categories/poster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Presentation</title>
+      <link>/categories/presentation/</link>
+      <pubDate>Tue, 22 Jul 2014 13:45:30 +1200</pubDate>
+      
+      <guid>/categories/presentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>/categories/project/</link>
+      <pubDate>Wed, 01 Jun 2016 10:22:30 +1200</pubDate>
+      
+      <guid>/categories/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/categories/r/</link>
+      <pubDate>Fri, 26 Jun 2015 10:15:30 +1200</pubDate>
+      
+      <guid>/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>/categories/resources/</link>
+      <pubDate>Wed, 23 Jul 2014 11:05:30 +1200</pubDate>
+      
+      <guid>/categories/resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rstudio</title>
+      <link>/categories/rstudio/</link>
+      <pubDate>Mon, 01 Jul 2013 12:43:30 +1200</pubDate>
+      
+      <guid>/categories/rstudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sequenceing</title>
+      <link>/categories/sequenceing/</link>
+      <pubDate>Wed, 01 Jun 2016 10:22:30 +1200</pubDate>
+      
+      <guid>/categories/sequenceing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>/categories/software/</link>
+      <pubDate>Wed, 23 Jul 2014 11:05:30 +1200</pubDate>
+      
+      <guid>/categories/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>/categories/tutorial/</link>
+      <pubDate>Fri, 26 Jun 2015 10:15:30 +1200</pubDate>
+      
+      <guid>/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wgs</title>
+      <link>/categories/wgs/</link>
+      <pubDate>Wed, 01 Jun 2016 10:22:30 +1200</pubDate>
+      
+      <guid>/categories/wgs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshop</title>
+      <link>/categories/workshop/</link>
+      <pubDate>Wed, 31 May 2017 10:00:33 +1200</pubDate>
+      
+      <guid>/categories/workshop/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

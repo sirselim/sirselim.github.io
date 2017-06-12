@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="an introduction to the world or R using the great RStudio">
+  <meta name="generator" content="Hugo 0.20.7" />
+
+  <title>An Introduction to R and RStudio &middot; ...Down the Rabbit Hole...</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="../../../../css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="../../../../css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../../../../css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../../../css/academicons.css"/>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="../../../../img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../../../about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../../../"><i class='fa fa-newspaper-o fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../../../projects/"><i class='fa fa-cogs fa-fw'></i>Projects</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../../../workshops-tutorials/"><i class='fa fa-question-circle fa-fw'></i>Tutorials</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../../../publications/"><i class='fa fa-list fa-fw'></i>Publications</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../../../presentations/"><i class='fa fa-picture-o fa-fw'></i>Presentations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../../../cv/cv_updated.pdf"><i class='fa fa-file-pdf-o fa-fw'></i>CV</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://github.com/sirselim"><i class='fa fa-github fa-fw'></i>GitHub</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://scholar.google.co.nz/citations?user=iEhBavEAAAAJ&amp;hl=en"><i class='ai ai-google-scholar fa-fw'></i>GoogleScholar</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://www.researchgate.net/profile/Miles_Benton"><i class='ai ai-researchgate fa-fw'></i>ResearchGate</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://www.researchgate.net/profile/Miles_Benton"><i class='fa fa-linkedin-square fa-fw'></i>LinkedIn</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://twitter.com/miles_benton"><i class='fa fa-twitter-square fa-fw'></i>Twitter</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://orcid.org/0000-0003-3442-965X"><i class='ai ai-orcid fa-fw'></i>ORCiD</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://www.mendeley.com/profiles/miles-benton/"><i class='ai ai-mendeley fa-fw'></i>Mendeley</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="http://rmarkdown.rstudio.com/">RMarkdown</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>An Introduction to R and RStudio</h1>
+  <h2>an introduction to the world or R using the great RStudio</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jul 2013, 12:43</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+</div>
+
+  <p>This is a workshop I put together during my PhD in attempt to help others wanting to learn and ultise the power of R in their studies/work.</p>
+
+<p>In the mean time, a pdf version of this workshop can be downloaded <a href="../../../../workshops-tutorials/Rworkshop_121001.pdf">here</a>.</p>
+
+<p><strong>Note:</strong> This workshop was last updated on the 5th October 2012, and I have good intentions of updating it - therefore it is a work in progress and may contain some dead links and outdated software versions, however the core concepts are still accurate.</p>
+
+<p>I&rsquo;m also aiming to have an online version of this workshop avaiable in the not too distant future (hopefully in GitBook format), watch this space!</p>
+
+<blockquote>
+<p>An Introduction to R: Preface</p>
+
+<p>This document is a collection of notes and useful titbits that I’ve hoarded over the few years since I’ve been learning R. I just want to reiterate that I am by no means an expert, and am constantly picking up new methods and techniques. The great thing about R (and, as I’m quickly learning, most programming languages) is there are many ways to achieve the same end point. More often than not when you’re starting out it’s about what’s easy to grasp and what actually works, as opposed to beautiful code and elegant design. Yes, sure there may well be a ‘better’ way of doing things, but if you’ve managed to stumble your way through a project and have got an end result then congratulations; give yourself a pat on the back!</p>
+
+<p>Enough about me, ‘what’s the deal with this workshop?’ you’re asking. Well since bioinformatics and high-throughput genomics applications are now quickly becoming ingrained in many labs, and data sets are expanding in size at a phenomenal rate – it is not uncommon to see some next gen sequencing data in the terabytes – there needs to be efficient and powerful ways to mine and analyse this data. R just happens to lend itself to this purpose, and is quickly becoming one of the major go-to tools for bioinformatics analysis. This in mind, R is still a programming language and generally these aren’t the easiest things to just pick up and learn.</p>
+
+<p>So that’s where this workshop comes in; this is my first workshop for those interested in applications of R in medical research, bioinformatics and high-throughput genomics. Somewhat of a pilot, the aim is to offer an initial grounding in R and set the platform for possible future workshops that will deal with handling and analysis of genomic data, i.e. microarrays. I have attempted to make this document as easy to follow as possible, and hope that those attending (and others who were unable to make it) will be able to take it away and use it as a reference and tutorial they can work through at their own pace.</p>
+
+<p>This document is broken into numerous sections1. The first couple offer information on where to get R/RStudio, how to install, and getting started. I’ve also included information about resources I’ve found invaluable whilst learning (in most cases these will have an html link). The actual workshop will be based on a core of four sections:</p>
+
+<ol>
+<li>A Brief Introduction to R Language and Programming</li>
+<li>Data Management in R</li>
+<li>Basic Statistical methods</li>
+<li>Basic Plotting/Graphing in R</li>
+</ol>
+
+<p>You might notice that these four sections are generally lighter on text – and contain much more code – than the initial ‘introduction’ of this document. This is because I will be talking around the code and examples as we go. I have included some barebones comments and explanations that you can hopefully refer back to at a later date if needed. Also after each section there is an exercise that aims to reinforce the ideas covered previously. At the very end of the document you’ll find a ‘cheat sheet’ that details some of the more common and useful functions/parameters utilised in R.</p>
+
+<p>Well that’s a brief synopsis of how things are planned to proceed, so good luck and I hope you enjoy.</p>
+</blockquote>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="../../../../2014/07/22/poster-design/">Considering Poster Design and Presentation</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="../../../../2014/07/22/poster-design/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="../../../../js/ui.js"></script>
+
+
+
+
+</body>
+</html>
+

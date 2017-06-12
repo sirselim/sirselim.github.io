@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gwas on ...Down the Rabbit Hole...</title>
+    <link>/categories/gwas/</link>
+    <description>Recent content in Gwas on ...Down the Rabbit Hole...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 26 Jun 2015 10:15:30 +1200</lastBuildDate>
+    
+	<atom:link href="/categories/gwas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction to Genomewide Association Studies</title>
+      <link>/2015/06/26/gwas-workshop/</link>
+      <pubDate>Fri, 26 Jun 2015 10:15:30 +1200</pubDate>
+      
+      <guid>/2015/06/26/gwas-workshop/</guid>
+      <description>In this workshop we will explore the basics of performing Genomewide Association Studies (GWAS) using a combination of the software plink (http://pngu.mgh.harvard.edu/~purcell/plink/) and R (http://www.r-project.org/).
+At a later stage (a separate workshop) we will also introduce the GenABEL package which offers additional functionality of genomic association analyses in R.
+This workshop is written to be accessible to a range of people, from those that have never performed any command-line work, to those that just want a refresher.</description>
+    </item>
+    
+  </channel>
+</rss>

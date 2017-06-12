@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rebuttal on ...Down the Rabbit Hole...</title>
+    <link>/tags/rebuttal/</link>
+    <description>Recent content in Rebuttal on ...Down the Rabbit Hole...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 02 Oct 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rebuttal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A nice how-to series for writing scientific communications</title>
+      <link>/2014/10/02/scientific-communication/</link>
+      <pubDate>Thu, 02 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/10/02/scientific-communication/</guid>
+      <description>How-to&amp;rsquo;s of writing scientific communications Very brief post to remind me to go back and read these in more detail!
+I&amp;rsquo;ve recently been asked to submit a couple of articles to Nature. One thing that seems to be an absolute must for even getting a look in to a journal such as this is a well written cover letter. Hence I went on the hunt for any tips/tricks/suggestions that were scattered around the internet.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Presentations on Down the Rabbit Hole</title>
+    <link>/presentations/</link>
+    <description>Recent content in Presentations on Down the Rabbit Hole</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 22 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/presentations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bootNet</title>
+      <link>/presentations/bootnet/</link>
+      <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/bootnet/</guid>
+      <description>bootNet project</description>
+    </item>
+    
+  </channel>
+</rss>
