@@ -1,0 +1,250 @@
+---
+title: "Bioinformatics for translational benefit"
+subtitle: "### \"visualisation and web based tools bring sequence data to the clinic\"<br/><br/>NHMRC Emerging Researcher Grant - Pitch"
+author: "Dr Miles Benton"
+date: "2017/07/28"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# .center[Motivation]
+
+**identification of known or novel pathogenic variants**
+  - found among a host of common and rare polymorphisms
+  - identification of clinically relevant variants is time consuming 
+    + large potential for analysis induced false negatives
+  - larger datasets (WES/WGS) contain [**thousands**]() to [**millions**]() of variants
+  - aggravated by complex conditions/disorders 
+    + multitudes of genes / mutations responsible for symptoms or important for treatment
+
+--
+
+**current tools are limited**
+
+--
+
+**bringing data back to the end-users**
+
+--
+
+**visualisation and interactivity incredibly powerful tools**
+
+--
+
+**I'm an emerging researcher (3 years out from PhD)**
+
+---
+class: inverse
+# .center[Major drivers for change] 
+
+**paywalls**
+
+  - nearly all software suites are licensed == '$$$'
+
+--
+<br/>
+<br/>
+
+**'blackbox' software**
+
+  - mysterious to users
+  - difficult/impossible to modified (closed-source)
+    + those not closed source are tailored to specific lab/job (i.e. CPIPE)
+  - can be hard to use<br/>
+  
+--
+<br/>
+<br/>
+.center[**NO software readily accessible and user-friendly for end users 'on the ground'**]
+
+---
+class: top
+# .center[Significance]
+
+.center[current methods fall into either:]
+
+.pull-left[
+  .center[**pay to use**]
+]
+
+.pull-right[
+  .center[**free but tricky**]
+]
+
+<br/>
+
+--
+
+.center[Accessible, flexible, powerful, and ... free]
+
+```{r, echo = FALSE, fig.align = 'center'}
+library(DiagrammeR)
+grViz("
+digraph a_nice_graph {
+
+# node definitions with substituted label text
+node [fontname = Helvetica]
+a [label = '@@1']
+b [label = '@@2-1']
+c [label = '@@3-2']
+d [label = '@@4-2']
+
+# edge definitions with the node IDs
+a -> {b}
+b -> {a}
+b -> {c d}
+}
+
+[1]: 'open source'
+[2]: 'community'
+[3]: 'better tools'
+[4]: 'better functionality'
+", height = 200, width = 750)
+```
+
+---
+
+# .center[Aims]
+
+**address shortfall in current methods**
+  + free and simple
+
+--
+  
+**Shiny integration**
+  + the power of R/RStudio
+  + visualisation/interactivity front and center
+
+--
+  
+**ease of use**
+  + want it to work in the hands of all end users
+    - clinic
+    - research
+    - public?
+
+--
+  
+**modularity** (full extensible and upgradable)
+
+--
+  
+**cloud integration and deployment options**
+
+
+---
+class: middle
+# .center[Team members on this submission]
+
+.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)<sup>1</sup>]
+
+.pull-left[
+  
+.right[
+Prof Lyn Griffiths<sup>1</sup>  
+A/Prof Rod Lea<sup>1</sup>  
+Dr Robert Smith<sup>1</sup>  
+Prof Greg Gibson<sup>2</sup>
+]
+]
+
+.pull-right[
+  
+AI (*Human Genetics*)<sup> </sup>  
+AI (*Genome Informatics*)<sup> </sup>  
+AI (*Diagnostics*)<sup> </sup>  
+AI/Mentor (*Integrative Genomics*)<sup> </sup>
+
+]
+
+.footnote[
+[1] CDA, MM, IHBI, QUT  
+[2] Georgia Tech, USA
+]
+
+---
+class: top inverse
+# .center[VCF files are powerful but clumsy<sup>\*</sup>]
+.center[\[\*\] *if you are not familiar with the commandline*]
+
+To 95% of people these are just really large complex text files
+
+  - no easy interaction
+  - no ready visualisation
+
+--
+
+<br/>
+  
+# .center[variant filtering process is complicated<sup>\*\*</sup>]
+.center[\[\*\*\] *even if you **are** familiar with the commandline*]
+
+.center[A large number of people still do this manually...]
+.center[**...this is what computers are for!**]
+
+---
+background-image: url(images/pipeline_chart.png)
+background-position: 50% 90%
+background-size: 75%
+class: top
+# .center[Progress to date]
+
+.center[WESTARC - live demonstration]
+
+---
+class: top inverse
+# .center[Research Design]
+
+**Develop a series of modules, each achieving a specific task:  **
+
+  - initial QC and sequence alignment  
+    <span style="font-size: 75%">+ including functionality for structural variation (routinely overlooked)</span>
+
+  - VCF annotation and manipulation  
+    <span style="font-size: 75%">+ currently only accessible to 'advanced' users</span>
+  
+  - simple interactive 'base' fontend (i.e. WESTARC)  
+    <span style="font-size: 75%">+ include database interfacing</span>
+  
+  - Additional analysis interface  
+    <span style="font-size: 75%">+ phenotype, case/control, sample comparison ...</span>
+
+--
+
+**Provide to clinical end users:  **
+  - have access to several engaged clinical geneticists (testing group?)
+
+--
+
+**Distribute:  **
+  - GitHub, docker, & online cloud server (Amazon S3)
+
+---
+class: top
+# .center[Expected outcomes]
+
+> *simple, scalable and robust method for the annotating and categorising genetic variants enabling more rapid and effective analysis of potentially pathogenic variants*
+
+--
+
+**A fully operational suite of software 'modules': **
+  - integrate into an easy-to-use workflow
+  - can handle all forms of sequence data
+  - open-source / free to use and develop 
+
+**Deployment of an user friendly app version / suite of apps:  **
+  - integration with existing databases
+  - cloud deployment
+  - docker integration
+
+**Direct to consumer:  **
+  - putting the 'power' back in the hands of those that matter
