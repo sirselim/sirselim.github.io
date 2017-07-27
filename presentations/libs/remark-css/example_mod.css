@@ -11,7 +11,7 @@ h1, h2, h3 {
   margin-top: 0px;
 }
 a, a > code {
-  color: rgb(249, 38, 114);
+  color: rgb(38, 102, 164);
   text-decoration: none;
 }
 .footnote {
@@ -64,4 +64,10 @@ img {
 blockquote {
   border-left: solid 5px lightgray;
   padding-left: 1em;
+}
+.large { font-size: 130% }
+.medium { font-size: 90% }
+.small { font-size: 70% }
+ul {
+  font-size: 0.95em;
 }

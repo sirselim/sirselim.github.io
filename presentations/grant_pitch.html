@@ -15,8 +15,8 @@
 class: center, middle, inverse, title-slide
 
 # Genome informatics for translation to clinical diagnostics
-## <h3 id="user-friendly-web-based-tools-bring-sequence-data-to-the-clinic-nhmrc-emerging-researcher-grant---pitch">“user-friendly web-based tools bring sequence data to the clinic”<br/><br/>NHMRC Emerging Researcher Grant - Pitch</h3>
-### Dr Miles Benton
+## <h3 id="user-friendly-web-based-tools-bring-sequence-data-to-the-clinic-nhmrc-new-investigator-grant---pitch">“<em>user-friendly web-based tools bring sequence data to the clinic</em>”<br/><br/>NHMRC New Investigator Grant - Pitch</h3>
+### <a href="http://sirselim.github.io/">Dr Miles Benton</a>
 ### 2017/07/28
 
 ---
@@ -32,6 +32,7 @@ class: center, middle, inverse, title-slide
 --
 
 **identification of known or novel pathogenic variants**
+
   - found among a host of common and rare polymorphisms
   - identification of clinically relevant variants is time consuming 
     + large potential for analysis induced false negatives
@@ -41,7 +42,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-**current tools are limited**
+**current tools are limited and specialised**
 
 --
 
@@ -49,11 +50,11 @@ class: center, middle, inverse, title-slide
 
 --
 
-**visualisation and interactivity incredibly powerful tools**
+**visualisation and interactivity incredibly powerful tools ('big data')**
 
 --
 
-**I'm an emerging researcher (3 years out from PhD)**
+.center[**I'm an emerging researcher (3.5 years out from PhD)**]
 
 ---
 class: inverse
@@ -62,6 +63,7 @@ class: inverse
 **paywalls**
 
   - nearly all software suites are licensed == '$$$'
+  - might not be an issue for institutes, harder for non-research
 
 --
 &lt;br/&gt;
@@ -72,12 +74,14 @@ class: inverse
   - mysterious to users
   - difficult/impossible to modified (closed-source)
     + those not closed source are tailored to specific lab/job (i.e. CPIPE)
-  - can be hard to use&lt;br/&gt;
+  - can be hard to use / require specific skills
+    + not everyone is a bioinformatician&lt;br/&gt;
   
 --
 &lt;br/&gt;
 &lt;br/&gt;
-.center[**NO software readily accessible and user-friendly for end users 'on the ground'**]
+
+.large[.center[**NO software readily accessible and user-friendly for end users 'on the ground'**]]
 
 ---
 class: top
@@ -93,16 +97,22 @@ class: top
   .center[**free but tricky**]
 ]
 
+--
 &lt;br/&gt;
+
+.center[**open-source software is the backbone of bioinformatics**]
 
 --
 
 .center[Accessible, flexible, powerful, and ... free]
 
+<div id="htmlwidget-b9248d498223fde31a0f" style="width:750px;height:200px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b9248d498223fde31a0f">{"x":{"diagram":"\ndigraph a_nice_graph {\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\na [label = \"open source\"]\nb [label = \"community\"]\nc [label = \"better tools\"]\nd [label = \"better functionality\"]\n\n# edge definitions with the node IDs\na -> {b}\nb -> {a}\nb -> {c d}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+--
 &lt;br/&gt;
 
-<div id="htmlwidget-36c6887c7f03853a4410" style="width:750px;height:200px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-36c6887c7f03853a4410">{"x":{"diagram":"\ndigraph a_nice_graph {\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\na [label = \"open source\"]\nb [label = \"community\"]\nc [label = \"better tools\"]\nd [label = \"better functionality\"]\n\n# edge definitions with the node IDs\na -> {b}\nb -> {a}\nb -> {c d}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+.center[**wide benefit**: research | diagnostic | clinical | public ]
 
 ---
 
@@ -113,8 +123,8 @@ class: top
 
 --
   
-**Shiny integration**
-  + the power of R/RStudio
+**[Shiny](https://shiny.rstudio.com/) integration**
+  + the power of [R](https://www.r-project.org/)/[RStudio](https://www.rstudio.com/)
   + visualisation/interactivity front and center
 
 --
@@ -160,7 +170,7 @@ background-size: 75%
 class: top
 # .center[Progress to date]
 
-.center[WESTARC - live demonstration]
+.center[[WESTARC]() - live demonstration]
 
 ---
 class: top inverse
@@ -209,21 +219,21 @@ class: top
   - docker integration
 
 **Direct to consumer:  **
-  - putting the 'power' back in the hands of those that matter
+  - putting the **'power'** back in the hands of those that matter
 
 ---
-class: middle
+class: middle inverse
 # .center[Team members on this submission]
 
-.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)&lt;sup&gt;1&lt;/sup&gt;]
+.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)&lt;sup&gt;[1]()&lt;/sup&gt;]
 
 .pull-left[
   
 .right[
-Prof Lyn Griffiths&lt;sup&gt;1&lt;/sup&gt;  
-A/Prof Rod Lea&lt;sup&gt;1&lt;/sup&gt;  
-Dr Robert Smith&lt;sup&gt;1&lt;/sup&gt;  
-Prof Greg Gibson&lt;sup&gt;2&lt;/sup&gt;
+Prof Lyn Griffiths&lt;sup&gt;[1]()&lt;/sup&gt;  
+A/Prof Rod Lea&lt;sup&gt;[1]()&lt;/sup&gt;  
+Dr Robert Smith&lt;sup&gt;[1]()&lt;/sup&gt;  
+Prof Greg Gibson&lt;sup&gt;[2]()&lt;/sup&gt;
 ]
 ]
 
@@ -237,8 +247,8 @@ AI/Mentor (*Integrative Genomics*)&lt;sup&gt; &lt;/sup&gt;
 ]
 
 .footnote[
-[1] CDA, MM, IHBI, QUT  
-[2] Georgia Tech, USA
+[[1]()] CDA, MM, IHBI, QUT  
+[[2]()] Georgia Tech, USA
 ]
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

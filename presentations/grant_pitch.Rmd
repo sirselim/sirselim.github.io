@@ -1,7 +1,7 @@
 ---
 title: "Genome informatics for translation to clinical diagnostics"
-subtitle: "### \"user-friendly web-based tools bring sequence data to the clinic\"<br/><br/>NHMRC Emerging Researcher Grant - Pitch"
-author: "Dr Miles Benton"
+subtitle: "### \"*user-friendly web-based tools bring sequence data to the clinic*\"<br/><br/>NHMRC New Investigator Grant - Pitch"
+author: "[Dr Miles Benton](http://sirselim.github.io/)"
 date: "2017/07/28"
 output:
   xaringan::moon_reader:
@@ -26,6 +26,7 @@ options(htmltools.dir.version = FALSE)
 --
 
 **identification of known or novel pathogenic variants**
+
   - found among a host of common and rare polymorphisms
   - identification of clinically relevant variants is time consuming 
     + large potential for analysis induced false negatives
@@ -35,7 +36,7 @@ options(htmltools.dir.version = FALSE)
 
 --
 
-**current tools are limited**
+**current tools are limited and specialised**
 
 --
 
@@ -43,11 +44,11 @@ options(htmltools.dir.version = FALSE)
 
 --
 
-**visualisation and interactivity incredibly powerful tools**
+**visualisation and interactivity incredibly powerful tools ('big data')**
 
 --
 
-**I'm an emerging researcher (3 years out from PhD)**
+.center[**I'm an emerging researcher (3.5 years out from PhD)**]
 
 ---
 class: inverse
@@ -56,6 +57,7 @@ class: inverse
 **paywalls**
 
   - nearly all software suites are licensed == '$$$'
+  - might not be an issue for institutes, harder for non-research
 
 --
 <br/>
@@ -66,12 +68,14 @@ class: inverse
   - mysterious to users
   - difficult/impossible to modified (closed-source)
     + those not closed source are tailored to specific lab/job (i.e. CPIPE)
-  - can be hard to use<br/>
+  - can be hard to use / require specific skills
+    + not everyone is a bioinformatician<br/>
   
 --
 <br/>
 <br/>
-.center[**NO software readily accessible and user-friendly for end users 'on the ground'**]
+
+.large[.center[**NO software readily accessible and user-friendly for end users 'on the ground'**]]
 
 ---
 class: top
@@ -87,13 +91,14 @@ class: top
   .center[**free but tricky**]
 ]
 
+--
 <br/>
+
+.center[**open-source software is the backbone of bioinformatics**]
 
 --
 
 .center[Accessible, flexible, powerful, and ... free]
-
-<br/>
 
 ```{r, echo = FALSE, fig.align = 'center'}
 library(DiagrammeR)
@@ -120,6 +125,11 @@ b -> {c d}
 ", height = 200, width = 750)
 ```
 
+--
+<br/>
+
+.center[**wide benefit**: research | diagnostic | clinical | public ]
+
 ---
 
 # .center[Aims]
@@ -129,8 +139,8 @@ b -> {c d}
 
 --
   
-**Shiny integration**
-  + the power of R/RStudio
+**[Shiny](https://shiny.rstudio.com/) integration**
+  + the power of [R](https://www.r-project.org/)/[RStudio](https://www.rstudio.com/)
   + visualisation/interactivity front and center
 
 --
@@ -176,7 +186,7 @@ background-size: 75%
 class: top
 # .center[Progress to date]
 
-.center[WESTARC - live demonstration]
+.center[[WESTARC]() - live demonstration]
 
 ---
 class: top inverse
@@ -225,21 +235,21 @@ class: top
   - docker integration
 
 **Direct to consumer:  **
-  - putting the 'power' back in the hands of those that matter
+  - putting the **'power'** back in the hands of those that matter
 
 ---
-class: middle
+class: middle inverse
 # .center[Team members on this submission]
 
-.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)<sup>1</sup>]
+.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)<sup>[1]()</sup>]
 
 .pull-left[
   
 .right[
-Prof Lyn Griffiths<sup>1</sup>  
-A/Prof Rod Lea<sup>1</sup>  
-Dr Robert Smith<sup>1</sup>  
-Prof Greg Gibson<sup>2</sup>
+Prof Lyn Griffiths<sup>[1]()</sup>  
+A/Prof Rod Lea<sup>[1]()</sup>  
+Dr Robert Smith<sup>[1]()</sup>  
+Prof Greg Gibson<sup>[2]()</sup>
 ]
 ]
 
@@ -253,6 +263,6 @@ AI/Mentor (*Integrative Genomics*)<sup> </sup>
 ]
 
 .footnote[
-[1] CDA, MM, IHBI, QUT  
-[2] Georgia Tech, USA
+[[1]()] CDA, MM, IHBI, QUT  
+[[2]()] Georgia Tech, USA
 ]
