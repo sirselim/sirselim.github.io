@@ -1,15 +1,17 @@
 ---
-title: "Bioinformatics for translational benefit"
-subtitle: "### \"visualisation and web based tools bring sequence data to the clinic\"<br/><br/>NHMRC Emerging Researcher Grant - Pitch"
+title: "Genome informatics for translation to clinical diagnostics"
+subtitle: "### \"user-friendly web-based tools bring sequence data to the clinic\"<br/><br/>NHMRC Emerging Researcher Grant - Pitch"
 author: "Dr Miles Benton"
 date: "2017/07/28"
 output:
   xaringan::moon_reader:
+    css: "libs/remark-css/example_mod.css"
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: 4:3
 ---
 
 ```{r setup, include=FALSE}
@@ -17,6 +19,11 @@ options(htmltools.dir.version = FALSE)
 ```
 
 # .center[Motivation]
+
+.center[<span>**NGS technology shows great promise for understanding genetic basis of disease and personalised medicine**</span>]
+.center[.......but....... ]
+
+--
 
 **identification of known or novel pathogenic variants**
   - found among a host of common and rare polymorphisms
@@ -32,7 +39,7 @@ options(htmltools.dir.version = FALSE)
 
 --
 
-**bringing data back to the end-users**
+**making data available (interpretable) to end user ie. clinician/patient**
 
 --
 
@@ -85,6 +92,8 @@ class: top
 --
 
 .center[Accessible, flexible, powerful, and ... free]
+
+<br/>
 
 ```{r, echo = FALSE, fig.align = 'center'}
 library(DiagrammeR)
@@ -140,37 +149,6 @@ b -> {c d}
   
 **cloud integration and deployment options**
 
-
----
-class: middle
-# .center[Team members on this submission]
-
-.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)<sup>1</sup>]
-
-.pull-left[
-  
-.right[
-Prof Lyn Griffiths<sup>1</sup>  
-A/Prof Rod Lea<sup>1</sup>  
-Dr Robert Smith<sup>1</sup>  
-Prof Greg Gibson<sup>2</sup>
-]
-]
-
-.pull-right[
-  
-AI (*Human Genetics*)<sup> </sup>  
-AI (*Genome Informatics*)<sup> </sup>  
-AI (*Diagnostics*)<sup> </sup>  
-AI/Mentor (*Integrative Genomics*)<sup> </sup>
-
-]
-
-.footnote[
-[1] CDA, MM, IHBI, QUT  
-[2] Georgia Tech, USA
-]
-
 ---
 class: top inverse
 # .center[VCF files are powerful but clumsy<sup>\*</sup>]
@@ -193,7 +171,7 @@ To 95% of people these are just really large complex text files
 
 ---
 background-image: url(images/pipeline_chart.png)
-background-position: 50% 90%
+background-position: 50% 75%
 background-size: 75%
 class: top
 # .center[Progress to date]
@@ -248,3 +226,33 @@ class: top
 
 **Direct to consumer:  **
   - putting the 'power' back in the hands of those that matter
+
+---
+class: middle
+# .center[Team members on this submission]
+
+.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)<sup>1</sup>]
+
+.pull-left[
+  
+.right[
+Prof Lyn Griffiths<sup>1</sup>  
+A/Prof Rod Lea<sup>1</sup>  
+Dr Robert Smith<sup>1</sup>  
+Prof Greg Gibson<sup>2</sup>
+]
+]
+
+.pull-right[
+  
+AI (*Human Genetics*)<sup> </sup>  
+AI (*Genome Informatics*)<sup> </sup>  
+AI (*Diagnostics*)<sup> </sup>  
+AI/Mentor (*Integrative Genomics*)<sup> </sup>
+
+]
+
+.footnote[
+[1] CDA, MM, IHBI, QUT  
+[2] Georgia Tech, USA
+]

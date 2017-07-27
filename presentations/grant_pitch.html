@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bioinformatics for translational benefit</title>
+    <title>Genome informatics for translation to clinical diagnostics</title>
     <meta charset="utf-8">
     <meta name="author" content="Dr Miles Benton" />
-    <link href="libs/remark-css/example.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/viz/viz.js"></script>
     <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
     <script src="libs/grViz-binding/grViz.js"></script>
+    <link rel="stylesheet" href="libs/remark-css/example_mod.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Bioinformatics for translational benefit
-## <h3 id="visualisation-and-web-based-tools-bring-sequence-data-to-the-clinic-nhmrc-emerging-researcher-grant---pitch">“visualisation and web based tools bring sequence data to the clinic”<br/><br/>NHMRC Emerging Researcher Grant - Pitch</h3>
+# Genome informatics for translation to clinical diagnostics
+## <h3 id="user-friendly-web-based-tools-bring-sequence-data-to-the-clinic-nhmrc-emerging-researcher-grant---pitch">“user-friendly web-based tools bring sequence data to the clinic”<br/><br/>NHMRC Emerging Researcher Grant - Pitch</h3>
 ### Dr Miles Benton
 ### 2017/07/28
 
@@ -25,6 +25,11 @@ class: center, middle, inverse, title-slide
 
 
 # .center[Motivation]
+
+.center[&lt;span&gt;**NGS technology shows great promise for understanding genetic basis of disease and personalised medicine**&lt;/span&gt;]
+.center[.......but....... ]
+
+--
 
 **identification of known or novel pathogenic variants**
   - found among a host of common and rare polymorphisms
@@ -40,7 +45,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-**bringing data back to the end-users**
+**making data available (interpretable) to end user ie. clinician/patient**
 
 --
 
@@ -94,8 +99,10 @@ class: top
 
 .center[Accessible, flexible, powerful, and ... free]
 
-<div id="htmlwidget-7de8359142bbdbf35e35" style="width:750px;height:200px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7de8359142bbdbf35e35">{"x":{"diagram":"\ndigraph a_nice_graph {\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\na [label = \"open source\"]\nb [label = \"community\"]\nc [label = \"better tools\"]\nd [label = \"better functionality\"]\n\n# edge definitions with the node IDs\na -> {b}\nb -> {a}\nb -> {c d}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+&lt;br/&gt;
+
+<div id="htmlwidget-36c6887c7f03853a4410" style="width:750px;height:200px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-36c6887c7f03853a4410">{"x":{"diagram":"\ndigraph a_nice_graph {\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\na [label = \"open source\"]\nb [label = \"community\"]\nc [label = \"better tools\"]\nd [label = \"better functionality\"]\n\n# edge definitions with the node IDs\na -> {b}\nb -> {a}\nb -> {c d}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -126,37 +133,6 @@ class: top
   
 **cloud integration and deployment options**
 
-
----
-class: middle
-# .center[Team members on this submission]
-
-.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)&lt;sup&gt;1&lt;/sup&gt;]
-
-.pull-left[
-  
-.right[
-Prof Lyn Griffiths&lt;sup&gt;1&lt;/sup&gt;  
-A/Prof Rod Lea&lt;sup&gt;1&lt;/sup&gt;  
-Dr Robert Smith&lt;sup&gt;1&lt;/sup&gt;  
-Prof Greg Gibson&lt;sup&gt;2&lt;/sup&gt;
-]
-]
-
-.pull-right[
-  
-AI (*Human Genetics*)&lt;sup&gt; &lt;/sup&gt;  
-AI (*Genome Informatics*)&lt;sup&gt; &lt;/sup&gt;  
-AI (*Diagnostics*)&lt;sup&gt; &lt;/sup&gt;  
-AI/Mentor (*Integrative Genomics*)&lt;sup&gt; &lt;/sup&gt;
-
-]
-
-.footnote[
-[1] CDA, MM, IHBI, QUT  
-[2] Georgia Tech, USA
-]
-
 ---
 class: top inverse
 # .center[VCF files are powerful but clumsy&lt;sup&gt;\*&lt;/sup&gt;]
@@ -179,7 +155,7 @@ To 95% of people these are just really large complex text files
 
 ---
 background-image: url(images/pipeline_chart.png)
-background-position: 50% 90%
+background-position: 50% 75%
 background-size: 75%
 class: top
 # .center[Progress to date]
@@ -234,12 +210,43 @@ class: top
 
 **Direct to consumer:  **
   - putting the 'power' back in the hands of those that matter
+
+---
+class: middle
+# .center[Team members on this submission]
+
+.center[**Dr Miles Benton** - Principal Investigator (emerging investigator)&lt;sup&gt;1&lt;/sup&gt;]
+
+.pull-left[
+  
+.right[
+Prof Lyn Griffiths&lt;sup&gt;1&lt;/sup&gt;  
+A/Prof Rod Lea&lt;sup&gt;1&lt;/sup&gt;  
+Dr Robert Smith&lt;sup&gt;1&lt;/sup&gt;  
+Prof Greg Gibson&lt;sup&gt;2&lt;/sup&gt;
+]
+]
+
+.pull-right[
+  
+AI (*Human Genetics*)&lt;sup&gt; &lt;/sup&gt;  
+AI (*Genome Informatics*)&lt;sup&gt; &lt;/sup&gt;  
+AI (*Diagnostics*)&lt;sup&gt; &lt;/sup&gt;  
+AI/Mentor (*Integrative Genomics*)&lt;sup&gt; &lt;/sup&gt;
+
+]
+
+.footnote[
+[1] CDA, MM, IHBI, QUT  
+[2] Georgia Tech, USA
+]
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"ratio": "4:3"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});</script>
 

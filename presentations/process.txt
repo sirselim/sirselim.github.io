@@ -1,0 +1,1 @@
+~/Downloads/software/decktape-1.0.0/phantomjs ~/Downloads/software/decktape-1.0.0/decktape.js grant_pitch.html MBenton_Bioinformatics_for_translational_benefit.pdf
