@@ -1,0 +1,2 @@
+track	annotation	observed	expected	CI95low	CI95high	stddev	fold	l2fold	pvalue	qvalue	track_nsegments	track_size	track_density	annotation_nsegments	annotation_size	annotation_density	overlap_nsegments	overlap_size	overlap_density	percent_overlap_nsegments_track	percent_overlap_size_track	percent_overlap_nsegments_annotation	percent_overlap_size_annotation
+merged	gwascatalog_sub.bed.gz	1326	749.1870	695.0000	807.0000	34.8768	1.7689	0.8228	1.0000e-03	1.0000e-03	12681	163134837	5.7019e+00	12316	12317	4.3051e-04	1326	1326	4.6347e-05	10.4566	0.0008	10.7665	10.7656

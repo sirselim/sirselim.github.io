@@ -1,0 +1,2 @@
+track	annotation	observed	expected	CI95low	CI95high	stddev	fold	l2fold	pvalue	qvalue	track_nsegments	track_size	track_density	annotation_nsegments	annotation_size	annotation_density	overlap_nsegments	overlap_size	overlap_density	percent_overlap_nsegments_track	percent_overlap_size_track	percent_overlap_nsegments_annotation	percent_overlap_size_annotation
+merged	lincRNAs_transcripts_sub.bed.gz	1409	887.1260	844.0000	931.0000	27.2067	1.5876	0.6669	1.0000e-03	1.0000e-03	12681	163134837	5.7019e+00	7499	127955229	4.4723e+00	1464	6767897	2.3655e-01	11.5448	4.1487	19.5226	5.2893
