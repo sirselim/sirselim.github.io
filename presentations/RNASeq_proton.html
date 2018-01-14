@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>.huge[RNASeq on the Ion Proton]</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="libs/remark-css/example_mod.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# .huge[RNASeq on the Ion Proton]
+## <h2 id="troubleshooting-a-niche-platform">…troubleshooting a ‘niche’ platform…</h2>
+### <div style="white-space: pre-line;"><a href="http://sirselim.github.io/">Dr Miles Benton</a>
+Genomics Research Centre, Institute of Health and Biomedical Innovation</div>
+### Lab meeting: <span style="color:darkred">Friday 13<sup>th</sup></span> October 2017
+
+---
+
+class: middle inverse
+
+
+
+&lt;p&gt;
+.center[&lt;img src="images/Friday13_Jason.jpg" style="width: 46%; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+# firstly, this is all thanks to a &lt;span style="color:darkblue"&gt;HUGE&lt;/span&gt; effort
+
+&lt;br /&gt;
+
+.huge[**Jade** and **Larisa**]
+
+---
+class: inverse middle
+
+# .center[Ion Proton vs Illumina platforms]
+.center[(...very briefly...)]
+
+---
+class: middle
+
+#*niche*
+## adjective:
+
+  1. denoting or relating to products, services, or interests that appeal to a small, specialized section of the population.  
+    *"other companies in this space had to adapt to being niche players"*
+
+---
+
+# Sequencing Troubleshooting
+
+--
+
+&lt;p&gt;
+.center[
+&lt;!-- ![](images/github_logo.png) --&gt;
+&lt;img src="images/p1_bad.png" style="width: 300px; margin-right: 1%; margin-top: 1.5em; border: 3px solid black;"/&gt;
+&lt;img src="images/p1_good.png" style="width: 300px; margin-right: 1%; margin-top: 1.5em; border: 3px solid black;"/&gt;
+]
+&lt;/p&gt;
+
+--
+
+&lt;br /&gt;
+
+.center[.huge[**we're now running P1 chips with &lt;span style="color:blue"&gt;4 samples&lt;/span&gt; at &lt;span style="color:blue"&gt;~20M&lt;/span&gt; reads p/s**]]
+
+---
+class: inverse 
+
+&lt;br /&gt;
+
+# pseudo-aligners
+
+  - .large[kallisto: https://github.com/pachterlab/kallisto] 
+  
+&lt;br /&gt;
+  
+  - .large[salmon: https://github.com/COMBINE-lab/salmon]
+
+&lt;br /&gt;
+
+--
+
+**these things are FAST!** **...but...**
+
+--
+
+.center[.large[40-45% mapping rate?]]
+
+--
+
+&lt;br /&gt;
+
+# where's the rest of our sequence going (or not going)?
+
+--
+
+...think back to the difference in platform...
+
+---
+class: middle
+
+&lt;style type="text/css"&gt;
+
+body, td {
+   font-size: 14px;
+}
+code.bash{
+  font-size: 10px;
+}
+pre {
+  font-size: 20px
+}
+&lt;/style&gt;
+
+### Illumina HiSeq (data from SRA)
+
+
+```bash
+$ /home/miles/Downloads/software/BBMap/bbmap/./readlength.sh in=SRR5712472.fastq.gz
+Processed 23143004 reads.
+#Reads:    23143004
+#Bases:    2290057568
+#Max:    100
+#Min:    35
+#Avg:    99.0
+#Median:    100
+#Mode:    100
+#Std_Dev:    5.9
+#Read Length Histogram:
+#Length    reads    pct_reads    cum_reads    cum_pct_reads    bases    pct_bases    cum_bases    cum_pct_bases
+30    803    0.003%    23143004    100.000%    29281    0.001%    2290057568    100.000%
+40    3336    0.014%    23142201    99.997%    152130    0.007%    2290028287    99.999%
+50    12806    0.055%    23138865    99.982%    710066    0.031%    2289876157    99.992%
+60    45027    0.195%    23126059    99.927%    2946265    0.129%    2289166091    99.961%
+70    138931    0.600%    23081032    99.732%    10467693    0.457%    2286219826    99.832%
+80    345039    1.491%    22942101    99.132%    29387682    1.283%    2275752133    99.375%
+90    7856837    33.949%    22597062    97.641%    772341951    33.726%    2246364451    98.092%
+100    14740225    63.692%    14740225    63.692%    1474022500    64.366%    1474022500    64.366%
+Time:     31.166 seconds.
+```
+
+---
+class: middle
+
+&lt;style type="text/css"&gt;
+
+body, td {
+   font-size: 14px;
+}
+code.bash{
+  font-size: 10px;
+}
+pre {
+  font-size: 20px
+}
+&lt;/style&gt;
+
+### Ion Proton (NZ collaboration)
+
+
+```bash
+$ /home/miles/software/bbmap/./readlength.sh in=IonXpressRNA_004_NZ4_108FC.fastq.gz
+Processed 43163515 reads.
+#Reads:    43163515
+#Bases:    5665763674
+#Max:    384
+#Min:    8
+#Avg:    131.3
+#Median:    130
+#Mode:    150
+#Std_Dev:    46.0
+#Read Length Histogram:
+#Length    reads    pct_reads    cum_reads    cum_pct_reads    bases    pct_bases    cum_bases    cum_pct_bases
+...
+70    2241801    5.194%    39909316    92.461%    171396670    3.025%    5528448143    97.576%
+80    1940603    4.496%    37667515    87.267%    162491173    2.868%    5357051473    94.551%
+90    2292707    5.312%    35726912    82.771%    216829366    3.827%    5194560300    91.683%
+100    2634055    6.103%    33434205    77.459%    276442225    4.879%    4977730934    87.856%
+110    4442437    10.292%    30800150    71.357%    510672988    9.013%    4701288709    82.977%
+120    3968235    9.193%    26357713    61.065%    493718902    8.714%    4190615721    73.964%
+130    4285103    9.928%    22389478    51.871%    576234504    10.170%    3696896819    65.250%
+140    3300311    7.646%    18104375    41.944%    476288426    8.406%    3120662315    55.079%
+150    5070909    11.748%    14804064    34.298%    786439255    13.881%    2644373889    46.673%
+160    2635951    6.107%    9733155    22.549%    432169965    7.628%    1857934634    32.792%
+170    1733055    4.015%    7097204    16.443%    301841277    5.327%    1425764669    25.165%
+180    1346624    3.120%    5364149    12.428%    248136479    4.380%    1123923392    19.837%
+190    1080328    2.503%    4017525    9.308%    210197271    3.710%    875786913    15.458%
+200    887356    2.056%    2937197    6.805%    181034580    3.195%    665589642    11.748%
+210    574633    1.331%    2049841    4.749%    123090836    2.173%    484555062    8.552%
+220    422081    0.978%    1475208    3.418%    94653944    1.671%    361464226    6.380%
+230    314634    0.729%    1053127    2.440%    73708314    1.301%    266810282    4.709%
+240    224927    0.521%    738493    1.711%    54936910    0.970%    193101968    3.408%
+250    169549    0.393%    513566    1.190%    43120685    0.761%    138165058    2.439%
+260    127626    0.296%    344017    0.797%    33729610    0.595%    95044373    1.678%
+270    97130    0.225%    216391    0.501%    26637362    0.470%    61314763    1.082%
+280    64355    0.149%    119261    0.276%    18284785    0.323%    34677401    0.612%
+290    35765    0.083%    54906    0.127%    10512248    0.186%    16392616    0.289%
+300    13952    0.032%    19141    0.044%    4234843    0.075%    5880368    0.104%
+...
+Time:     125.836 seconds.
+```
+
+---
+class: 
+
+# however, it's not all doom and gloom
+
+&lt;p&gt;
+.center[
+&lt;img src="images/heatmap.png" style="width: 50%; margin-right: 1%; margin-top: 1.5em; border: 2.5px solid black;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: 
+
+# however, it's not all doom and gloom
+
+&lt;p&gt;
+.center[
+&lt;img src="images/boxplots.png" style="width: 80%; margin-right: 1%; margin-top: 1.5em; border: 2.5px solid black;"/&gt;
+]
+&lt;/p&gt;
+
+--
+
+.center[**hitting expected and interesting genes/pathways!!**]
+
+---
+class: inverse 
+
+&lt;br /&gt;
+
+# time to try a different approach
+
+  - .large[STAR: https://github.com/alexdobin/STAR]    
+    + Spliced Transcripts Alignment to a Reference
+
+&lt;br /&gt;
+
+--
+
+&lt;br /&gt;
+
+  - .large[RSEM: https://github.com/deweylab/RSEM]  
+    + a software package for estimating gene and isoform expression levels from RNA-Seq data
+
+&lt;br /&gt;
+  
+--
+
+&lt;br /&gt;
+
+  - .large[EBSeq: http://bioconductor.org/packages/release/bioc/html/EBSeq.html]  
+    + differential expression analysis at both gene and isoform level using RNA-seq data
+    + R (bioconductor) package
+
+---
+class: inverse
+
+# success!!
+
+  - we're getting mapping scores &gt;80% across the board
+  
+  &lt;br /&gt;
+  
+  - if we filter out all the smaller reads (&lt;30bp) we approach 100%
+  
+&lt;br /&gt;
+
+--
+
+&lt;br /&gt;
+
+# differential expression and isoforms
+
+  - have now been able to identify expression of:
+    + transcripts
+    + isoforms (!)
+    
+&lt;br /&gt;
+    
+  - preliminary exploration is returning some really exciting biology!
+
+---
+class: 
+
+&lt;br /&gt;
+
+#*niche*
+## noun:
+
+  1. a specialized segment of the market for a particular kind of product or service.  
+    *"he believes he has found a niche in the market"*
+
+&lt;br /&gt;
+
+--
+
+&lt;br /&gt;
+
+# the little sequencer that could!
+
+--
+
+&lt;br /&gt;
+
+# multiple pipelines to &lt;span style='color:red'&gt;**'play'**&lt;/span&gt; with moving forward
+
+---
+class: middle
+
+.center[&lt;img src="images/Friday_the_13th_logo.png" style="width: 65%; margin-right: 1%; margin-top: 1.5em; border: 0px solid white;"/&gt;]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

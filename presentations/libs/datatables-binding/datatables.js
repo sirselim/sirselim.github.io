@@ -49,11 +49,11 @@ DTWidget.formatSignif = function(thiz, row, data, col, digits) {
   $(thiz.api().cell(row, col).node()).html(d.toPrecision(digits));
 };
 
-DTWidget.formatDate = function(thiz, row, data, col, method, params) {
+DTWidget.formatDate = function(thiz, row, data, col, method) {
   var d = data[col];
   if (d === null) return;
   d = new Date(d);
-  $(thiz.api().cell(row, col).node()).html(d[method].apply(d, params));
+  $(thiz.api().cell(row, col).node()).html(d[method]());
 };
 
 window.DTWidget = DTWidget;
@@ -544,18 +544,24 @@ HTMLWidgets.widget({
 
     // run the callback function on the table instance
     if (typeof data.callback === 'function') data.callback(table);
+    this.adjustWidth(el);
 
-    var thiz = this;
-    table.on('init', function(e) {
-      // fillContainer = TRUE behavior
-      if (instance.fillContainer) {
+     // fillContainer = TRUE behavior
+    if (instance.fillContainer) {
+
+      // we need to wait just a bit to do this so DT can completely
+      // finish laying itself out
+      var thiz = this;
+      setTimeout(function() {
+
         // calculate correct height
         thiz.fillAvailableHeight(el, $(el).innerHeight());
-      }
-      // we need to force DT to recalculate column widths
-      // (otherwise all the columns are the same size)
-      thiz.adjustWidth(el);
-    });
+
+        // we need to force DT to recalculate column widths
+        // (otherwise all the columns are the same size)
+        table.columns.adjust();
+      }, 200);
+    }
 
     // interaction with shiny
     if (!HTMLWidgets.shinyMode) return;
@@ -618,7 +624,7 @@ HTMLWidgets.widget({
       // row, column, or cell selection
       if (inArray(selTarget, ['row', 'row+column'])) {
         var selectedRows = function() {
-          var rows = table.rows('.' + selClass);
+          var rows = table.rows('.' + selClass, {search: 'applied'});
           var idx = rows.indexes().toArray();
           if (!server) return addOne(idx);
           idx = idx.map(function(i) {
