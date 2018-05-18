@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>.huge[Data Science:]</title>
+    <meta charset="utf-8">
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
+    <link rel="stylesheet" href="libs/remark-css/example_mod.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# .huge[Data Science:]
+## skills and capabilities
+### <div class="line-block"><a href="http://sirselim.github.io/">Dr Miles Benton</a><br />
+Senior Scientist, ESR</div>
+### (or soon to be, 2<sup>nd</sup> July 2018)
+
+---
+
+class: middle
+
+
+
+# .center[Advocate for reproducible research...]
+
+## .center[Where possible my presentations and code are available online]
+
+&lt;br /&gt;
+
+&lt;p&gt;
+.center[
+&lt;!-- ![](images/github_logo.png) --&gt;
+&lt;img src="images/github_logo.png" style="width: 520px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/sirselim_qrcode.png" style="width: 202px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+&lt;br /&gt;
+
+.center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
+
+---
+
+# Overview
+
+**1. Me briefly**
+
+&lt;br&gt;
+
+--
+
+**2. Select projects to highlight skill set&lt;sup&gt;*&lt;/sup&gt;** 
+  
+  - Obesity Methylation
+  - bootNet
+  - WGS pipeline
+  - Methylation pipeline
+  - Diagnostics Annotation and Variant Reporting software (DART)
+  - Electronic notebook  
+
+&lt;sup&gt;*&lt;/sup&gt;&lt;i&gt;aim to demonstrate integration of data, analysis and visualisation with these&lt;/i&gt;
+
+&lt;br&gt;
+
+--
+
+**4. Other tools**
+
+&lt;br&gt;
+
+--
+
+**5. Collaborations**
+
+---
+class: inverse middle
+
+.large[...it starts with...]
+
+# NORFOLK ISLAND
+
+---
+class: middle center
+
+<div id="htmlwidget-b8fe9343dc753d57ff4d" style="width:100%;height:594px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b8fe9343dc753d57ff4d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-29.0285,-192.038,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Norfolk Island",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[-24.3768,-128.3242,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Pitcairn Islands",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[-17.6509,-149.426,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Tahiti",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[52.3555,-359.25,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"England",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[-2.25,-240,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Indonesia",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[-26.0285,-180.65],3,[]],"limits":{"lat":[-29.0285,52.3555],"lng":[-359.25,-128.3242]}},"evals":[],"jsHooks":[]}</script>
+
+---
+class: inverse middle center
+
+&lt;p&gt; 
+.center[&lt;img src="images/NI_ped_mt.png" style="width: 100%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+40% of current population haplogroup &lt;span style="color:lightblue"&gt;B4a1a[...]&lt;/span&gt;&lt;br /&gt;
+
+&lt;p style="font-size: 14px"&gt;Benton MC &lt;i&gt;et al.,:&lt;/i&gt; &lt;a href="https://investigativegenetics.biomedcentral.com/articles/10.1186/s13323-015-0028-9" target="blank"&gt;&lt;i&gt;“Mutiny on the Bounty”: the genetic history of Norfolk Island reveals extreme gender-biased admixture.&lt;/i&gt;&lt;/a&gt; Investigative Genetics 2015, 6:11.&lt;/p&gt;
+
+---
+class: inverse
+
+### &lt;span style="color:lightblue"&gt;My PhD took me from basic GWAS...&lt;/span&gt;
+
+&lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Lea RA, &lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, Carless MA, Bellis C, Hanna M, Eccles D, Chambers GK, Curran JE, Blangero J and Griffiths LR. (2015) *Serum bilirubin concentration is modified by UGT1A1 Haplotypes and Influences Risk of Type-2 Diabetes in the Norfolk Island Genetic Isolate*. **BMC Genetics** 16(1) [[article]](http://www.biomedcentral.com/1471-2156/16/136)
+
+--
+
+### &lt;span style="color:lightblue"&gt;through integrative 'omics...&lt;/span&gt;
+
+&lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Lea RA, &lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, Carless MA, Göring HH, Bellis C, Hanna M, Eccles D, Chambers GK, Curran JE, Harper JL, Blangero J and Griffiths LR. (2013) *Mapping eQTLs in the Norfolk Island Genetic Isolate Identifies Candidate Genes for CVD-risk Traits*. **American Journal of Human Genetics** 93(6): 1087-99 [[article]](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3853002/)
+
+--
+
+### &lt;span style="color:lightblue"&gt;and the application of 'outside-of-the-box' statistical approaches...&lt;/span&gt;
+
+&lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Lea RA, &lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, Carless MA, Göring HH, Bellis C, Hanna M, Eccles D, Chambers GK, Curran JE, Harper JL, Blangero J and Griffiths LR. (2015) *A phenomic scan of the Norfolk Island genetic isolate identifies a major pleiotropic effect locus associated with renal disorder markers*. **PLoS Genetics** 11(10) [[article]](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005593)
+
+---
+class: middle
+
+# Projects
+
+---
+
+## Project: Obesity Methylation
+
+Collaborators: Donia Macartney-Coxson
+
+Illumina methylation arrays 
+  - brand new = limited tools
+  - use what's available and 'bolt on' the rest...
+
+Basic statistical approaches (t-test, regression, clustering)
+
+--
+
+&lt;br&gt;
+
+Spawned some small GitHub projects:
+
+  - illumina_filtering: https://github.com/sirselim/illumina450k_filtering
+    + updated to work on 450k and 850k arrays
+  - CpG_annotate: https://github.com/sirselim/cpg_annotate
+  - EWAS_workshop: https://github.com/sirselim/methylation_EWAS_workshop
+
+&lt;br&gt;
+
+--
+
+Was able to discuss this project with **Terry Speed**, who gave me a book to read...
+  
+...which lead to...
+
+---
+class: inverse
+
+## Project: bootNet (https://github.com/sirselim/bootNet)
+
+Collaborators: Nicole White, Ray Blick
+
+&gt; bootNet is a wrapper for the fantastic [glmnet](https://cran.r-project.org/web/packages/glmnet/index.html) R package - it brings bootstrapping and parallel processing to the elastic-net framework.
+
+bootNet was designed to identify methylation sites predicting an outcome (now agnostic and integrative)
+
+--
+
+  - the outcome can either be:
+    + quantitative (continuous, i.e. age, BMI, weight … )
+    + qualitative (categorical, i.e. gender, smoking, case/control … )
+  
+  - integrated ability to perform bootstrapping for a given number of iterations  
+    + user defined sub-sampling at each iteration
+    + additional sampling approaches (i.e. 'leave one out')  
+
+--
+  
+  - wrote a second function to allow parallelisation
+    + this allows a user to select the number of processors (cores) to split the task across
+    + running on multiple cores greatly speeds up analysis  
+
+Full presentation: http://sirselim.github.io/bootNet/bootNet_presentation.html
+
+---
+class: inverse
+
+## Project: bootNet (https://github.com/sirselim/bootNet)
+
+Applied the principles to detect age related genes
+  - [training set] Norfolk Island data
+  - [validation] &gt;2500 public methylomes ([blood](images/aging_meth.png))
+
+.small[&lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Sutherland HG, &lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, Haupt LM, Lea RA, and Griffiths LR. (2017) *Methylome-wide association study of whole blood DNA in the Norfolk Island isolate identifies robust loci associated with age*. Aging 9(3) [[article]](http://www.aging-us.com/article/101187)]
+
+&lt;br&gt;
+
+--
+
+Under final development, R package available via GitHub upon publication
+
+&lt;br&gt;
+
+--
+
+Graph theorem: Mike Langston
+
+Contrasting methods...
+
+.small[&lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, &lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Blick R, Stubbs RS, Hagan RD, and &lt;span style="color:#3498DB"&gt;**Langston MA**&lt;/span&gt;. (2017) *Genome-wide DNA methylation analysis reveals loci that distinguish different types of adipose tissue in obese individuals*. Clinical Epigenetics 9(48) [[article]](https://clinicalepigeneticsjournal.biomedcentral.com/articles/10.1186/s13148-017-0344-4)]
+
+---
+
+## Project: Whole Genome Sequencing
+
+Collaborators: David Eccles
+
+.medium[
+&lt;span style="color:darkblue"&gt;**N=108**&lt;/span&gt; core pedigree individuals sequenced  
+
+Platform – **Illumina HiSeq-X10 (Garvan)**  
+
+Bioinformatics: 
+  - BOWTIE2 –&gt; SAMTOOLS -&gt; VCF annotation –&gt; dbSNP -&gt; SNPsift{dbNSFP} -&gt; VEP -&gt; custom beds = fully annotated VCF
+
+Coverage &gt;=30X
+]
+
+--
+
+## Project: Functional Founder Effect Variants
+
+.medium[
+&lt;span style="color:darkblue"&gt;**Functional**&lt;/span&gt; = Predicted damaging in *in silico* tests:
+  - SIFT, POLYPHEN2, MUTATIONTASTER, PROVEAN, MUTATION ASSESSOR, CADD
+  
+&lt;span style="color:darkblue"&gt;**Founder effect**&lt;/span&gt; = increased allele freq in NI compared to general population
+  - (MAF&lt;0.01% in 1000G &gt;5% in NI)
+
+&lt;span style="color:darkblue"&gt;**Variant**&lt;/span&gt; = single nucleotide variant (SNV)
+]
+
+---
+class: inverse
+
+## Project: Identification of allele-specific methylation profiles
+
+measuring genome-wide allele-specific methylation (ASM)
+
+  - NGS bisulphite sequencing
+  - SeqCap Epi CpGiant (Illumina HiSeq)
+  
+collected data for &lt;span style="color:lightblue"&gt;&lt;b&gt;108&lt;/b&gt;&lt;/span&gt; NI individuals&lt;/li&gt; 
+
+&lt;br /&gt;
+
+--
+
+fully customised QC and analysis pipeline:&lt;span style="color:lightblue"&gt;&lt;b&gt;*&lt;/b&gt;&lt;/span&gt;
+
+  - (fastqc, trimgalore) &gt;&gt;&gt; replaced now by [fastp](https://github.com/OpenGene/fastp)
+  - bismark, sambamba, picard tools
+  - methpipe (ASM estimation)
+  - MethylDackel (originally PileOMeth), R and methylkit
+  - Shiny webserver visualisation
+  - all wrapped into a docker container
+
+parallel processing enabled for local and remote machines
+
+.center[
+&lt;span style="color:lightblue; font-size: 75%"&gt;&lt;b&gt;*&lt;i&gt;once wrangled into shape scripts/container will be accessible via GitHub/Docker Hub&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;
+]
+
+---
+
+&lt;p&gt; 
+.center[&lt;img src="images/circos_170906v4.png" style="width: 62%; margin-right: 1%; margin-top: -1.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+
+&lt;p&gt; 
+.center[&lt;img src="images/circos_170906v4.png" style="width: 155%; margin-right: 1%; margin-top: -1.5em; border: 1px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+
+## Project: Diagnostics Annotation and Variant Reporting software 
+
+&lt;p&gt; 
+.center[&lt;img src="images/Pipeline_flowchart_v2.png" style="width: 80%; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: inverse
+
+## Project: Electronic Notebook
+
+A project I undertook to try and make life a little easier for my Honours student.  
+
+  - in Bioinformatics: Electronic Notebook **&gt;&gt;&gt;** Physical Lab Notebook (IMO)
+  - R package [`blogdown`](https://github.com/rstudio/blogdown) to the rescue
+
+--
+
+.center[*With free software we are able to produce an extensible and reproducible electronic lab notebook.*]
+
+.center[.huge[RStudio -&gt; Blogdown -&gt; Hugo -&gt; GitHub]]
+
+&lt;br&gt;
+
+--
+
+### Examples
+
+  - https://example-lab-notebook.netlify.com/
+  - https://martha-labbook.netlify.com/
+
+&lt;br&gt;
+
+--
+
+.center[Everything you need to get set up is available from my GitHub repo: https://github.com/sirselim/electronic_lab_notebook]
+
+---
+
+## Other tools worth noting?
+
+**RedCap** (https://www.project-redcap.org/)
+
+  + diabetes app questionnaire (Jeremy Krebs)
+  + guinea pig data entry tool (Max Berry)
+
+&lt;br&gt;
+    
+--
+  
+**MongoDB** (https://www.mongodb.com/)
+
+  + reboot of a large public methylation array database (Sam Beardman)
+
+&lt;br&gt;
+
+--
+
+**Docker** (https://www.docker.com/)
+  
+  + creating a container for DART (Sam Beardman)
+
+&lt;br&gt;
+
+--
+
+**VSCode** (https://code.visualstudio.com)  
+  - Yep, I'm using a Microsoft product!
+
+---
+class: middle inverse
+
+# Collaborations
+
+---
+class: inverse
+
+# Collaborations / Networks
+
+.pull-left[.medium[
+#### &lt;span style="color:lightblue"&gt;UK&lt;/span&gt;  
+Peter Donnelly (*Director, Wellcome Trust Centre*)  
+Jim Wilson (*Oxford University*)
+
+#### &lt;span style="color:lightblue"&gt;USA&lt;/span&gt;  
+Greg Gibson (*Georgia Institute of Technology*)  
+Mike Langston (**)  
+John Blangero (*University of Texas Rio Grande Valley*)  
+Melanie Carless (*Texas Biomedical Research Institute*)  
+Saumya Das (*Harvard Medical School*)
+
+#### &lt;span style="color:lightblue"&gt;Canada&lt;/span&gt;  
+Sam Beardman - Vancouver (*BestBuy, Boeing*)
+]]
+
+.pull-right[.medium[
+#### &lt;span style="color:lightblue"&gt;Australia&lt;/span&gt;  
+Kerrie Mengersen (*QUT*)  
+Nicole White (*QUT*)  
+Marcel Dinger (*Garvan Institute*)  
+Ray Blick (**)
+
+#### &lt;span style="color:lightblue"&gt;Local&lt;/span&gt;  
+Mik Black (*University of Otago*)  
+Max Berry (*University of Otago*)  
+Jeremy Krebs (*University of Otago*)   
+Kirsty Danielson (*Otago University Medical School*)  
+
+David Eccles (*Gringene Bioinformatics*)  
+Geoff Chambers (*VUW*)
+]]
+
+&lt;br /&gt;
+
+.large[.center[&lt;b&gt;a collection of my important contacts&lt;/b&gt;]]
+
+---
+class: middle inverse
+
+&lt;p&gt;
+.huge[.center[&lt;b&gt;Thank you&lt;/b&gt;]]
+&lt;/p&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
