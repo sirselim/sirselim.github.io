@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>.huge[My journey through genetics:]</title>
+    <meta charset="utf-8">
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
+    <link rel="stylesheet" href="libs/remark-css/example_mod.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# .huge[My journey through genetics:]
+## …wetlab to cafe…
+### <div class="line-block"><a href="http://sirselim.github.io/">Dr Miles Benton</a><br />
+Senior Scientist Bioinformatics, ESR</div>
+### (4<sup>th</sup> August 2018)
+
+---
+
+class: middle
+
+
+
+# .center[Advocate for reproducible research...]
+
+## .center[Where possible my presentations and code are available online]
+
+&lt;br /&gt;
+
+&lt;p&gt;
+.center[
+&lt;img src="images/github_logo.png" style="width: 520px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/sirselim_qrcode.png" style="width: 202px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+&lt;br /&gt;
+
+.center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
+
+---
+class: middle inverse
+
+# Me...
+
+---
+layout: false
+
+background-image: url("images/taranaki.jpg")
+background-size: cover
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/house.jpg" style="width: 75%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/building.jpg" style="width: 75%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+# Undergrad (2004 - 2007)
+
+## Victoria University of Wellington (VUW)
+
+### &lt;span style="color:#3498DB"&gt;BBMedSci (Human Genetics, Molecular Pathology)&lt;/span&gt;
+
+---
+layout: false
+
+background-image: url("images/dna.jpg")
+background-size: cover
+
+---
+class: center
+
+## Human Genome Project (1990 - 2003)
+
+&lt;p&gt; 
+.center[&lt;img src="images/damn_hackers.jpg" style="width: 35%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+&lt;p style="font-size: 14px"&gt;
+.center[
+&lt;a href="http://humangenomeproject.yolasite.com/impact.php" target="blank"&gt;http://humangenomeproject.yolasite.com/impact.php&lt;/a&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+### The Human Genome
+
+  - ~3 billion base pairs (A, T, C, G)
+  - organised into 23 pairs of chromosomes  
+  
+  - it took ~13 years to 'complete' the genome project
+  - at a cost of $3 billion USD
+    + yep, that's a $ per letter!
+
+&lt;br&gt;
+
+.center[**Remember a few of these stats, we'll revisit later on...**]
+
+---
+class: middle inverse
+
+# MSc (2007 - 2009)
+
+## Environmental Science and Research (ESR) &amp; VUW
+
+### &lt;span style="color:#3498DB"&gt;Started off as Cell and Molecular Biology...&lt;/span&gt;
+
+---
+class: middle inverse
+
+&lt;p&gt;
+.center[
+&lt;img src="images/rod.jpg" style="width: 202px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/geoff.jpg" style="width: 202px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+# Mitochondria - and their DNA!
+
+---
+class: middle inverse
+
+### Seven daughters of Eve (Bryan Sykes)
+
+&lt;p&gt; 
+.center[&lt;img src="images/eve.jpg" style="width: 25%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+.center[.small[*First PCR machine (cool story!)]]
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/mt_process.png" style="width: 75%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/mt_dna.png" style="width: 55%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+## My Masters project
+
+* We performed the first complete mtDNA sequencing in NZ Māori:  
+  * population genetics (more diversity)
+  * health outcomes (some interesting results)
+
+&lt;br&gt;
+
+* Using a technology called a microarray
+
+* turns out this was 'flawed' and the software was TERRIBLE
+  * so I had to improvise/'hack'
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/chip_process.png" style="width: 70%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/gel.png" style="width: 45%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/seq.png" style="width: 45%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/bad_seq.png" style="width: 50%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/nj_tree.png" style="width: 70%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+.large[The introduction of this &lt;span style="color:#3498DB"&gt;*in-silico*&lt;/span&gt; aspect into my project really grabbed me...]
+
+&lt;br&gt;
+
+.large[...so I started making the move from the wetlab/bench...]
+
+&lt;br&gt;
+
+.pull-right[.large[...to &lt;span style="color:#3498DB"&gt;computers&lt;/span&gt;...]]
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/wetlab.jpg" style="width: 75%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+# PhD (2010 - 2014)
+
+## Griffith University, Gold Coast, Australia
+
+### &lt;span style="color:#3498DB"&gt;Bioinformatics (*using computers to solve biological problems*)&lt;/span&gt;
+
+---
+class: middle inverse
+
+&lt;p&gt;
+.center[
+&lt;img src="images/lyn.jpg" style="width: 200px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/rod.jpg" style="width: 222px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/donia.jpg" style="width: 170px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/geoff.jpg" style="width: 222px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+---
+
+&lt;p&gt; 
+.center[&lt;img src="images/stuff.gif" style="width: 65%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+&lt;p style="font-size: 14px"&gt;
+.center[
+&lt;a href="http://biocomicals.blogspot.com/2011/05/thats-what-bioinformaticians-do.html" target="blank"&gt;http://biocomicals.blogspot.com/&lt;/a&gt;
+]
+&lt;/p&gt;
+
+---
+class: inverse middle
+
+.large[...it starts with...]
+
+# NORFOLK ISLAND
+
+---
+class: middle inverse
+
+&lt;p&gt; 
+.center[&lt;img src="images/NorfolkIsland.png" style="width: 70%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+&lt;p&gt; 
+.center[&lt;img src="images/vic_england.jpg" style="width: 45%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+&lt;p&gt; 
+.center[&lt;img src="images/sun_island.jpg" style="width: 75%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle center
+
+<div id="htmlwidget-aee7ab4ba719905704a4" style="width:100%;height:594px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aee7ab4ba719905704a4">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-29.0285,-192.038,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Norfolk Island",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[-24.3768,-128.3242,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Pitcairn Islands",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[-17.6509,-149.426,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Tahiti",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[52.3555,-359.25,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"England",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[-2.25,-240,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Indonesia",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[-26.0285,-180.65],3,[]],"limits":{"lat":[-29.0285,52.3555],"lng":[-359.25,-128.3242]}},"evals":[],"jsHooks":[]}</script>
+
+---
+class: inverse middle center
+
+&lt;p&gt; 
+.center[&lt;img src="images/NI_ped_mt.png" style="width: 100%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+40% of current population haplogroup &lt;span style="color:lightblue"&gt;B4a1a[...]&lt;/span&gt;&lt;br /&gt;
+
+&lt;p style="font-size: 14px"&gt;Benton MC &lt;i&gt;et al.,:&lt;/i&gt; &lt;a href="https://investigativegenetics.biomedcentral.com/articles/10.1186/s13323-015-0028-9" target="blank"&gt;&lt;i&gt;“Mutiny on the Bounty”: the genetic history of Norfolk Island reveals extreme gender-biased admixture.&lt;/i&gt;&lt;/a&gt; Investigative Genetics 2015, 6:11.&lt;/p&gt;
+
+---
+class: middle
+
+.center[.large[Specific female mtDNA trees]]
+
+&lt;p&gt; 
+.center[&lt;img src="images/ped1.png" style="width: 80%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+.center[.large[Specific female mtDNA trees]]
+
+&lt;p&gt; 
+.center[&lt;img src="images/ped2.png" style="width: 80%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+.center[.large[Specific female mtDNA trees]]
+
+&lt;p&gt; 
+.center[&lt;img src="images/ped3.png" style="width: 80%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: inverse
+
+### &lt;span style="color:lightblue"&gt;My PhD took me from basic GWAS...&lt;/span&gt;
+
+&lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Lea RA, &lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, Carless MA, Bellis C, Hanna M, Eccles D, Chambers GK, Curran JE, Blangero J and Griffiths LR. (2015) *Serum bilirubin concentration is modified by UGT1A1 Haplotypes and Influences Risk of Type-2 Diabetes in the Norfolk Island Genetic Isolate*. **BMC Genetics** 16(1) [[article]](http://www.biomedcentral.com/1471-2156/16/136)
+
+--
+
+### &lt;span style="color:lightblue"&gt;through integrative 'omics...&lt;/span&gt;
+
+&lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Lea RA, &lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, Carless MA, Göring HH, Bellis C, Hanna M, Eccles D, Chambers GK, Curran JE, Harper JL, Blangero J and Griffiths LR. (2013) *Mapping eQTLs in the Norfolk Island Genetic Isolate Identifies Candidate Genes for CVD-risk Traits*. **American Journal of Human Genetics** 93(6): 1087-99 [[article]](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3853002/)
+
+--
+
+### &lt;span style="color:lightblue"&gt;and the application of 'outside-of-the-box' statistical approaches...&lt;/span&gt;
+
+&lt;span style="color:#3498DB"&gt;**Benton MC**&lt;/span&gt;, Lea RA, &lt;span style="color:#3498DB"&gt;**Macartney-Coxson D**&lt;/span&gt;, Carless MA, Göring HH, Bellis C, Hanna M, Eccles D, Chambers GK, Curran JE, Harper JL, Blangero J and Griffiths LR. (2015) *A phenomic scan of the Norfolk Island genetic isolate identifies a major pleiotropic effect locus associated with renal disorder markers*. **PLoS Genetics** 11(10) [[article]](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005593)
+
+---
+class: middle
+
+# so bioinformatics also means &lt;span style="color:#3498DB"&gt;'freedom'&lt;/span&gt;...
+
+---
+layout: false
+
+background-image: url("images/coffee.jpg")
+background-size: cover
+
+---
+class: middle inverse
+
+# PostDoc (2014 - 2018)
+
+## Queensland University of Technology, Brisbane, Australia&lt;sup&gt;*&lt;/sup&gt;
+
+### &lt;span style="color:#3498DB"&gt;Research Fellow&lt;/span&gt;
+
+----
+
+&lt;sup&gt;*&lt;/sup&gt;but I worked remotely (from home/Wellington) - that freedom again!
+
+---
+layout: false
+
+background-image: url("images/x10.png")
+background-size: cover
+
+---
+class: top
+
+&lt;br&gt;
+
+# Whole Genome Sequencing 
+
+.center[.large[let's revisit the idea of time and cost...]]
+
+--
+
+* can now do a genome in &lt;span style="color:#3498DB"&gt;**&lt;24 hours**&lt;/span&gt;...
+
+* ...for &lt;span style="color:#3498DB"&gt;**~$1000 USD**&lt;/span&gt;
+
+&lt;br&gt;
+
+--
+
+# Norfolk Island Whole Genome Sequencing
+
+* sequenced 108 individuals
+
+--
+
+* progress to date:
+
+  * founder variants
+
+  * glaucoma
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/proton.jpg" style="width: 65%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+layout: false
+
+background-image: url("images/proton2.jpg")
+background-size: cover
+
+---
+class: middle
+
+# Diagnostics Lab
+
+.large[Gene panel and Exome Sequencing (accredited - neurological disorders)]
+
+&lt;br&gt;
+
+## VCF-DART (my pipeline)
+
+* used to manually work through 30-60K rows of data in excel!
+
+* could take 4-8 weeks to identify and validate variant(s)
+
+&lt;br&gt;
+
+* now can have a short list of variants in &lt;span style="color:#3498DB"&gt;**1 day**&lt;/span&gt; 
+
+* validation in &lt;span style="color:#3498DB"&gt;**&lt;2 weeks**&lt;/span&gt;!
+
+---
+class: middle inverse
+
+# The next "big" thing in &lt;span style="color:#3498DB"&gt;next-generation sequencing&lt;/span&gt;?
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/nanopore.jpg" style="width: 65%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/nanopore2.png" style="width: 65%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/nanopore_family.jpg" style="width: 65%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+# Epigenetics
+
+&lt;br&gt;
+
+.large[&lt;span style="color:#3498DB"&gt;the punctuation of the genome&lt;/span&gt;]
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/grandma.jpg" style="width: 25%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/methylation.png" style="width: 80%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+# Methylation and Aging
+
+---
+class: middle
+
+&lt;p&gt; 
+.center[&lt;img src="images/aging_paper.png" style="width: 65%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+&lt;p&gt; 
+.center[&lt;img src="images/aging.png" style="width: 60%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+# ESR (July 2018 - )
+
+## Wellington (Porirua), NZ
+
+### &lt;span style="color:#3498DB"&gt;Senior Scientist Bioinformatics and Data Science&lt;/span&gt;
+
+---
+layout: false
+
+background-image: url("images/desk.jpg")
+background-size: cover
+
+---
+class: middle
+
+# I now have students of my own!
+
+&lt;br&gt;
+
+## &lt;span style="color:#3498DB"&gt;Martha Aquino&lt;/span&gt; (Honours, QUT)
+
+&lt;br&gt;
+
+## &lt;span style="color:#3498DB"&gt;Alessandra Santana&lt;/span&gt; (PhD, UoO &amp; ESR)
+
+---
+class: middle inverse
+
+&lt;p&gt; 
+.center[&lt;img src="images/jamie.jpg" style="width: 45%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+&lt;p&gt;
+.huge[.center[&lt;b&gt;Thank you!&lt;/b&gt;]]
+&lt;br&gt;
+&lt;/p&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
