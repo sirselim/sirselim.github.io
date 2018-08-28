@@ -82,20 +82,18 @@ class: middle
 
 # Diagnostics Lab
 
-.large[Gene panel and Exome Sequencing (accredited - neurological disorders)]
+.large[Gene panel and Exome Sequencing (NATA accredited - neurological disorders)]
 
 <br>
 
 ## VCF-DART (the pipeline)
 
 * used to manually work through 30-60K rows of data in Excel!
-
 * could take 4-8 weeks to identify and validate variant(s)
 
 <br>
 
 * now can have a short list of variants in <span style="color:#3498DB">**1 day**</span> 
-
 * validation in <span style="color:#3498DB">**<2 weeks**</span>
 
 ---
@@ -103,14 +101,14 @@ class: middle inverse
 
 # VCF-DART - what it's not...
 
-It is not a variant calling and quality control pipeline
+It is **NOT** a variant calling and quality control pipeline
 
 ---
 
 # Overview
 
 <p> 
-.center[<img src="images/Pipeline_flowchart_v2.png" style="width: 90%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/>]
+.center[<img src="images/Pipeline_flowchart_v2.png" style="width: 95%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/>]
 </p>
 
 ---
@@ -199,16 +197,72 @@ background-image: url("images/backup_6.png")
 background-size: contain
 
 ---
-class: middle
+class: 
+
+<p> 
+.center[<img src="images/nectarcloud.png" style="width: 70%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/>]
+</p>
+
+Spun up VM to give reviewers a chance to ~~break~~ test things.
+
+* using 6 public exomes (1000G)
+
+<br>
+
+--
+
+.large[**Allocated VM:**]
+
+* Ubuntu 18.08
+* 4 cores
+* 12GB RAM
+* 30GB root
+* 120GB emphemral disk
+
+--
+
+<br>
+
+...so it can scale down to quite reasonable specs...
+
+---
+class: middle inverse
 
 # to-do
 
-  - finish implementing ClinGen links
-  - option for GnomAD-beta
-  - refactoring main code base (bpipe)
-  - complete docker version
-  - continue developing documentation!
-  - work with clinicians to further develop and refine
+* ~~submit~~ manuscript - out for review (Genetics in Medicine) 
+* finish implementing ClinGen links
+* option for GnomAD-beta
+* refactoring main code base (bpipe)
+* complete docker version
+* continue developing documentation!
+* work with clinicians to further develop and refine
+
+---
+class: top
+
+# acknowledgements
+
+<div id="images">
+    <a href="http://xyz.com/hello">
+        <img src="images/robert.jpg" width="180px" height="250px">
+        <div class="caption">Dr Robert Smith (QUT)</div>
+    </a>
+    <a href="http://xyz.com/hi">
+        <img src="images/donia.jpg" width="180px" height="250px"> 
+        <div class="caption">Dr Donia Macartney-Coxson (ESR)</div>
+    </a>
+</div>
+
+
+
+
+
+Craig Windell (QUT)
+
+Sam Beardman
+
+QRISCloud / Nectar 
 
 ---
 class: middle inverse

@@ -73,7 +73,6 @@ blockquote {
 ul {
   font-size: 0.95em;
 }
-
 /* can hide slide numbers by setting opacity to 0 */
 .remark-slide-number {
   font-size: 10pt;
@@ -81,4 +80,17 @@ ul {
   margin-right: 10px;
   color: #FFFFFF; /* white */
   opacity: 0; /* default: 0.5 */
+}
+/* increase space between bullets */
+ul li { padding: 5px 0px; }
+
+#images{
+    text-align:center;
+    margin:50px auto;
+}
+#images a{
+    margin:0px 20px;
+    display:inline-block;
+    text-decoration:none;
+    color:black;
 }

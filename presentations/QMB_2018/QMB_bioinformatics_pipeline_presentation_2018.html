@@ -80,20 +80,18 @@ class: middle
 
 # Diagnostics Lab
 
-.large[Gene panel and Exome Sequencing (accredited - neurological disorders)]
+.large[Gene panel and Exome Sequencing (NATA accredited - neurological disorders)]
 
 &lt;br&gt;
 
 ## VCF-DART (the pipeline)
 
 * used to manually work through 30-60K rows of data in Excel!
-
 * could take 4-8 weeks to identify and validate variant(s)
 
 &lt;br&gt;
 
 * now can have a short list of variants in &lt;span style="color:#3498DB"&gt;**1 day**&lt;/span&gt; 
-
 * validation in &lt;span style="color:#3498DB"&gt;**&lt;2 weeks**&lt;/span&gt;
 
 ---
@@ -101,14 +99,14 @@ class: middle inverse
 
 # VCF-DART - what it's not...
 
-It is not a variant calling and quality control pipeline
+It is **NOT** a variant calling and quality control pipeline
 
 ---
 
 # Overview
 
 &lt;p&gt; 
-.center[&lt;img src="images/Pipeline_flowchart_v2.png" style="width: 90%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+.center[&lt;img src="images/Pipeline_flowchart_v2.png" style="width: 95%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
 &lt;/p&gt;
 
 ---
@@ -197,16 +195,72 @@ background-image: url("images/backup_6.png")
 background-size: contain
 
 ---
-class: middle
+class: 
+
+&lt;p&gt; 
+.center[&lt;img src="images/nectarcloud.png" style="width: 70%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+Spun up VM to give reviewers a chance to ~~break~~ test things.
+
+* using 6 public exomes (1000G)
+
+&lt;br&gt;
+
+--
+
+.large[**Allocated VM:**]
+
+* Ubuntu 18.08
+* 4 cores
+* 12GB RAM
+* 30GB root
+* 120GB emphemral disk
+
+--
+
+&lt;br&gt;
+
+...so it can scale down to quite reasonable specs...
+
+---
+class: middle inverse
 
 # to-do
 
-  - finish implementing ClinGen links
-  - option for GnomAD-beta
-  - refactoring main code base (bpipe)
-  - complete docker version
-  - continue developing documentation!
-  - work with clinicians to further develop and refine
+* ~~submit~~ manuscript - out for review (Genetics in Medicine) 
+* finish implementing ClinGen links
+* option for GnomAD-beta
+* refactoring main code base (bpipe)
+* complete docker version
+* continue developing documentation!
+* work with clinicians to further develop and refine
+
+---
+class: top
+
+# acknowledgements
+
+&lt;div id="images"&gt;
+    &lt;a href="http://xyz.com/hello"&gt;
+        &lt;img src="images/robert.jpg" width="180px" height="250px"&gt;
+        &lt;div class="caption"&gt;Dr Robert Smith (QUT)&lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href="http://xyz.com/hi"&gt;
+        &lt;img src="images/donia.jpg" width="180px" height="250px"&gt; 
+        &lt;div class="caption"&gt;Dr Donia Macartney-Coxson (ESR)&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+
+
+
+
+Craig Windell (QUT)
+
+Sam Beardman
+
+QRISCloud / Nectar 
 
 ---
 class: middle inverse
