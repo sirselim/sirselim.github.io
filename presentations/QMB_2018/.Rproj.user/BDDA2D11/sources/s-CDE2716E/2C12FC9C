@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535451701360.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2C12FC9C",
+    "lastKnownWriteTime" : 1535451757,
+    "last_content_update" : 1535451757073,
+    "path" : "/data/Presentations/QMB_2018/libs/remark-css/example_mod.css",
+    "project_path" : "libs/remark-css/example_mod.css",
+    "properties" : {
+        "cursorPosition" : "76,49",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "css"
+}

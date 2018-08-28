@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535446064749.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4891C036",
+    "lastKnownWriteTime" : 1535451305,
+    "last_content_update" : 1535451305484,
+    "path" : "/data/Presentations/QMB_2018/QMB_bioinformatics_pipeline_presentation_2018.Rmd",
+    "project_path" : "QMB_bioinformatics_pipeline_presentation_2018.Rmd",
+    "properties" : {
+        "cursorPosition" : "30,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
