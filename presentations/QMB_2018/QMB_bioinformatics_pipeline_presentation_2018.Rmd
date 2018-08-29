@@ -236,6 +236,7 @@ class: middle inverse
 # to-do
 
 * ~~submit~~ manuscript - out for review (Genetics in Medicine) 
+* release to the wild (anyone interested can help out)
 * finish implementing ClinGen links
 * option for GnomAD-beta
 * refactoring main code base (bpipe)
