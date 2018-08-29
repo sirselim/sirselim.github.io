@@ -86,15 +86,10 @@ class: middle
 
 <br>
 
-## VCF-DART (the pipeline)
+## Sanger -> Gene panel -> Exome
 
 * used to manually work through 30-60K rows of data in Excel!
 * could take 4-8 weeks to identify and validate variant(s)
-
-<br>
-
-* now can have a short list of variants in <span style="color:#3498DB">**1 day**</span> 
-* validation in <span style="color:#3498DB">**<2 weeks**</span>
 
 ---
 class: middle inverse
@@ -102,6 +97,8 @@ class: middle inverse
 # VCF-DART - what it's not...
 
 It is **NOT** a variant calling and quality control pipeline
+
+... it's about data
 
 ---
 
@@ -226,6 +223,14 @@ Spun up VM to give reviewers a chance to ~~break~~ test things.
 ...so it can scale down to quite reasonable specs...
 
 ---
+class: middle
+
+## VCF-DART in the lab
+
+* now can have a short list of variants in <span style="color:#3498DB">**1 day**</span> 
+* validation in <span style="color:#3498DB">**<2 weeks**</span>
+
+---
 class: middle inverse
 
 # to-do
@@ -253,10 +258,6 @@ class: top
         <div class="caption">Dr Donia Macartney-Coxson (ESR)</div>
     </a>
 </div>
-
-
-
-
 
 Craig Windell (QUT)
 
