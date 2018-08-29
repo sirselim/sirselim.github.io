@@ -214,7 +214,7 @@ Spun up VM to give reviewers a chance to ~~break~~ test things.
 * 4 cores
 * 12GB RAM
 * 30GB root
-* 120GB emphemral disk
+* 120GB ephemeral disk
 
 --
 
@@ -229,6 +229,13 @@ class: middle
 
 * now can have a short list of variants in <span style="color:#3498DB">**1 day**</span> 
 * validation in <span style="color:#3498DB">**<2 weeks**</span>
+
+## Summary
+
+* open source
+* modular (tools and databases)
+* scalable (laptops -> servers)
+* easy to deploy and use
 
 ---
 class: middle inverse
