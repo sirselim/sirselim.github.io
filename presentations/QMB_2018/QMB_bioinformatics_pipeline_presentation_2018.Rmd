@@ -1,6 +1,6 @@
 ---
-title: ".huge[VCF-DART:]"
-subtitle: "...another pipeline..."
+title: ".huge[VCF-DART]"
+subtitle: "(VCF Diagnostic Annotation and Reporting Tool)"
 author:  | 
   | [Dr Miles Benton](http://sirselim.github.io/)
   | Senior Scientist Bioinformatics, ESR
