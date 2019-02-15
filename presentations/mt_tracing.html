@@ -812,17 +812,20 @@ transMatrix &lt;- as.data.frame(transMatrix)
 # look at random sample of data
 sample_n(transMatrix, 10) # sample_n assumes use of dplyr</code></pre>
 <pre><code>##        ID1    ID2 number_of_trans
-## 235 212771 312960               3
-## 94      15 345601               3
-## 103     17 125850               2
-## 36      12 212771               2
-## 144     20 125850               2
-## 59      13 168790               1
-## 130     19 312960               2
-## 318 319420 338630               5
-## 231 168790 400516               4
-## 169    112 312960               3</code></pre>
+## 208 125850 333130               3
+## 69      13 333760               2
+## 229 168790 400263               4
+## 334 333760 400263               5
+## 281 219390 345601               4
+## 307 316960 319420               4
+## 214 125850 400512               4
+## 288 312960 319420               3
+## 333 333760 364020               3
+## 165    112 212771               4</code></pre>
 <p>The above example was run on a small sub-pedigree containing <strong>351</strong> total pairs, it completed in less than a second. Obviously as the number of pairs increases it will take longer. It’s not best practice to use for loops but this was a very quick solution to the problem at hand and it appears to be working well enough for now. Could look into using something like <code>apply</code> in the future if required.</p>
+</div>
+<div id="most-recent-common-maternal-ancestor-mrcma-transmission" class="section level2">
+<h2>Most Recent Common Maternal Ancestor (MRCMA) transmission</h2>
 <p><strong>NOTE:</strong> in the above, the code was exploring the number of transmissions via the founding maternal pedigree member. This isn’t going to be of interest and doesn’t actually make a whole lot of sense. What is more interesting is the number of transmissions between a pair of samples to their <strong>most recent commom maternal ancestor</strong>. This is a bit trickier to implement, but the below code will do this.</p>
 <p>First, we need a function to find the most recent common maternal ancestor (<code>mrcma</code>) for a given pair of samples:</p>
 <pre class="r"><code># return mrcma for a given pair
@@ -897,16 +900,16 @@ maternalTest &lt;- calc_maternalTrans(13)</code></pre>
 <pre class="r"><code># look at random sample of data
 sample_n(maternalTest, 10) # sample_n assumes use of dplyr</code></pre>
 <pre><code>##     maternalFounder   ind1   ind2 mrcma mrcma_transmissions
-## 48               13     13 400512    13                   3
-## 103              13     19 219390    19                   1
-## 8                13      9 125850    13                   2
-## 272              13 316160 319420    13                   4
-## 21               13      9 345601    13                   3
-## 238              13 213992 316960    15                   2
-## 111              13     19 345601    13                   3
-## 210              13 212771 316160    13                   4
-## 292              13 319420 338630    13                   5
-## 100              13     19 212771    13                   3</code></pre>
+## 89               13     17 338630    13                   4
+## 250              13 219390 316960    13                   4
+## 132              13     20 364020    13                   2
+## 151              13    112 364020    13                   3
+## 18               13      9 333130    13                   3
+## 126              13     20 316960    13                   3
+## 160              13 110850 219390    13                   5
+## 208              13 212771 219390    13                   4
+## 123              13     20 219390    13                   3
+## 273              13 316160 333130    13                   4</code></pre>
 <p>We can now batch through a list of maternal founders to calculate all pairwise maternal transmissions and return these as an object (the next bit of code takes a while to run).</p>
 <pre class="r"><code># list of maternal IDs
 maternal_IDs &lt;- c(13, 1597, 691, 694, 242, 490, 522)
