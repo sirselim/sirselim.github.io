@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535451701360.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2C12FC9C",
+    "lastKnownWriteTime" : 1555313473,
+    "last_content_update" : 1555313473958,
+    "path" : "/data/Presentations/ESR_SSAP_2019/libs/remark-css/example_mod.css",
+    "project_path" : "libs/remark-css/example_mod.css",
+    "properties" : {
+        "cursorPosition" : "67,24",
+        "scrollLine" : "51"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "css"
+}

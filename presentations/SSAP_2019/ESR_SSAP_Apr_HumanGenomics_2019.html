@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>.huge[Human Genomics]</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="libs/remark-css/example_mod.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# .huge[Human Genomics]
+## (Exomes, pipelines and GPUs)
+### <div class="line-block"><a href="http://sirselim.github.io/">Dr Miles Benton</a><br />
+Senior Scientist Bioinformatics, ESR</div>
+### (SSAP Kenepuru - 16<sup>th</sup> April 2019)
+
+---
+
+class: middle
+
+
+
+# .center[Advocate for reproducible research...]
+
+## .center[Where possible my presentations and code are available online]
+
+&lt;br /&gt;
+
+&lt;p&gt;
+.center[
+&lt;img src="images/github_logo.png" style="width: 520px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/sirselim_qrcode.png" style="width: 202px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+&lt;br /&gt;
+
+.center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
+
+&lt;!-- --- --&gt;
+&lt;!-- class: middle inverse --&gt;
+
+&lt;!-- # ESR (2&lt;sup&gt;nd&lt;/sup&gt; July 2018 - ) --&gt;
+
+&lt;!-- ## Wellington (Porirua), NZ --&gt;
+
+&lt;!-- ### &lt;span style="color:#3498DB"&gt;Senior Scientist Bioinformatics and Data Science&lt;/span&gt; --&gt;
+
+---
+layout: false
+
+background-image: url("images/pipeline_1.jpg")
+background-size: contain
+
+.massive[Pipeline Development]
+
+---
+class: middle inverse
+
+# VCF-DART - what it's not...
+
+It is **NOT** a variant calling and quality control pipeline
+
+... it's about data
+
+---
+
+# Overview
+
+&lt;p&gt; 
+.center[&lt;img src="images/Pipeline_flowchart_v2.png" style="width: 95%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+---
+class: middle inverse
+
+# "Module 1" - VCF-DART
+
+---
+layout: false
+
+background-image: url("images/vcfdart_1.png")
+background-size: contain
+
+---
+layout: false
+
+background-image: url("images/vcfdart_2.png")
+background-size: contain
+
+---
+class: middle
+
+# Runtime
+
+.huge[30-50K variants ("average" human exome VCF):]
+
+  - 6-10 mins (24 core 256GB RAM)
+  - 17-23 mins (4 core 12GB RAM)
+
+---
+class: middle inverse
+
+# "Module 2" - VCF-DART Viewer
+
+---
+class: middle center
+
+.huge[[...live demonstration...](https://43.240.99.48/sample-apps/WES_ShinyDiscover/)]
+
+&lt;br&gt;
+
+.huge[**?**]
+
+---
+layout: false
+
+background-image: url("images/backup_1.png")
+background-size: contain
+
+---
+layout: false
+
+background-image: url("images/backup_2.png")
+background-size: contain
+
+---
+layout: false
+
+background-image: url("images/backup_3.png")
+background-size: contain
+
+---
+layout: false
+
+background-image: url("images/backup_4.png")
+background-size: contain
+
+---
+layout: false
+
+background-image: url("images/backup_5.png")
+background-size: contain
+
+---
+layout: false
+
+background-image: url("images/backup_6.png")
+background-size: contain
+
+---
+class: 
+
+&lt;p&gt; 
+.center[&lt;img src="images/nectarcloud.png" style="width: 70%; margin-right: 1%; margin-top: -0.5em; border: 3px solid white;"/&gt;]
+&lt;/p&gt;
+
+Spun up VM to give reviewers a chance to ~~break~~ test things.
+
+* using 6 public exomes (1000G)
+
+&lt;br&gt;
+
+--
+
+.large[**Allocated VM:**]
+
+* Ubuntu 18.08
+* 4 cores
+* 12GB RAM
+* 30GB root
+* 120GB ephemeral disk
+
+--
+
+&lt;br&gt;
+
+...so it can scale down to quite reasonable specs...
+
+---
+class: middle
+
+## Summary
+
+* open source
+* modular (tools and databases)
+* scalable (laptops -&gt; servers -&gt; HPC)
+  * potential to launch as Azure or AWS service
+* easy to deploy and use
+
+&lt;br&gt;
+
+Manuscript under revision at [The Journal of Molecular Diagnostics](https://jmd.amjpathol.org/)
+
+---
+layout: false
+
+background-image: url("images/clinical_DNA.jpg")
+background-size: cover
+
+.massive[Clinical Exomes]
+
+---
+class: inverse middle
+
+## &lt;span style="color:#3498DB"&gt;{service}&lt;/span&gt; Wellington Regional Genetics Lab
+
+* clinical exome (~5000 targeted genes)
+* successful first run (8 samples)
+  * another 8 about to be run
+* looking to ESR for sequencing and bioinformatics expertise
+  * also training
+* this addresses a major 'gap' for Wellington health care
+* service contract on the horizon (monthly sequencing)
+* additionally: 15 whole genomes (data)
+
+---
+class: inverse middle
+
+## &lt;span style="color:#3498DB"&gt;{research}&lt;/span&gt; Capital &amp; Coast DHB (Wellington Hospital)
+
+* 50 "whole" exomes - hyperthyroidism
+  * appears much more prevalent in NZ (genetics??) 
+  * includes family trios
+* research collaboration initially
+* aiming for a diagnostic test
+  * course of action planning
+  * depending on the type, surgery not required
+
+---
+layout: false
+
+background-image: url("images/NVIDIA_Tesla.jpg")
+background-size: cover
+
+.massive[GPUs]
+
+---
+class: middle
+
+# GPUs (Graphics Processing Units)
+
+## &lt;span style="color:#3498DB"&gt;**Orac**&lt;/span&gt; - Data science server
+
+* 36 cores (72 threads)
+* 512GB RAM
+* 2 x Nvidia Tesla V100 GPUs
+  * 32GB RAM
+  * 5120 cuda cores
+  * 640 Tensor cores
+  * Deep learning 112 teraFLOPS
+
+&lt;center&gt;Allows us to test variant callers such as &lt;b&gt;Deepvariant&lt;/b&gt;&lt;/center&gt;
+
+---
+
+## First Deepvariant test
+
+* Genome in a bottle sample (HG001) 
+* variant calling done in &lt;span style="color:#3498DB"&gt;**45 seconds**&lt;/span&gt;
+* &lt;span style="color:#3498DB"&gt;**99.93%** accuracy&lt;/span&gt; against "truth" data
+
+--
+
+&lt;br&gt;
+
+* additional testing underway
+  * comparison between 3 different calling methods
+  * final design likely to be a combination of several tools
+  
+--
+
+&lt;br&gt;
+
+* look to incorporate into our pipelines 
+  * (human and non-human)
+
+---
+class: middle inverse
+
+.massive[&lt;center&gt;...&lt;/center&gt;]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

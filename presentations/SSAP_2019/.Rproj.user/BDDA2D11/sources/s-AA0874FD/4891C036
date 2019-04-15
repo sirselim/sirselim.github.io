@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535446064749.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2252291754",
+    "id" : "4891C036",
+    "lastKnownWriteTime" : 1555314249,
+    "last_content_update" : 1555314249747,
+    "path" : "/data/Presentations/ESR_SSAP_2019/ESR_SSAP_Apr_HumanGenomics_2019.Rmd",
+    "project_path" : "ESR_SSAP_Apr_HumanGenomics_2019.Rmd",
+    "properties" : {
+        "cursorPosition" : "230,47",
+        "scrollLine" : "205"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
