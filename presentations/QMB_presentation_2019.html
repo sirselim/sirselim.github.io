@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>.huge[The Humble Guinea Pig]</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="libs/remark-css/example_mod.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# .huge[The Humble Guinea Pig]
+## …Cute, Furry and Deserving of a Better Genome Assembly…
+### <div class="line-block"><a href="http://sirselim.github.io/">Dr Miles Benton</a><br />
+Senior Scientist Bioinformatics<br />
+Human Genomics, Institute of Environmental Science and Research (ESR)<br />
+<br />
+.large[Queenstown Research Week, Queenstown, 5<small><sup>th</sup></small> September 2019]<br />
+<br />
+<br />
+.center[<img src="images/ESR_Logo_SFC_reversed.png" style="width: 30%;"/>]</div>
+
+---
+
+class: middle
+
+
+
+# .center[Advocate for reproducible research...]
+
+## .center[Where possible my presentations and code are available online]
+
+&lt;br /&gt;
+
+&lt;p&gt;
+.center[
+&lt;img src="images/github_logo.png" style="width: 520px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/sirselim_qrcode.png" style="width: 202px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+&lt;br /&gt;
+
+.center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
+ 
+---
+class: middle
+
+# Why guinea pig genomes?
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/GuineaPig.jpg" style="width: 720px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+## "We deserve a decent reference after everything we've been through!"
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/promethion.jpg" style="width: 420px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;
+&lt;img src="images/NovaSeq6000.jpg" style="width: 320px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+&lt;br&gt;
+
+&lt;span style="color:#3498DB"&gt;**Long read sequencing**&lt;/span&gt;
+
+* 3 out-bred females
+
+&lt;br&gt;
+
+--
+
+&lt;span style="color:#3498DB"&gt;**Short read sequencing**&lt;/span&gt;
+
+* 6 animals
+  * 3 females (same animals as above)
+  * 3 males (a brother of each female)
+
+&lt;br&gt;
+
+--
+
+... what about the Y chr? ...
+
+--
+
+* FISH for Y
+* sequence on our in-house minION
+* student project
+
+---
+class: middle
+
+# Slight segue...
+
+---
+class: false
+
+background-image: url("images/titan.jpg")
+background-size: cover
+
+---
+class: middle
+
+# GPU benchmarking*
+
+We have been collecting some metrics and thoughts [here](https://esr-nz.github.io/gpu_basecalling_testing/gpu_benchmarking.html).
+
+&lt;br&gt;
+
+_*&lt;b&gt;spoiler&lt;/b&gt;: it's MUCH faster!!_
+
+---
+class: top
+
+&lt;br&gt;
+&lt;br&gt;
+
+# Cute, Furry and Deserving of a Better Genome Assembly...
+
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+## ...unfortunately not quite yet...
+
+---
+class: top
+
+# Liver tissue is being "fun"...
+
+&lt;p&gt;
+.center[
+&lt;img src="images/not_good_1.png" style="width: 760px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+# Liver tissue is being "fun"...
+
+&lt;p&gt;
+.center[
+&lt;img src="images/better_1.png" style="width: 760px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+# Liver tissue is being "fun"...
+
+&lt;p&gt;
+.center[
+&lt;img src="images/not_good_2.png" style="width: 760px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+# Liver tissue is being "fun"...
+
+&lt;p&gt;
+.center[
+&lt;img src="images/better_2.png" style="width: 760px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+# Liver tissue is being "fun"...
+
+&lt;p&gt;
+.center[
+&lt;img src="images/not_good.png" style="width: 760px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+# Liver tissue is being "fun"...
+
+&lt;p&gt;
+.center[
+&lt;img src="images/better.png" style="width: 760px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+# what can I tell you?
+
+we have a very high coverage complete mt genome...
+
+---
+class: middle
+
+# how about some epigenetics?
+
+---
+class: top
+
+&lt;br&gt;
+
+# Facilitating collaboration
+
+* using reproducible research ethos
+* creating interactive documents and applications
+* empowers data owners to explore their own data
+
+--
+
+## example
+
+RRBS guinea pig liver
+
+* pre-term (n=6) vs term (n=6)
+* shiny app to explore data
+  * differential meth
+  * PCA
+  * interactive results tables
+
+--
+
+.center[ Make available via our [internal server](http://leviathan/human_genomics/). ]
+
+---
+class: top
+
+# Guinea Liver RRBS
+
+&lt;p&gt;
+.pull-left[
+&lt;img src="images/pheatmap_dfmeth_20190903.png" style="width: 690px;"/&gt;
+]
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;br&gt;
+
+&lt;ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;differential methylation - &lt;a href="https://github.com/al2na/methylKit" target="blank"&gt;[methylkit]&lt;/a&gt;&lt;/li&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;490 CpG sites FDR &lt; 0.05 &amp; &gt;10% diff meth&lt;/li&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;interesting biology / pathways&lt;/li&gt;  
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+Experimental Shiny app [here](https://esr-cri.shinyapps.io/methylation_plotting_app/)
+]
+
+&lt;/p&gt;
+
+---
+class: middle
+
+# where to next?
+
+.large[
+
+* "reboot" the project
+
+* complete mtDNA aside
+
+* explore long-read base modifications
+
+* RRBS: targeted validation
+
+* manuscripts
+
+] 
+ 
+---
+class: top
+
+# acknowledgements
+
+&lt;div id="images"&gt;
+    &lt;a href="http://xyz.com/hello"&gt;
+        &lt;img src="images/max.jpg" style="width: 180px; height: 250px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;
+        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Dr Max Berry (University of Otago)&lt;/span&gt;&lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href="http://xyz.com/hi"&gt;
+        &lt;img src="images/donia.jpg" style="width: 180px; height: 250px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt; 
+        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Dr Donia Macartney-Coxson (ESR)&lt;/span&gt;&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+
+.pull-left[.medium[
+.center[Dr Rebecca Dyson (University of Otago)]
+
+.center[&lt;img src="images/UoO_logo.png" style="height: 90px; "/&gt;]
+
+]]
+
+.pull-right[.medium[
+.center[Jane Clapham (ESR)
+
+Dr Joep de Ligt (ESR)
+
+Dr David Eccles (Malaghan Institute)]
+]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

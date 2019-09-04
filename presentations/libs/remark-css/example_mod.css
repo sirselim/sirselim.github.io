@@ -112,3 +112,10 @@ ul li { padding: 5px 0px; }
   content:url(images/esr_logo.png);
   height:60px;
 }
+
+.remark-slide-content:not(.title-slide){
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/66/ESR_SFC_logo.png);
+  background-position: 98% 98%;
+  background-size: 125px;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
