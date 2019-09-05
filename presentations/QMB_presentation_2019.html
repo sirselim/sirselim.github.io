@@ -11,7 +11,7 @@ class: center, middle, inverse, title-slide
 
 # .huge[The Humble Guinea Pig]
 ## …Cute, Furry and Deserving of a Better Genome Assembly…
-### <div class="line-block"><a href="http://sirselim.github.io/">Dr Miles Benton</a><br />
+### <div class="line-block"><a href="http://sirselim.github.io/">Miles Benton</a><br />
 Senior Scientist Bioinformatics<br />
 Human Genomics, Institute of Environmental Science and Research (ESR)<br />
 <br />
@@ -42,11 +42,22 @@ class: middle
 &lt;br /&gt;
 
 .center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
- 
+
 ---
 class: middle
 
 # Why guinea pig genomes?
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/article.png" style="width: 820px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+.small[.center[(*link to article [here](https://tinyurl.com/yy9fuw95)*)]]
 
 ---
 class: middle
@@ -206,14 +217,101 @@ class: top
 ---
 class: top
 
-# what can I tell you?
+# What can I tell you?
 
-we have a very high coverage complete mt genome...
+--
+
+.large[We have a very high coverage complete mt genome...]
+
+&lt;br&gt;
+
+--
+
+&lt;br&gt;
+
+1. downsample ([fastx-sample.pl](https://gitlab.com/gringer/bioinfscripts/blob/master/fastx-sample.pl) David Eccles)
+
+2. mapping - [minimap2](https://github.com/lh3/minimap2)
+
+3. assembly - [miniasm](https://github.com/lh3/miniasm)
+
+4. consensus
+```sh
+# GFA to fasta
+awk '$1 ~/S/ {print "&gt;"$2"\n"$3}' reads.gfa &gt; reads.fasta
+```
+
+5. re-map - [minimap2](https://github.com/lh3/minimap2)
+
+6. polish - [racon](https://github.com/lbcb-sci/racon)
 
 ---
 class: middle
 
-# how about some epigenetics?
+&lt;p&gt;
+.center[
+&lt;img src="images/msa_nucl_assembled_gp_Cpor_mtDNA_rotated.png" style="width: 590px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/Cpor_assembly_k8_001.png" style="width: 590px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/Cpor_assembly_k12_001.png" style="width: 590px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/Cpor_mtDNA_endRepeat.png" style="width: 590px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/assembled_guinea_k12_001.png" style="width: 890px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/stompPlot_Cpor_mtDNA.png" style="width: 990px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/stompPlot_utg000001c.png" style="width: 990px;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: middle
+
+# How about some epigenetics?
 
 ---
 class: top
@@ -240,7 +338,7 @@ RRBS guinea pig liver
 
 --
 
-.center[ Make available via our [internal server](http://leviathan/human_genomics/). ]
+.center[ Make available via our [internal server](http://leviathan/human_genomics/) and [shinyapps.io](https://www.shinyapps.io). ]
 
 ---
 class: top
@@ -279,7 +377,7 @@ Experimental Shiny app [here](https://esr-cri.shinyapps.io/methylation_plotting_
 ---
 class: middle
 
-# where to next?
+# Where to next?
 
 .large[
 
@@ -298,22 +396,22 @@ class: middle
 ---
 class: top
 
-# acknowledgements
+# Acknowledgements
 
 &lt;div id="images"&gt;
     &lt;a href="http://xyz.com/hello"&gt;
         &lt;img src="images/max.jpg" style="width: 180px; height: 250px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;
-        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Dr Max Berry (University of Otago)&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Max Berry (University of Otago)&lt;/span&gt;&lt;/div&gt;
     &lt;/a&gt;
     &lt;a href="http://xyz.com/hi"&gt;
         &lt;img src="images/donia.jpg" style="width: 180px; height: 250px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt; 
-        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Dr Donia Macartney-Coxson (ESR)&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Donia Macartney-Coxson (ESR)&lt;/span&gt;&lt;/div&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 
 .pull-left[.medium[
-.center[Dr Rebecca Dyson (University of Otago)]
+.center[Rebecca Dyson (University of Otago)]
 
 .center[&lt;img src="images/UoO_logo.png" style="height: 90px; "/&gt;]
 
@@ -322,9 +420,9 @@ class: top
 .pull-right[.medium[
 .center[Jane Clapham (ESR)
 
-Dr Joep de Ligt (ESR)
+Joep de Ligt (ESR)
 
-Dr David Eccles (Malaghan Institute)]
+David Eccles (Malaghan Institute)]
 ]]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
