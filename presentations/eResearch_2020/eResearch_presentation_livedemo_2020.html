@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>.huge[Real-time Genomic Sequencing]</title>
+    <meta charset="utf-8" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
+    <link rel="stylesheet" href="libs/remark-css/example_mod_esr.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# .huge[Real-time Genomic Sequencing]
+## Assessing the potential of <del>autonomous AI devices</del> <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/">cool tech</a> for portable real-time sequencing
+### <div class="line-block"><a href="http://sirselim.github.io/">Miles Benton</a><br />
+Senior Scientist Bioinformatics<br />
+Human Genomics, Institute of Environmental Science and Research (ESR)<br />
+<br />
+.large[<a href="https://www.eresearchnz2020.org.nz/">eResearch</a>, Dunedin, 12<small><sup>th</sup></small> - 14<small><sup>th</sup></small> Feburary 2020]<br />
+<br />
+<br />
+.center[<img src="images/ESR_SFC_logo.png" style="width: 25%; border: 2px solid white;"/>]</div>
+
+---
+
+class: middle
+
+
+
+# .center[Advocate for reproducible research...]
+
+## .center[Where possible my presentations and code are available online]
+
+&lt;br /&gt;
+
+&lt;p&gt;
+.center[
+&lt;img src="images/github_logo.png" style="width: 520px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+&lt;img src="images/sirselim_qrcode.png" style="width: 202px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+&lt;br /&gt;
+
+.center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
+
+---
+class: middle
+
+&lt;img src="https://nanopore-dunedin.github.io/docs/assets/GA-Wide-Colour-1200px.jpg"&gt;
+
+.center[.huge[
+[www.genomics-aotearoa.org.nz](www.genomics-aotearoa.org.nz)
+
+[github.com/GenomicsAotearoa](https://github.com/GenomicsAotearoa)
+]]
+
+---
+class: middle
+
+# GPU basecalling (live demo part 1)
+
+&lt;br&gt; 
+
+data: mixed bacterial sample, ~0.5 Mb (or ~5.5 Gb actual data)
+
+
+```bash
+# fast basecalling mode
+guppy_basecaller \
+  --disable_pings \
+  --compress_fastq \
+  -c dna_r9.4.1_450bps_fast.cfg -i fast5/ \
+  -s flongle_test \
+  -x 'auto' \
+  --recursive \
+  --num_callers 4 \
+  --gpu_runners_per_device 8 \
+  --chunks_per_runner 256
+```
+
+&lt;br&gt;
+
+.pull.right[&lt;span style="color:#3498DB"&gt;... **que to start ~~trial by fire~~ the first demo** ...&lt;/span&gt;]
+
+---
+class: middle
+
+# while that's running...
+
+---
+layout: false
+class: middle inverse
+
+background-image: url("https://cdn.vox-cdn.com/thumbor/llQlREwACaitewdPcLm5HzWT_g0=/0x1:1100x734/920x613/filters:focal(0x1:1100x734):format(webp)/cdn.vox-cdn.com/imported_assets/1507663/DNA-sequence.jpg")
+background-size: cover
+
+.massive[**Genomic sequencing**]
+
+---
+class: top
+
+# what are we doing?
+
+.large[
+Portable ‘real-time’ sequencing for the masses?
+]
+
+--
+
+* &lt;span style="color:#3498DB"&gt;**the idea**&lt;/span&gt;
+
+  * low cost
+  * accessible
+  * portable
+  * fun!
+
+--
+  
+* &lt;span style="color:#3498DB"&gt;**example use cases**&lt;/span&gt;
+
+  * field sequencing (real-time monitoring, forensics, forestry, ...)
+  * clinical
+  * community outreach / teaching
+  
+---
+layout: false
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="https://www.illumina.com/content/dam/illumina-marketing/images/decade-in-sequencing/decade-in-sequencing-320-web-graphic.jpg" style="width: 820px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+.small[.center[
+(image source: [illumina.com](https://www.illumina.com/techniques/sequencing/dna-sequencing.html))
+]]
+
+---
+layout: false
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator.com/article/2018/03/21/oxford-nanopore-raises-funds-to-support-commercial-expansion/7992741-1-eng-GB/Oxford-Nanopore-raises-funds-to-support-commercial-expansion_wrbm_large.jpg" style="width: 620px; margin-right: 1%; margin-top: 1.5em;"/&gt;
+]
+&lt;/p&gt;
+
+---
+layout: false
+
+background-image: url("images/david_slide.png")
+background-size: contain
+
+&lt;a href="https://f1000research.com/slides/8-1947" style="position:absolute; top:638px; left:190px"&gt;kindly supplied by David Eccles (f1000 presentation)&lt;/a&gt;
+
+---
+layout: false
+class: middle
+
+![](https://nanoporetech.github.io/tombo/_images/single_samp.png)
+
+.small[.center[
+(image source: [tombo manual](https://nanoporetech.github.io/tombo/plotting.html))
+]]
+
+---
+class: middle
+
+# Why GPUs?
+
+.pull-left[
+New type of sequencing data requires new type of 'analysis'
+
+* squiggle data lends itself nicely to neural nets
+* GPUs are very capable in this space
+
+&lt;br&gt;
+
+ESR GPU basecalling benchmarks [(link)](https://esr-nz.github.io/gpu_basecalling_testing/gpu_benchmarking.html)
+]
+
+.pull-right[
+![Titan RTX](images/titan.jpg)
+]
+
+&lt;br&gt;
+
+.small[.center[
+[UPDATE:] guppy is now able to scale across mutiple GPUs!
+]]
+
+---
+class: middle
+
+# Our experiences with the Xavier [(link)](https://hackmd.io/@Miles/HkumH7sBH)
+
+.pull-left[.right[
+&lt;img src="images/IMG_20191021_165639.jpg" style="width: 200px;"/&gt;
+&lt;img src="images/IMG_20191025_094614.jpg" style="width: 200px;"/&gt;
+]]
+
+.pull-right[.left[
+&lt;img src="images/battery_charge.jpg" style="width: 200px;"/&gt;
+&lt;img src="images/xavier_in_use.jpg" style="width: 200px;"/&gt;
+]]
+
+.center[
+&lt;img src="images/jetson_xavier_jtop_screenshot.png" style="width: 650px;"/&gt;
+]
+
+---
+class: top
+
+# Benchmarking [(link)&lt;sup&gt;*&lt;/sup&gt;](https://gist.github.com/sirselim/2ebe2807112fae93809aa18f096dbb94)
+
+.small[
+\* spoilers for those following along live
+]
+
+--
+
+&lt;br&gt;
+
+Most Jetson devices have the ability to be put into different power modes
+
+&lt;br&gt;
+
+<div id="htmlwidget-417c425f9defb98ecef3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-417c425f9defb98ecef3">{"x":{"filter":"none","fillContainer":false,"data":[["10W","15W","30W 2 cores","30W 4 cores","30W MAX (8 cores)"],["33.4 mins","14.3 mins","10.8 mins","10.8 mins","7.5 mins"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Power.mode<\/th>\n      <th>Time<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+.small[
+***Note:*** this table represents basecalling perfomed when running on a portable powerbank.
+]
+
+---
+class: top
+
+## Very rough comparison of Nvidia ecosystem&lt;sup&gt;#&lt;/sup&gt;
+
+<div id="htmlwidget-e91840b89a1c2e4dfea9" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e91840b89a1c2e4dfea9">{"x":{"filter":"none","fillContainer":false,"data":[["Jetson Nano","Jetson Xavier NX*","Jetson Xavier","Geforce 1080 Ti","Geforce 2080 Ti","Titan RTX","Tesla V100"],["~0.5","6","11","11.3","~13-14","16.3","16.4"],["$99","$399","$699","~$650","~$800-$1000","~$3000","~$8500"],["5-10W","10-15W","10-30W","215W","250W","280W","250W"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Card<\/th>\n      <th>TFLOPS<\/th>\n      <th>Price<\/th>\n      <th>Power<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
+.small[Price in USD]  
+.small[&lt;sup&gt;#&lt;/sup&gt; a very small selection of what Nvidia offers obviously!]  
+.small[\* [Available March 2020](https://developer.nvidia.com/embedded/jetson-xavier-nx), this can fit in an existing Jetson Nano board]
+
+---
+class: middle
+
+# Results...?
+
+&lt;br&gt;
+
+.pull.right[
+&lt;span style="color:#3498DB"&gt;... **que to open the terminal** ...&lt;/span&gt;
+]
+
+---
+class: middle
+
+# Case study (live demo part 2)
+
+## Clinical metagenomics
+
+&lt;br&gt; 
+
+.pull.right[&lt;span style="color:#3498DB"&gt;... **que to start the second demo** ...&lt;/span&gt;]
+
+---
+class: middle
+
+&lt;p&gt;
+.center[
+&lt;img src="images/jamie_sm.jpg" style="width: 330px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;
+&lt;img src="images/jamie_big.jpg" style="width: 334px; margin-right: 1%; margin-top: 1.5em; border: 3px solid white;"/&gt;
+]
+&lt;/p&gt;
+
+---
+class: top
+
+# case study
+
+.large[
+&lt;br&gt;
+
+* had a lumbar puncture ('9 days' old) 
+  * (after being born 8 weeks early)
+
+&lt;br&gt;
+
+* suspected meningitis (bacteria/viral)?
+ * told after the fact
+
+&lt;br&gt;
+
+* \&gt;**48 hours** for results return
+
+]
+
+---
+class: top
+
+# case study
+
+.large[
+... imagine a more ‘real-time’ procedure:
+]
+
+&lt;br&gt;
+
+--
+
+.large[
+* a sample (i.e. blood) taken,
+* DNA/RNA extracted/enriched,
+* sequencing library prepared,
+* nanopore sequencing initiated,
+* sequence starts coming in almost instantly,
+* **&lt;span style="color:#3498DB"&gt;time to first read-match detection &lt;1 hr&lt;/span&gt;**
+
+]
+
+--
+
+&lt;br&gt;
+
+.center[.huge[
+**This isn't a stretch of the imagination anymore, soon to be reality**
+]]
+
+---
+class: middle
+
+# Results...?
+
+&lt;br&gt;
+
+.center[
+## BLAST [blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&amp;PAGE_TYPE=BlastSearch&amp;LINK_LOC=blasthome)
+]
+
+---
+class: middle
+
+&lt;iframe src="taxonomy.krona.html" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:90%;width:100%;border:none;overflow:hidden;"&gt;&lt;/iframe&gt;
+
+---
+class: middle
+
+### What's actually in there?
+
+&lt;br&gt;
+
+.large[
+
+Mixed sample of bacterial species:
+
+&gt; 18AR0083 Enterobacter cloacae  
+&gt; 18AR0155 Klebsiella pneumoniae  
+&gt; 18AR0156 Escherichia coli  
+&gt; 18AR0164 Escherichia coli
+
+]
+
+---
+class: middle
+
+# Summary ...
+
+## ... if things haven't crashed and burned ...
+
+---
+class: top
+
+# acknowledgements
+
+&lt;div id="images"&gt;
+    &lt;a href="http://xyz.com/hello"&gt;
+        &lt;img src="images/RDean.jpg" width="350px"&gt;
+        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Richard Dean (ESR)&lt;/span&gt;&lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href="http://xyz.com/hello"&gt;
+        &lt;img src="images/DC_ESR_2.jpg" width="350px"&gt;
+        &lt;div class="caption"&gt;&lt;span style="color:#3498DB"&gt;Joep de Ligt (ESR)&lt;/span&gt;&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+.pull-left[.medium[
+Donia Macartney-Coxson (ESR)  
+Una Ren (ESR)  
+Matt Storey (ESR)
+]]
+
+.pull-right[.medium[
+Shane Sturrock (ESR)  
+Russell Smithies (ESR)  
+Graham Ogdon (ESR)  
+
+David Eccles (Malaghan, Gringene Bioinformatics)
+]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

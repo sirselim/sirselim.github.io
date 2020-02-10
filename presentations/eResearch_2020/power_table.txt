@@ -1,0 +1,6 @@
+Power mode	Time
+10W	33.4 mins
+15W	14.3 mins
+30W 2 cores	10.8 mins
+30W 4 cores	10.8 mins
+30W MAX (8 cores)	7.5 mins

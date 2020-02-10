@@ -1,0 +1,8 @@
+Card	TFLOPS	Price	Power
+Jetson Nano	~0.5	$99	5-10W
+Jetson Xavier NX*	6	$399	10-15W
+Jetson Xavier	11	$699	10-30W
+Geforce 1080 Ti	11.3	~$650	215W
+Geforce 2080 Ti	~13-14	~$800-$1000	250W
+Titan RTX	16.3	~$3000	280W
+Tesla V100	16.4	~$8500	250W
