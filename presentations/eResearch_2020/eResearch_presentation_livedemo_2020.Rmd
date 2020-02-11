@@ -200,8 +200,8 @@ layout: false
 background-image: url("images/david_slide.png")
 background-size: contain
 
-<a href="https://f1000research.com/slides/8-1947" style="position:absolute; top:625px; left:190px">kindly supplied by David Eccles (f1000 presentation)</a>
-<a href="https://www.youtube.com/watch?v=CHCAb-PAqUI" style="position:absolute; top:652px; left:190px">Sequencing DNA with Linux Cores and Naopores</a>
+<a href="https://f1000research.com/slides/8-1947" style="position:absolute; top:625px; left:190px">slide kindly supplied by David Eccles (f1000 presentation)</a>
+<a href="https://www.youtube.com/watch?v=CHCAb-PAqUI" style="position:absolute; top:652px; left:190px">"Sequencing DNA with Linux Cores and Naopores"</a>
 
 ???
 
