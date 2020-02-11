@@ -43,9 +43,9 @@ options(knitr.table.format = "html")
 ]
 </p>
 
-<br />
-
 .center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
+
+.center[twitter: [@miles_benton](https://twitter.com/miles_benton?lang=en)]
 
 ???
 
@@ -109,7 +109,7 @@ class: middle
 
 Refer to Peter's opening address, reiterating that genomics is important and increasingly so.
 
-Check to see auidence knowledge of genetics/genomics.
+Check to see audience knowledge of genetics/genomics.
 
 A little genomics 101 if needed...
 
@@ -249,7 +249,7 @@ New type of sequencing data requires new type of 'analysis'
 
 
 ESR GPU basecalling benchmarks [(link)](https://esr-nz.github.io/gpu_basecalling_testing/gpu_benchmarking.html)
-* Titan RTX & 2x Telsa V100
+* Titan RTX & 2x Tesla V100
 ]
 
 .pull-right[
@@ -259,7 +259,7 @@ ESR GPU basecalling benchmarks [(link)](https://esr-nz.github.io/gpu_basecalling
 <br>
 
 .small[.center[
-[UPDATE:] guppy is now able to scale across mutiple GPUs!
+[UPDATE:] guppy is now able to scale across multiple GPUs!
 ]]
 
 ---
@@ -316,7 +316,7 @@ DT::datatable(
 )
 ```
 .small[
-***Note:*** this table represents basecalling perfomed when running on a portable powerbank.
+***Note:*** this table represents basecalling performed when running on a portable powerbank.
 ]
 
 ???
@@ -511,7 +511,7 @@ Again reiterate:
 
 * cost
 * portability
-* accesible - off the shelf parts
+* accessible - off the shelf parts
 * fast
 * GPU tech scaled down
 * MANY use cases
