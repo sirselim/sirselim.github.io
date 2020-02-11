@@ -47,6 +47,12 @@ options(knitr.table.format = "html")
 
 .center[[sirselim.github.io/presentations](http://sirselim.github.io/presentations)]
 
+???
+
+These are my presenter notes. :)
+
+These links throughout are a combination of github and hackMD, all should be available.
+
 ---
 class: middle
 
@@ -57,6 +63,10 @@ class: middle
 
 [github.com/GenomicsAotearoa](https://github.com/GenomicsAotearoa)
 ]]
+
+???
+
+Part of the Bioinformatics Leadership Team, for health.
 
 ---
 class: middle
@@ -70,25 +80,32 @@ data: mixed bacterial sample, ~0.5 Mb (or ~5.5 Gb actual data)
 ```{r, engine='bash', eval=F}
 # fast basecalling mode
 guppy_basecaller \
-  --disable_pings \
+  --disable_pings \                            # don't call home
   --compress_fastq \
-  -c dna_r9.4.1_450bps_fast.cfg -i fast5/ \
-  -s flongle_test \
-  -x 'auto' \
+  -c dna_r9.4.1_450bps_fast.cfg \              # model file
+  -i fast5/ \                                  # input dir (fast5 files)
+  -s flongle_test \                            # output dir
+  -x 'auto' \                                  # GPU configuration
   --recursive \
   --num_callers 4 \
   --gpu_runners_per_device 8 \
   --chunks_per_runner 256
 ```
 
-<br>
-
 .pull.right[<span style="color:#3498DB">... **que to start ~~trial by fire~~ the first demo** ...</span>]
+
+???
+
+Notes
 
 ---
 class: middle
 
 # while that's running...
+
+???
+
+A little genomics 101...
 
 ---
 layout: false
@@ -98,6 +115,11 @@ background-image: url("https://cdn.vox-cdn.com/thumbor/llQlREwACaitewdPcLm5HzWT_
 background-size: cover
 
 .massive[**Genomic sequencing**]
+
+???
+
+DNA - A, T, C, G
+Part of all 'living' things
 
 ---
 class: top
@@ -139,6 +161,12 @@ class: middle
 (image source: [illumina.com](https://www.illumina.com/techniques/sequencing/dna-sequencing.html))
 ]]
 
+???
+
+I used the word portable in my previous slide, this is not a phrase one would attribute to machines from Illumina / PacBio.
+
+These things are huge! ... and expensive.
+
 ---
 layout: false
 class: middle
@@ -149,23 +177,51 @@ class: middle
 ]
 </p>
 
+.small[.center[
+(image source: [nanoporetech](https://nanoporetech.com/about-us/news/oxford-nanopore-announces-ps100-million-140m-fundraising-global-investors))
+]]
+
+???
+
+flongle: ~$500 USD for 5
+1 might be enough for a metagenome
+
+minION: $1000 
+
+smidgION: still just a concept
+
+gridION: ~$50K
+
+promethION: ~$230K
+
 ---
 layout: false
 
 background-image: url("images/david_slide.png")
 background-size: contain
 
-<a href="https://f1000research.com/slides/8-1947" style="position:absolute; top:638px; left:190px">kindly supplied by David Eccles (f1000 presentation)</a>
+<a href="https://f1000research.com/slides/8-1947" style="position:absolute; top:625px; left:190px">kindly supplied by David Eccles (f1000 presentation)</a>
+<a href="https://www.youtube.com/watch?v=CHCAb-PAqUI" style="position:absolute; top:652px; left:190px">Sequencing DNA with Linux Cores and Naopores</a>
+
+???
+
+David's talk and a live demo are linked.
 
 ---
 layout: false
 class: middle
+
+# Example squiggle plot
 
 ![](https://nanoporetech.github.io/tombo/_images/single_samp.png)
 
 .small[.center[
 (image source: [tombo manual](https://nanoporetech.github.io/tombo/plotting.html))
 ]]
+
+???
+
+What we 'see' when DNA passes through the pores.
 
 ---
 class: middle
@@ -177,10 +233,11 @@ New type of sequencing data requires new type of 'analysis'
 
 * squiggle data lends itself nicely to neural nets
 * GPUs are very capable in this space
+  - CUDA cores
 
-<br>
 
 ESR GPU basecalling benchmarks [(link)](https://esr-nz.github.io/gpu_basecalling_testing/gpu_benchmarking.html)
+* Titan RTX & 2x Telsa V100
 ]
 
 .pull-right[
@@ -212,6 +269,15 @@ class: middle
 <img src="images/jetson_xavier_jtop_screenshot.png" style="width: 650px;"/>
 ]
 
+???
+
+Talk about the Xavier specs:
+
+ * 8 core arm 
+ * 16 GB of RAM
+ * 512 CUDA core and 64 tensor cores
+ * 512 GB SSD NVMe
+
 ---
 class: top
 
@@ -241,6 +307,12 @@ DT::datatable(
 ***Note:*** this table represents basecalling perfomed when running on a portable powerbank.
 ]
 
+???
+
+Why is 10W mode exciting?
+
+We're running in 30W MAX mode for this live demo - running on a portable powerpack.
+
 ---
 class: top
 
@@ -259,6 +331,12 @@ DT::datatable(
 .small[<sup>#</sup> a very small selection of what Nvidia offers obviously!]  
 .small[\* [Available March 2020](https://developer.nvidia.com/embedded/jetson-xavier-nx), this can fit in an existing Jetson Nano board]
 
+???
+
+V100 could rip through this data in a couple of mins, but consider the cost, power, etc.
+
+Xavier NX is exciting, module that can slot into the Nano body [**hold up Nano device**]
+
 ---
 class: middle
 
@@ -269,6 +347,12 @@ class: middle
 .pull.right[
 <span style="color:#3498DB">... **que to open the terminal** ...</span>
 ]
+
+???
+
+Show completed run, time and other metrics.
+
+Also open/show head of a fastq file (cat it and take a long read to blast)
 
 ---
 class: middle
@@ -344,6 +428,10 @@ class: top
 **This isn't a stretch of the imagination anymore, soon to be reality**
 ]]
 
+???
+
+Stress how fast and low cost this has the potential to be.
+
 ---
 class: middle
 
@@ -354,6 +442,20 @@ class: middle
 .center[
 ## BLAST [blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
 ]
+
+```{r, engine='bash', eval=F}
+zcat flongle_test/fastq_runid_3b07b3e214d5928e9ae59bd18918e7298d4f601b_20_0.fastq.gz | \
+  paste - - - - | \
+  awk -F '\t' '{L=length($2);if(L>M) {M=L;R=$0;}} END {print R;}' | \
+  tr "\t" "\n" | \
+  sed -n 2p
+```
+
+???
+
+Take an example read and blast it.
+
+Quick and dirty oneliner to find the longest read in a fastq file, we can then paste this into our blast window and hopefully identify a speices of bacteria...
 
 ---
 class: middle
@@ -378,17 +480,34 @@ Mixed sample of bacterial species:
 
 ]
 
+???
+
+Success!
+
 ---
 class: middle
 
 # Summary ...
 
+<br>
+
 ## ... if things haven't crashed and burned ...
+
+???
+
+Again reiterate:
+
+* cost
+* portability
+* accesible - off the shelf parts
+* fast
+* GPU tech scaled down
+* MANY use cases
 
 ---
 class: top
 
-# acknowledgements
+# acknowledgements (people to 'nerd' out with!)
 
 <div id="images">
     <a href="http://xyz.com/hello">
