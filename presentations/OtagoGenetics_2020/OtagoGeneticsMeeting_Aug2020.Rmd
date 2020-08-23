@@ -21,7 +21,7 @@ output:
       countIncrementalSlides: false
       ratio: 16:9
 ---
-class: middle
+class: middle hide_logo
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -40,6 +40,27 @@ xaringanExtra::use_logo(
   link_url = "https://www.esr.cri.nz/",
   exclude_class = c("title-slide", "inverse", "hide_logo")
 )
+```
+
+```{r xaringan-extra-styles, echo=FALSE}
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket")
+)
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
 ```
 
 # .center[Advocate for reproducible research...]
@@ -61,16 +82,16 @@ xaringanExtra::use_logo(
 
 <!-- SVG Icons are from https://simpleicons.org -->
 <footer class="pv3 ph3 ph5-ns tc">
-  <a class="link near-black hover-silver dib h2 w2 mr3" href="https://github.com/sirselim" title="GitHub">
+  <a class="link near-black hover-blue dib h2 w2 mr3" href="https://github.com/sirselim" title="GitHub">
     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"/></svg>
   </a>
-  <a class="link hover-silver near-black dib h2 w2 mr3" href="https://twitter.com/miles_benton" title="Twitter">
+  <a class="link hover-blue near-black dib h2 w2 mr3" href="https://twitter.com/miles_benton" title="Twitter">
     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
   </a>
-  <a class="link hover-silver near-black dib h2 w2 mr3" href="https://scholar.google.co.nz/citations?user=iEhBavEAAAAJ&hl=en" title="Google Scholar">
+  <a class="link hover-blue near-black dib h2 w2 mr3" href="https://scholar.google.co.nz/citations?user=iEhBavEAAAAJ&hl=en" title="Google Scholar">
     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" fill-rule="nonzero"/></svg>
   </a>
-  <a class="link hover-silver near-black dib h2 w2 mr3" href="http://orcid.org/0000-0003-3442-965X" title="ORCID">
+  <a class="link hover-blue near-black dib h2 w2 mr3" href="http://orcid.org/0000-0003-3442-965X" title="ORCID">
     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z" fill-rule="nonzero"/></svg>
   </a>
 </footer>
@@ -80,49 +101,51 @@ class: top
 
 # acknowledgements
 
-<br>
-
 <div class="dt dt--fixed">
   <div class="dtc tc pv4 bg-white">
-    <a href="https://www.linkedin.com/in/leah-kemp-80a204115/?originalSubdomain=nz">
-      <img src="images/Leah.jpeg" width="240px" height="250px"> 
-      <div class="caption">Leah Kemp</div>
-    </a>
+    <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img src="images/Leah.jpeg" class="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of team member">
+        <h4 class="f3 mb2">Leah Kemp</h4>
+        <h4 class="f5 fw4 gray mt0">(ESR)</h4>
+      </div>
+    </article>
   </div>
   <div class="dtc tc pv4 bg-white">
-    <a href="https://scholar.google.com/citations?user=z2edTLkAAAAJ&hl=en">
-      <img src="images/JoepPM.jpg" width="300px" height="250px"> 
-      <div class="caption">Dr Joep de Ligt</div>
-    </a>
+    <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img src="images/Joep.jpeg" class="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of team member">
+        <h4 class="f3 mb2">Joep de Ligt</h4>
+        <h4 class="f5 fw4 gray mt0">(ESR)</h4>
+      </div>
+    </article>
   </div>
   <div class="dtc tc pv4 bg-white">
-    <a href="https://scholar.google.co.nz/citations?user=HtgLI-8AAAAJ&hl=en">
-      <img src="images/donia.jpg" width="180px" height="250px"> 
-      <div class="caption">Dr Donia Macartney-Coxson</div>
-    </a>
+    <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <div class="tc">
+        <img src="images/Donia.png" class="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of team member">
+        <h4 class="f3 mb2">Donia Macartney-Coxson</h4>
+        <h4 class="f5 fw4 gray mt0">(ESR)</h4>
+      </div>
+    </article>
   </div>
 </div>
 
 ---
+class: middle
 
 # Talk Outline
 
-[1]. One year ago...
-  * my journey
-  * ESR
-  * VCF-DART  
+[1]. <span style="color:#3498DB">**One year ago...**</span>
+  * my journey → ESR → VCF-DART  
 
-<br>
-  
-[2]. Current day  
+[2]. <span style="color:#3498DB">**Current day**</span>
+  * wfl → GPUs → lots of data
 
-<br>
+[3]. <span style="color:#3498DB">**Scout tool**</span>
+  * {Interactive demo}
 
-[3]. Scout tool {Interactive demo}
-
-<br>
-
-[4]. Moving forwards?
+[4]. <span style="color:#3498DB">**Moving forwards?**</span>
 
 ---
 class: middle inverse
@@ -158,7 +181,7 @@ class: middle
 ## Sanger -> Gene panel -> Exome
 
 * move to WES -> increase in variants
-* manual approach through 30-60K rows of data in Excel
+* manual approach through 30-60K rows of data in **Excel**
 * increased time to identify and validate variant(s)
 
 ---
@@ -359,7 +382,23 @@ class: middle inverse
 ---
 class: middle inverse
 
+# to-do (SPOILER: the goal posts have shifted!)
+
+* &#10004; ~~submit~~ manuscript - accepted (The Journal of Molecular Diagnostics) 
+* &#10004; ~~[release to the wild - GitHub (anyone interested can help out)](https://github.com/sirselim/WES_ShinyDiscover)~~
+* ~~finish implementing ClinGen & ClinVar links~~
+* ~~option for GnomAD-beta~~
+* ~~refactoring main code base (snakemake)~~
+* ~~complete docker/singularity version~~
+* ~~continue developing documentation!~~
+* ~~work with clinicians to further develop and refine~~
+
+---
+class: middle inverse
+
 # What a difference a year makes...
+
+.huge[<span style="color:#3498DB">**Human Genomics at ESR**</span>]
 
 ---
 
@@ -383,19 +422,42 @@ class: middle inverse
   * exploring the replacement of gene panels with exome/genome
 
 ---
-class: middle
+class: top
 
 # Complete Overhaul! [Leah Kemp]
 
-## ESR GitHub: [https://github.com/ESR-NZ](https://github.com/ESR-NZ)
-
 <br>
 
-* Alignment and Variant Calling Workflow: [human_genomics_pipeline](https://github.com/ESR-NZ/human_genomics_pipeline)
+<article class="cf">
+  <div class="fl w-100 w-50-ns bg-white">
+    <br>
+    <br>
+    <br>
+    <ul>
+      <li>Alignment and Variant Calling Workflow</li>
+        <ul>
+          <li><a href="https://github.com/ESR-NZ/human_genomics_pipeline" target="blank">[human_genomics_pipeline]</a></li>
+        </ul>
+    <br>
+    <br>
+      <li>Variant Annotation Workflow</li> 
+        <ul>
+          <li><a href="https://github.com/ESR-NZ/vcf_annotation_pipeline" target="blank">[annotation_pipeline]</a></li>
+        </ul>
+    </ul>
+  </div>
+  <div class="fl w-100 w-50-ns bg-white tc">
+  <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+    <div class="tc">
+      <img src="images/Leah.jpeg" class="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of team member">
+      <h4 class="f3 mb2">Leah Kemp</h4>
+      <h4 class="f5 fw4 gray mt0">(ESR)</h4>
+    </div>
+  </article>
+  </div>
+</article>
 
-<br>
-
-* Variant Annotation Workflow: [annotation_pipeline](https://github.com/ESR-NZ/vcf_annotation_pipeline)
+.center[.huge[ESR GitHub: [https://github.com/ESR-NZ](https://github.com/ESR-NZ)]]
 
 ---
 class: top
@@ -421,7 +483,7 @@ class: top
   - this means you get more finishing in the time it takes to process one
 
 ---
-class: middle
+class: middle inverse
 
 # We can go faster!
 
@@ -481,47 +543,69 @@ class: middle inverse
 
 # ... so what ? ...
 
-## the exact same workflow, but THE SPEED!
+--
+
+.center[.large[exact same workflow, but THE SPEED!]]
 
 --
 
-### pipeline [CPU]
+<br>
 
-* Exomes: a >100X exome takes between 8 - 12 hours
-* Genomes: a ~30X genome takes between 30-48 hours
-
---
-
-### pipeline [GPU - Parabricks]
-
---
-
-* Exomes: a >100X exome takes between **6-12 mins**
-* Genomes: a 100X genome takes **~4 hours** (fastq -> vcf)
+<article class="cf">
+  <div class="fl w-100 w-50-ns bg-white">
+    <ul>
+    <li><b>Pipeline [CPU]</b></li>
+      <ul>
+        <li>Exomes: >100X exome takes between 8-12 hours</li>
+        <li>Genomes: ~30X genome takes between 30-48 hours</li>
+      </ul>
+    </ul>
+    <br>
+    <ul>
+    <li><b>Pipeline [GPU - Parabricks]</b></li>
+      <ul>
+        <li>Exomes: >100X exome takes between <span style="color:#3498DB"><b>6-12 mins</b></span></b></li>
+        <li>Genomes: 100X genome takes <span style="color:#3498DB"><b>~4 hours</b></span></li>
+      </ul>
+    </ul>
+  </div>
+  <div class="fl w-100 w-50-ns bg-white tc">
+    <img src="images/fast-turtle.png" style="width: 70%; margin-right: 1%;"/>
+  </div>
+</article>
 
 ---
 
 # ... so what ? ...
 
 <br>
-<br>
-<br>
-<br>
 
-* This is running on 2x Nvidia Tesla V100 GPUs  
-  * ~$15,000 NZD per card
-
-<br>
-
-* Can have up to 8 cards in a node
-  * this results in processing a genome in **~30 mins**
-      + according to Nvidia
+<article class="cf">
+  <div class="fl w-100 w-50-ns bg-white">
+    <ul>
+    <li>[ESR] This is running on 2x Nvidia Tesla V100 GPUs</li>
+      <ul>
+        <li>~$15,000 NZD per card</li>
+      </ul>
+    </ul>
+    <br>
+    <ul>
+    <li>Can have up to 8 cards in a node</li>
+      <ul>
+        <li>this results in processing a genome in <b>~30 mins</b></li>
+      </ul>
+    </ul>
+  </div>
+  <div class="fl w-100 w-50-ns bg-white tc">
+    <img src="images/v100rack.jpg" style="width: 70%; margin-right: 1%;"/>
+  </div>
+</article>
 
 --
 
 <br>
 
-.center[(*cough ... someone should ask why we don't just all buy GPUs ...*)]
+.center[.large[*<span style="color:#3498DB"><b>( "cough" ... someone should ask why we don't just all buy GPUs ... "cough" )</b></span>*]]
 
 ---
 
@@ -600,14 +684,17 @@ class: top
 ---
 class: middle
 
-<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
-  <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">What is Scout?</h1>
-  <div class="pa3 bt b--black-10">
-    <p class="f6 f5-ns lh-copy measure">
-    Analyze VCFs and collaborate on solving rare diseases quicker.
-    </p>
-  </div>
-</article>
+<div class="flex items-center justify-center pa4 bg-lightest-blue navy">
+  <svg class="w1" data-icon="info" viewBox="0 0 32 32" style="fill:currentcolor">
+    <title>info icon</title>
+    <path d="M16 0 A16 16 0 0 1 16 32 A16 16 0 0 1 16 0 M19 15 L13 15 L13 26 L19 26 z M16 6 A3 3 0 0 0 16 12 A3 3 0 0 0 16 6"></path>
+  </svg>
+  <h2 class="lh-title ml3">What is Scout?</h2>
+</div>
+
+### Answer: A free, open-source tool to analyze VCFs and collaborate on solving rare diseases quicker.
+
+Scout documentation: [link](http://www.clinicalgenomics.se/scout/)
 
 <br>
 
@@ -637,7 +724,7 @@ class: middle inverse
 * ...
 
 ---
-class: middle
+class: middle hide_logo
 
 <article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
   <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Thank you</h1>
