@@ -42,27 +42,6 @@ xaringanExtra::use_logo(
 )
 ```
 
-```{r xaringan-extra-styles, echo=FALSE}
-xaringanExtra::use_extra_styles(
-  hover_code_line = TRUE,         #<<
-  mute_unhighlighted_code = TRUE  #<<
-)
-```
-
-```{r share-again, echo=FALSE}
-xaringanExtra::use_share_again()
-```
-
-```{r style-share-again, echo=FALSE}
-xaringanExtra::style_share_again(
-  share_buttons = c("twitter", "linkedin", "pocket")
-)
-```
-
-```{r xaringanExtra-clipboard, echo=FALSE}
-xaringanExtra::use_clipboard()
-```
-
 # .center[Advocate for reproducible research...]
 
 ## .center[Where possible my presentations and code are available online]
