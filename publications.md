@@ -1,5 +1,7 @@
 # Publications
 
+([return home](https://sirselim.github.io/))
+
 #### A list of my peer-reviewed journal articles
 
 <br />
