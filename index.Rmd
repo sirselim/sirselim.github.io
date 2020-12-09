@@ -20,5 +20,6 @@ output:
 At the bottom of the world in New Zealand, I am a computational geneticist 
 interested in all facets of biology and technology. I am currently working 
 at ESR ([Institute of Environmental Science and Research](www.esr.cri.nz)) 
-as a Senior Bioinformatician. I also dabble at photography and guitar, with 
-a side of coffee, beer and single malts in the mix.
+as a Senior Bioinformatician. Technology and science geek that also dabbles 
+at photography and electric guitar, with a side of coffee, beer and single 
+malts thrown in the mix.
