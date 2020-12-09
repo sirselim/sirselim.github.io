@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": true,
+        "libraryPath": "/data/R/library/site-library",
+        "installDependencies": true
+    }
+}

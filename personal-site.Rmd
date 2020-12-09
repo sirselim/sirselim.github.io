@@ -1,0 +1,24 @@
+---
+title: "Miles Benton"
+image: "mbenton.jpg"
+color1: "#00416A"
+color2: "#536976"
+angle: 45
+links:
+  - GitHub: "https://github.com/sirselim"
+  - Twitter: "https://twitter.com/miles_benton"
+  - Scholar: "https://scholar.google.co.nz/citations?user=iEhBavEAAAAJ&hl=en"
+  - LinkedIn: "https://www.linkedin.com/in/miles-benton-937a1961"
+  - CV: "https://sirselim.github.io/Miles_CV/"
+  # - Publications: ""
+  # - Presentations: ""
+  - Email: "mailto:miles.benton84@gmail.com"
+output:
+  postcards::onofre
+---
+
+At the bottom of the world in New Zealand, I am a computational geneticist 
+interested in all facets of biology and technology. I am currently working 
+at ESR ([Institute of Environmental Science and Research](www.esr.cri.nz)) 
+as a Senior Bioinformatician. I also dabble at photography and guitar, with 
+a side of coffee, beer and single malts in the mix.

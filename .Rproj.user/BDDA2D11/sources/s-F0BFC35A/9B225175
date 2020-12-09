@@ -1,0 +1,24 @@
+{
+    "id": "9B225175",
+    "path": "/data/gitrepos/personal-site/personal-site.Rmd",
+    "project_path": "personal-site.Rmd",
+    "type": "r_markdown",
+    "hash": "1430173261",
+    "contents": "",
+    "dirty": false,
+    "created": 1606671620519.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "cursorPosition": "13,23",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1607506941,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1607506941498,
+    "read_only": false,
+    "read_only_alternatives": []
+}
