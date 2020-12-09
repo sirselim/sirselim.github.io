@@ -1,6 +1,6 @@
 ---
 title: "Miles Benton"
-image: "mbenton.jpg"
+image: "images/mbenton.jpg"
 color1: "#00416A"
 color2: "#536976"
 angle: 45
