@@ -10,8 +10,8 @@ links:
   - Scholar: "https://scholar.google.co.nz/citations?user=iEhBavEAAAAJ&hl=en"
   - LinkedIn: "https://www.linkedin.com/in/miles-benton-937a1961"
   - CV: "https://sirselim.github.io/Miles_CV/"
-  # - Publications: ""
-  # - Presentations: ""
+  - Publications: "publications.html"
+  - Presentations: "presentations.html"
   - Email: "mailto:miles.benton84@gmail.com"
 output:
   postcards::onofre
