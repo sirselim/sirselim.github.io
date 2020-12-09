@@ -6,6 +6,10 @@ A list of conference presentations and posters
 	
 ### 2020
 
+* **Benton MC.** *Harnessing the disruptive nature of portable sequencing for community empowerment*. Auckland Research Bazaar, 24<sup>th</sup> November 2020, Virtual Seminar. <a href="https://sirselim.github.io/AlkResBaz_KeyStory_2020/ResBaz_KeyStory_2020.html" target="blank">[HTML Presentation]</a>
+
+* **Benton MC.** and de Ligt J. *Genomics at the frontline - the power of GPUs.* ESR Data Science Week 2020, Virtual Presentation, 24<sup>th</sup> September 2020. <a href="https://sirselim.github.io/frontline_genomics_presentation/Frontline_Genomics_gpus.html#1" target="blank">[HTML Presentation]</a>
+
 * <b>Benton MC.</b> <i>Clinical Genomics: Customisable Analysis Workflows for Identification of Clinically Relevant Genetic Variants - An Update</i> Otago Genetics Seminar, University of Otago, Dunedin, NZ, August 24th 2020. <a href="https://sirselim.github.io./presentations/OtagoGenetics_2020/OtagoGeneticsMeeting_Aug2020#1" target="blank">[HTML Presentation]</a>
 
 * <b>Benton MC.</b> <i>Assessing the potential of autonomous AI devices for portable real-time sequencing</i> eResearch, Dunedin, NZ, February 12th-14th 2020. <a href="https://sirselim.github.io./presentations/eResearch_2020/eResearch_presentation_livedemo_2020#1" target="blank">[HTML Presentation]</a>
