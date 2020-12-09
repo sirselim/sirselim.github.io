@@ -1,4 +1,14 @@
-# Publications
+---
+format: complete
+title: Publications
+output:
+  html_document:
+    theme: yeti
+    toc: true
+    toc_float: true
+    includes:
+      in_header: header.html
+---
 
 ([return home](https://sirselim.github.io/))
 
