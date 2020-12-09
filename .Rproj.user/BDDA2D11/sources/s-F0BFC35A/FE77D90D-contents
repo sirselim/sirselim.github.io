@@ -12,7 +12,7 @@
 
 * Journal articles: __43__
 * H-index: __17__
-* Citations: __962__
+* Citations: __974__
 
 <center><i>(Where able I have provided a link to the full article.)</i></center></p>
 
