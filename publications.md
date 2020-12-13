@@ -17,7 +17,7 @@ output:
 <br />
 
 <center>
-  <a href="https://scholar.google.co.nz/citations?user=iEhBavEAAAAJ&hl=en" target="blank"><img src="https://drive.google.com/uc?id=0B-V32YNJHBSgNDJUR2o3YXlRYnM" width="400" height="150"></a>
+  <a href="https://scholar.google.co.nz/citations?user=iEhBavEAAAAJ&hl=en" target="blank"><img src="https://drive.google.com/uc?id=16J2Bwd5WFT41ANKYeqqWU-27UGAgsV5a" width="400" height="150"></a>
 </center>
 
 ##### Publication Metrics
