@@ -24,19 +24,23 @@ output:
 
 * Journal articles: __43__
 * H-index: __17__
-* Citations: __974__
+* Citations: __1006__
 
 <center><i>(Where able I have provided a link to the full article.)</i></center></p>
+
+## 2021
+
+* Cao TV, Lea RA, Sutherland HG, **Benton MC**, Pishva SR, Haupt LM, and Griffiths LR. (2021) A genome-wide methylation study of body fat traits in the Norfolk Island Isolate. *Nutrition, Metabolism and Cardiovascular Diseases* (Accepted, awaiting publication)
 
 ## 2020
 
 * Macartney-Coxson D, Cameron AM, Clapham J, and **Benton MC**. (2020) DNA methylation in blood-potential to provide new insights in immune cell biology. *PLOS ONE* 15(11): e0241367 <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0241367" target="blank">[article]</a>
 
-* Harvey NR, Voisin S, Lea RA, Yan X, **MC Benton**, Papadimitriou ID, Jacques M, Haupt LM, Ashton KJ, Eynon N, Griffiths and LR. Investigating the influence of mtDNA and nuclear encoded mitochondrial variants on high intensity interval training outcomes. (2020) *Scientific Reports* 10(1) <a href="https://www.nature.com/articles/s41598-020-67870-1" target="blank">[article]</a>
+* Harvey NR, Voisin S, Lea RA, Yan X, **Benton MC**, Papadimitriou ID, Jacques M, Haupt LM, Ashton KJ, Eynon N, Griffiths and LR. Investigating the influence of mtDNA and nuclear encoded mitochondrial variants on high intensity interval training outcomes. (2020) *Scientific Reports* 10(1) <a href="https://www.nature.com/articles/s41598-020-67870-1" target="blank">[article]</a>
 
 * Dunn PJ, Maher BH, Albury CL, Stuart S, Sutherland HG, Maksemous N, **Benton MC**, Smith, RA, Haupt LM, and Griffiths LR. (2020) Tiered analysis of whole-exome sequencing for epilepsy diagnosis. *Molecular Genetics and Genomics* (DOI:<a href="https://doi.org/10.1007/s00438-020-01657-x" target="blank">10.1007/s00438-020-01657-x</a>)
 
-* Harvey NR, Voisin S, Lea RA, Yan X, **MC Benton**, Papadimitriou ID, Jacques M, Haupt LM, Ashton KJ, Eynon N, Griffiths and LR. (2020) Identification of novel mitochondrial and mitochondrial related genetic loci associated with exercise response in the Gene SMART study. *biorxiv* (DOI: <a href="https://doi.org/10.1101/2020.02.20.957340" target="blank">10.1101/2020.02.20.957340</a>)
+* Harvey NR, Voisin S, Lea RA, Yan X, **Benton MC**, Papadimitriou ID, Jacques M, Haupt LM, Ashton KJ, Eynon N, Griffiths and LR. (2020) Identification of novel mitochondrial and mitochondrial related genetic loci associated with exercise response in the Gene SMART study. *biorxiv* (DOI: <a href="https://doi.org/10.1101/2020.02.20.957340" target="blank">10.1101/2020.02.20.957340</a>)
 
 * Macartney-Coxson D, Danielson K, Clapham J, **Benton MC**, Johnstone A, Jones A, Shaw O, Hagan RD, Hoffman EP, Hayes M, Harper J, Langston MA, and Stubbs RS. (2020) MicroRNA profiling in adipose before and after weight-loss highlights the role of miR-223-3p and the NLRP3 inflammasome. *Obesity* (epub 2020) (DOI:<a href="https://doi.org/10.1002/oby.22722" target="blank">10.1002/oby.22722</a>)
 
