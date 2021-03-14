@@ -82,11 +82,9 @@ A list of conference presentations and posters
 
 ### 2013
 
-* <strong>Benton MC</strong>. <i>A student’s journey − how Bioinformatics changed my worldview: the many platforms, data types and analyses I’ve learnt along the way.</i> ESR conference, Lincoln University, Christchurch, New Zealand, 3rd-5th December 2013.
-* <a href="../presentations/Benton_ESRconference_2013.pdf">[PDF]</a>
+* <strong>Benton MC</strong>. <i>A student’s journey − how Bioinformatics changed my worldview: the many platforms, data types and analyses I’ve learnt along the way.</i> ESR conference, Lincoln University, Christchurch, New Zealand, 3rd-5th December 2013. <a href="../presentations/Benton_ESRconference_2013.pdf">[PDF]</a>
 
-* <strong>Benton MC</strong>. <i>Epigenetics − where the environment meets the genetics of disease: Interpreting high-throughput DNA Methylation data.</i> QUT SBB symposium, Queensland University of Technology, Brisbane, Australia, 25-26th November 2013.
-* <a href="../presentations/MBenton_QUT_SBB_presentation_131122.pdf">[PDF]</a><br />
+* <strong>Benton MC</strong>. <i>Epigenetics − where the environment meets the genetics of disease: Interpreting high-throughput DNA Methylation data.</i> QUT SBB symposium, Queensland University of Technology, Brisbane, Australia, 25-26th November 2013. <a href="../presentations/MBenton_QUT_SBB_presentation_131122.pdf">[PDF]</a><br />
 
 * <strong>Benton MC</strong>, Johnstone A, Eccles D, Harmon B, Hayes MT, Lea RA, Griffiths LR, Hoffman E, Stubbs RS, Macartney-Coxson D. <i>Global DNA methylation profiling reveals significant differential methylation of subcutaneous and omental adipose tissue before and after weight loss.</i> Queenstown Molecular Biology Meeting, Queenstown, New Zealand, August 2013 Epigenetics Satellite.
 
