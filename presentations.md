@@ -18,6 +18,8 @@ A list of conference presentations and posters
 
 ### 2021
 
+* **Benton MC.** *Affordable GPU compute makes nanopore sequencing even more disruptive and empowering*. Nanopore Community Meeting 2021, 1<sup>st</sup> - 2<sup>nd</sup> December 2021, Online Virtual Conference. <a href="https://docs.google.com/presentation/d/1mfNIxb5HhfQOHEw_h64uIijtc92WfBRi/edit?usp=sharing&ouid=110124961777360666391&rtpof=true&sd=true" target="blank">[PPT Presentation]</a>
+
 * **Benton MC.** *The disruptive nature of portable sequencing*. Nvidia Spring GPU Technology Conference (GTC), 12<sup>th</sup> - 16<sup>th</sup> April 2021, Online Virtual Conference. <a href="https://sirselim.github.io/NvidiaGTC_2021/" target="blank">[HTML Presentation]</a> - Presentation and live demonstration.
 
 * **Benton MC.** *Something a little bit different...* CLNR 401 Plenary, 6<sup>th</sup> March 2021, Victoria University of Wellington. <a href="https://sirselim.github.io/CLNR_401_plenary_presentation/index.html" target="blank">[HTML Presentation]</a>	- Presentation and live demonstration.
