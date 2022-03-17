@@ -19,7 +19,7 @@ output:
 
 At the bottom of the world in New Zealand, I am a computational geneticist 
 interested in all facets of biology and technology. As of March 2022 I am working 
-for ([Oxford Nanopore Technologies](www.nanoporetech.com)) 
+for [Oxford Nanopore Technologies](www.nanoporetech.com) 
 as a Senior Bioinformatician. Technology and science geek that also dabbles 
 at photography and electric guitar, with a side of coffee, beer and single 
 malts thrown in the mix.
