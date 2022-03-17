@@ -22,9 +22,9 @@ output:
 
 ##### Publication Metrics
 
-* Journal articles: __43__
-* H-index: __17__
-* Citations: __1006__
+* Journal articles: __49__
+* H-index: __19__
+* Citations: __1337__
 
 <center><i>(Where able I have provided a link to the full article.)</i></center></p>
 
